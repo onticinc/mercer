@@ -1,244 +1,60 @@
-html, body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    height: 100%;
-    background: #3797d4;
-  }
+:root {
+  --bg: #054e9c;
+  --card-bg: #ffffff;
+}
+
+body {
+  background: var(--bg);
+}
+
+.box {
+
+  background: var(--card-bg);
+}
 
 
-  /* NAVBAR */
-  nav.navbar {
-    border-top: 4px solid #3199db;
-    margin-bottom: 1rem;
-  }
-  .navbar-item.brand-text {
-    font-weight: 300;
-  }
-  .navbar-item, .navbar-link {
-    font-size: 14px;
-    font-weight: 700;
-  }
-  
-  
-  /* MENU */
+input::placeholder {
+  color: antiquewhite;
+}
 
-  .menu-background {
-    background-color: #F2F6FA;
-    margin-top: 0px;
-    align-items: center;
-  }
+.navbar {
+  background: var(--card-bg);
+}
 
-  .menu-padding {
-    padding: 15px;
-  }
+.navbar-item {
+  color: rgb(0, 0, 0);
+}
 
-  .menu-label {
-    color: #000000;
-    letter-spacing: 1.3;
-    font-weight: 700;
-  }
-  
-  .menu-list a {
-    border-top: 2px black;
-    color: #000000;
-    font-size: 14px;
-    font-weight: 700;
-  }
-  .menu-list a:hover {
-    background-color: transparent;
-    color: #686868;
-  }
-  .menu-list a.is-active {
-    background-color: transparent;
-    color: #3199db;
-    font-weight: 700;
-  }
+/* Card start*/
+.card {
+  overflow: hidden;
+  background: ghostwhite;
+  color: var(--bg);
+}
 
-  /* CARD */
-  .card {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
-    margin-bottom: 2rem;
-  }
-  .card-header-title {
-    color: #8F99A3;
-    font-weight: 400;
-  }
-  .card .content {
-    font-size: 14px;
-  }
-  .card-footer-item {
-    font-size: 14px;
-    font-weight: 700;
-    color: #8F99A3;
-  }
-  
-  .card-table .table {
-    margin-bottom: 0;
-  }
-  .events-card .card-table {
-    max-height: 250px;
-    overflow-y: scroll;
-  }
-  .card {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
-    margin-bottom: 2rem;
-  }
-  .card-header-title {
-    color: #343a40;
-    font-weight: 400;
-  }
+.card.large {
+  border-radius: 5px;
+}
 
-  /* INFO TILES */
-  .info-tiles {
-    margin: 1rem 0;
-  }
-  .info-tiles .subtitle {
-    font-weight: 300;
-    color: #8F99A3;
-  }
+.title.no-padding {
+  margin-bottom: 0 !important;
+}
 
+.footer {
+  background: var(--card-bg);
+  color: ghostwhite;
+}
 
-  /* HERO COMPONENT */
-  .hero.welcome.is-info {
-    background: #ffffff;
-    background: -webkit-linear-gradient(to right, #3199db, #051920);
-    background: linear-gradient(to right, #3199db, #051920);
-  }
-  .hero.welcome .title, .hero.welcome .subtitle {
-    color: hsl(192, 17%, 99%);
-  }
+.footer p,
+strong {
+  color: ghostwhite
+}
 
-  .hero.is-success {
-    background: #3797d4;
-  }
-  .hero, .hero.is-success {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
+.footer a:hover {
+  color: crimson;
+}
 
-  .card .content {
-    font-size: 14px;
-  }
-  .card-footer-item {
-    font-size: 14px;
-    font-weight: 700;
-    color: #8F99A3;
-  }
-  
-  .card-table .table {
-    margin-bottom: 0;
-  }
-  .events-card .card-table {
-    max-height: 250px;
-    overflow-y: scroll;
-  }
-
-  /* LOGIN CSS */
- 
-  .box {
-    margin-top: 5px;
-  }
-  .avatar {
-    margin-top: 10px;
-    padding-bottom: 20px;
-    
-  }
-  .avatar img {
-    padding: 5px;
-    background: #fff;
-    border-radius: 50%;
-  }
-  input {
-    font-weight: 200;
-  }
-  p {
-    font-weight: 700;
-  }
-  p.subtitle {
-    padding-top: 1rem;
-  }
-  
-  .login-hr{
-    border-bottom: 1px solid black;
-  }
-  
-  
-  .field{
-    padding-bottom: 10px;
-  }
-  
-  .fa{
-    margin-left: 5px; 
-  }
-
-
-  /* Register CSS */
-
-  .field:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-
-  .register {
-    margin-top: 10rem;
-    background: white;
-    border-radius: 10px;
-  }
-
-  .left,
-  .right {
-    padding: 4.5rem;
-  }
-
-  .left {
-    border-right: 5px solid var(--background);
-  }
-
-  .left .title {
-    font-weight: 800;
-    letter-spacing: -2px;
-  }
-
-  .left .colored {
-    color: var(--brandColor);
-    font-weight: 500;
-    margin-top: 1rem !important;
-    letter-spacing: -1px;
-  }
-
-  .left p {
-    color: var(--textLight);
-    font-size: 1.15rem;
-  }
-
-  .right .title {
-    font-weight: 800;
-    letter-spacing: -1px;
-  }
-
-  .right .description {
-    margin-top: 1rem;
-    margin-bottom: 1rem !important;
-    color: var(--textLight);
-    font-size: 1.15rem;
-  }
-
-  .right small {
-    color: var(--textLight);
-  }
-
-  input {
-    font-size: 1rem;
-  }
-
-  
-
-  .fab,
-  .fas {
-    color: var(--textLight);
-    margin-right: 1rem;
-  }
-
-  .m-l-5 {
-    margin-left: 5px;
-  }
+.fa {
+  color: ghostwhite;
+  margin: 10px
+}
