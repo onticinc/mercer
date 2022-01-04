@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import {
   BrowserRouter as Router,
   Route,
@@ -10,6 +9,7 @@ import {
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import CardContainer from "./components/cards/CardContainer";
+import HomeContainer from "./components/home/HomeContainer";
 
 
 class App extends Component {
@@ -18,10 +18,11 @@ class App extends Component {
      <Router>
        <div>
         <Routes>
-          <Route exact path="/" element={<Login />} />
+          <Route exact path="/" element={<HomeContainer />} />
           <Route path="/login" element={<Login />}/>
           <Route path="/register" element={<Register />}/>
           <Route path="/card" element={<CardContainer />}/>
+          <Route path="/home" element={<HomeContainer />}/>
         </Routes>
        </div>
      </Router>

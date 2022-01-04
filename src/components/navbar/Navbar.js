@@ -9,7 +9,7 @@ class Navbar extends Component {
                     <div className="container">
                         <div className="navbar-brand">
                             <a className="navbar-item" href="#">
-                                <img src="https://cdn.emk.dev/templates/bulma-logo-light.png" alt="Logo" />
+                            <img src="https://bulma.io/images/placeholders/48x48.png" alt="Logo"/>
                             </a>
                             <span className="navbar-burger burger" data-target="navbarMenu">
                                 <span></span>
@@ -19,10 +19,10 @@ class Navbar extends Component {
                         </div>
                         <div id="navbarMenu" className="navbar-menu">
                             <div className="navbar-end">
-                                <a className="navbar-item is-active">
+                                <a href="/"className="navbar-item is-active">
                                     Home
                                 </a>
-                                <a className="navbar-item">
+                                <a href=""className="navbar-item">
                                     Examples
                                 </a>
                                 <a className="navbar-item">
@@ -31,11 +31,11 @@ class Navbar extends Component {
                                 <a className="navbar-item">
                                     Team
                                 </a>
-                                <a className="navbar-item">
-                                    Archives
+                                <a href="/register" className="navbar-item">
+                                    Register
                                 </a>
-                                <a className="navbar-item">
-                                    Help
+                                <a href="/login" className="navbar-item">
+                                    Login
                                 </a>
                             </div>
                         </div>

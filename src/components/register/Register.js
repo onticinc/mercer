@@ -7,7 +7,7 @@ class Register extends Component {
         return (
             <div>
                 <Navbar />
-                <div className="columns is-multiline" style={{padding: '20px'}}>
+                <div className="columns is-multiline">
                     <div className="column is-8 is-offset-2 register">
                         <div className="columns">
                             <div className="column left">

@@ -10,8 +10,9 @@ class InfoTiles extends Component {
                         <div className="tile is-ancestor has-text-centered">
                             <div className="tile is-parent">
                                 <article className="tile is-child box">
-                                    <p className="title">48</p>
-                                    <p className="subtitle">Confirmed Events</p>
+                                    <figure className="image is-48x48">
+                                        <img src="https://bulma.io/images/placeholders/48x48.png" />
+                                    </figure>
                                 </article>
                             </div>
                             <div className="tile is-parent">
