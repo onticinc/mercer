@@ -10,6 +10,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import CardContainer from "./components/cards/CardContainer";
 import HomeContainer from "./components/home/HomeContainer";
+import Item from "./components/item/item";
 
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/register" element={<Register />}/>
           <Route path="/card" element={<CardContainer />}/>
           <Route path="/home" element={<HomeContainer />}/>
+          <Route path="/item" element={<Item />}/>
         </Routes>
        </div>
      </Router>
