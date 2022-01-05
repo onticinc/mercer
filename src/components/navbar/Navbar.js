@@ -22,15 +22,6 @@ class Navbar extends Component {
                                 <a href="/"className="navbar-item is-active">
                                     Home
                                 </a>
-                                <a href=""className="navbar-item">
-                                    Examples
-                                </a>
-                                <a className="navbar-item">
-                                    Features
-                                </a>
-                                <a className="navbar-item">
-                                    Team
-                                </a>
                                 <a href="/register" className="navbar-item">
                                     Register
                                 </a>
