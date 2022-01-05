@@ -1,11 +1,15 @@
 :root {
-  --bg: #3d5a80;
+  --bg: #5E6472;
   --card-bg: #98c1d9;
   --primary: #e0fbfc;
 }
 
 body {
   background: var(--bg);
+}
+
+h1 {
+  color: #EADEDA;
 }
 
 .box {
@@ -162,3 +166,10 @@ hr {
   margin: 0 1rem;
 }
 
+/* Register styles */
+
+.columns {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-top: 1.25rem;
+}

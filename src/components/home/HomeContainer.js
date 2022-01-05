@@ -11,10 +11,10 @@ class HomeContainer extends Component {
         
                 <section className="hero is-medium">
                     <div className="hero-body has-text-centered">
-                        <h1 className="title is-2">Thoughts, stories, and ideas.</h1>
+                        <h1 className="title is-2">Thousands of hidden gems, all in one place.</h1>
                         <div id="hero-input-group" className="field has-addons has-addons-centered">
                             <div className="control">
-                                <input className="input is-medium" type="text" placeholder="Search..." />
+                                <input className="input is-medium" type="text" placeholder="What are you looking for today?" />
                             </div>
                             <div className="control">
                                 <a className="button is-medium is-primary">
@@ -30,7 +30,7 @@ class HomeContainer extends Component {
                         <div className="level">
                             <div className="level-left">
                                 <div className="level-item">
-                                    <h2 className="subtitle">Featured Articles</h2>
+                                    <h2 className="subtitle">Featured Mercer Sellers</h2>
                                 </div>
                             </div>
                             <div className="level-right">
@@ -96,19 +96,19 @@ class HomeContainer extends Component {
                         <div className="links">
 
                             <div className="level-item">
-                                <a href="#">Link One</a>
+                                <a href="#">Contact</a>
                             </div>
                             <div className="level-item">
-                                <a href="#">Link One</a>
+                                <a href="#">Careers</a>
                             </div>
                             <div className="level-item">
-                                <a href="#">Link One</a>
+                                <a href="#">Legal</a>
                             </div>
                         </div><br />
                         <p>
-                            <a href="https://bulma.io">
+                            {/* <a href="https://bulma.io">
                                 <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24" />
-                            </a>
+                            </a> */}
                         </p>
                     </div>
                 </div>
