@@ -11,7 +11,9 @@ class HomeContainer extends Component {
         
                 <section className="hero is-medium">
                     <div className="hero-body has-text-centered">
+
                         <h1 className="title is-2">Thousands of hidden gems, all in one place.</h1>
+
                         <div id="hero-input-group" className="field has-addons has-addons-centered">
                             <div className="control">
                                 <input className="input is-medium" type="text" placeholder="What are you looking for today?" />
