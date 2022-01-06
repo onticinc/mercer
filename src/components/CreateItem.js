@@ -10,8 +10,6 @@ class createItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: "",
-            sale: [],
             redirect: false,
         };
     }
@@ -21,6 +19,12 @@ class createItem extends Component {
             userName: e.target.value,
         });
     }
+
+    // handleSaleName(e) {
+    //     this.setState({
+    //         saleName: e.target.value,
+    //     });
+    // }
 
     handleItemName(e) {
         this.setState({
@@ -105,6 +109,20 @@ class createItem extends Component {
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit
                                     </p>
                                     <form onSubmit={this.handleSubmit.bind(this)}>
+                                        {/* <div className="field">
+                                            <div className="control">
+                                                <input
+                                                    className="input is-medium"
+                                                    type="text"
+                                                    placeholder="Sale Number"
+                                                    name="saleNumber"
+                                                    value={this.state.saleName}
+                                                    onChange={this.handleSaleName.bind(this)}
+                                                    required
+                                                />
+                                            </div>
+                                        </div> */}
+
                                         <div className="field">
                                             <div className="control">
                                                 <input
