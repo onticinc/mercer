@@ -10,8 +10,6 @@ class createItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: "",
-            sale: [],
             redirect: false,
         };
     }
@@ -19,6 +17,12 @@ class createItem extends Component {
     handleName(e) {
         this.setState({
             userName: e.target.value,
+        });
+    }
+
+    handleSaleNumber(e) {
+        this.setState({
+            saleNumber: e.target.value,
         });
     }
 
@@ -55,6 +59,7 @@ class createItem extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         const itemData = {
+            saleNumber: this.state.saleNumber,
             itemName: this.state.itemName,
             price: this.state.price,
             itemDescription: this.state.itemDescription,
@@ -105,6 +110,20 @@ class createItem extends Component {
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit
                                     </p>
                                     <form onSubmit={this.handleSubmit.bind(this)}>
+                                        <div className="field">
+                                            <div className="control">
+                                                <input
+                                                    className="input is-medium"
+                                                    type="text"
+                                                    placeholder="Sale Number"
+                                                    name="saleNumber"
+                                                    value={this.state.saleNumber}
+                                                    onChange={this.handleSaleNumber.bind(this)}
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+
                                         <div className="field">
                                             <div className="control">
                                                 <input
