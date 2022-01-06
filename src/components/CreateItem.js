@@ -20,11 +20,11 @@ class createItem extends Component {
         });
     }
 
-    // handleSaleName(e) {
-    //     this.setState({
-    //         saleName: e.target.value,
-    //     });
-    // }
+    handleSaleNumber(e) {
+        this.setState({
+            saleNumber: e.target.value,
+        });
+    }
 
     handleItemName(e) {
         this.setState({
@@ -109,19 +109,19 @@ class createItem extends Component {
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit
                                     </p>
                                     <form onSubmit={this.handleSubmit.bind(this)}>
-                                        {/* <div className="field">
+                                        <div className="field">
                                             <div className="control">
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
                                                     placeholder="Sale Number"
                                                     name="saleNumber"
-                                                    value={this.state.saleName}
-                                                    onChange={this.handleSaleName.bind(this)}
+                                                    value={this.state.saleNumber}
+                                                    onChange={this.handleSaleNumber.bind(this)}
                                                     required
                                                 />
                                             </div>
-                                        </div> */}
+                                        </div>
 
                                         <div className="field">
                                             <div className="control">
