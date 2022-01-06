@@ -9,7 +9,7 @@ class Signup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
+      userName: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -19,7 +19,7 @@ class Signup extends Component {
 
   handleName(e) {
     this.setState({
-      name: e.target.value,
+      userName: e.target.value,
     });
   }
 
@@ -47,7 +47,7 @@ class Signup extends Component {
     // password length >= 8 characters
     if (this.state.password === this.state.confirmPassword && this.state.password.length >= 8) {
       const newUser = {
-        name: this.state.name,
+        userName: this.state.userName,
         email: this.state.email,
         password: this.state.password,
       };
