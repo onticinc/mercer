@@ -17,22 +17,32 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][Devyn Malone](https://github.com/DevynMalone) [Michael Smith](https://github.com/onticinc) [Roland Yaambao](https://github.com/RolandYambao)[Patrick Brennan](https://github.com/pambonian)
+<div align="center">
+
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
 
 
+![Contributors][contributors-shield] <br>
+
+[Devyn Malone](https://github.com/DevynMalone) <br>
+[Michael Smith](https://github.com/onticinc) <br>
+[Roland Yaambao](https://github.com/RolandYambao) <br>
+[Patrick Brennan](https://github.com/pambonian)
+</div>
+
+
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/onticinc/mercer">
+  <!-- <a href="https://github.com/onticinc/mercer">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
-<h3 align="center">Mercer Internet Marketplace</h3>
+<h1 align="center">Mercer Internet Marketplace</h1>
 
   <p align="center">
     A unique online resale platform intended to empower sellers.
