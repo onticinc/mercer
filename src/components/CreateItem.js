@@ -100,7 +100,7 @@ class createItem extends Component {
                                     </p>
                                 </div>
                                 <div className="column right has-text-centered">
-                                    <h1 className="title is-4">Create a Sale</h1>
+                                    <h1 className="title is-4">Create an Item</h1>
                                     <p className="description">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit
                                     </p>
