@@ -23,9 +23,27 @@ class Signup extends Component {
     });
   }
 
+  handleProfilePic(e) {
+    this.setState({
+      profilePic: e.target.value,
+    });
+  }
+
   handleEmail(e) {
     this.setState({
       email: e.target.value,
+    });
+  }
+
+  handleAddress(e) {
+    this.setState({
+      address: e.target.value,
+    });
+  }
+
+  handlePhone(e) {
+    this.setState({
+      phone: e.target.value,
     });
   }
 
@@ -65,10 +83,10 @@ class Signup extends Component {
       alert("Password needs to be at least 8 characters. Please try again.");
     }
   };
-  
+
   render() {
     if (this.state.redirect) return <Redirect to="/login" />; // You can have them redirected to profile (your choice)
-    
+
     return (
       <>
         <section className="container">
@@ -110,13 +128,55 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
+                          type="profilePic"
+                          placeholder="Profile Picture URL"
+                          name="profilePic"
+                          value={this.state.profilePic}
+                          onChange={this.handleProfilePic.bind(this)}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input is-medium"
                           type="email"
                           placeholder="Email"
                           name="email"
                           value={this.state.email}
                           onChange={this.handleEmail.bind(this)}
                           required
-                          />
+                        />
+                      </div>
+                    </div>
+
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input is-medium"
+                          type="address"
+                          placeholder="Address"
+                          name="address"
+                          value={this.state.address}
+                          onChange={this.handleAddress.bind(this)}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input is-medium"
+                          type="phone"
+                          placeholder="Phone Number"
+                          name="phone"
+                          value={this.state.phone}
+                          onChange={this.handlePhone.bind(this)}
+                          required
+                        />
                       </div>
                     </div>
 
@@ -190,7 +250,7 @@ class Signup extends Component {
                     className="level-item"
                     style={{ color: "var(--textLight)" }}
                   >
-                    &copy; Super Cool Website. 2022 All Rights Reserved. 
+                    &copy; Super Cool Website. 2022 All Rights Reserved.
                   </small>
                 </div>
               </nav>
