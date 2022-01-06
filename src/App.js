@@ -1,28 +1,29 @@
+// Imports
 import React, { useEffect, useState, Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Switch,
-  Redirect,
-} from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 
-// Components
-import Login from "./components/login/Login";
-import Register from "./components/register/Register";
-import CardContainer from "./components/cards/CardContainer";
-import HomeContainer from "./components/home/HomeContainer";
-import Item from "./components/item/item";
+// CSS
+import './App.css';
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
+// Components
+import Signup from './components/Signup';
+import About from './components/About';
+import Footer from './components/Footer';
+import Login from './components/Login';
+import Navbar from './components/Navbar';
+import Profile from './components/Profile';
+import Welcome from './components/Welcome';
+
+const PrivateRoute = ({ component: Component, ...rest}) => {
   let token = localStorage.getItem('jwtToken');
   // console.log('===> Hitting a Private Route');
   return <Route {...rest} render={(props) => {
-    return token ? <Component {...rest} {...props} /> : <Redirect to="/login" />
+    return token ? <Component {...rest} {...props} /> : <Redirect to="/login"/>
   }} />
 }
+
 
 function App() {
   // Set state values
@@ -50,26 +51,30 @@ function App() {
 
   const handleLogout = () => {
     if (localStorage.getItem('jwtToken')) {
-      // remove token for localStorage
-      localStorage.removeItem('jwtToken');
-      setCurrentUser(null);
-      setIsAuthenticated(false);
+        // remove token for localStorage
+        localStorage.removeItem('jwtToken');
+        setCurrentUser(null);
+        setIsAuthenticated(false);
     }
   }
 
   return (
-    <Router>
-      <div>
-        <Routes>
-          <Route exact path="/" element={<HomeContainer />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/card" element={<CardContainer />} />
-          <Route path="/home" element={<HomeContainer />} />
-          <Route path="/item" element={<Item />} />
-        </Routes>
+    <div className="App">
+      <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
+      <div className="container mt-5">
+        <Switch>
+          <Route path='/signup' component={Signup} />
+          <Route 
+            path="/login"
+            render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>}
+          />
+          <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
+          <Route exact path="/" component={Welcome} />
+          <Route path="/about" component={About} />
+        </Switch>
       </div>
-    </Router>
+      <Footer />
+    </div>
   );
 }
 
