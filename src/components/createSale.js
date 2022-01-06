@@ -72,7 +72,7 @@ class createSale extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        const saleData = {
+        const saleData = [{
             saleName: this.state.saleName,
             location: this.state.location,
             saleImage: this.state.saleImage,
@@ -81,7 +81,7 @@ class createSale extends Component {
             date: this.state.date,
             saleTags: this.state.saleTags,
             zipCode: this.state.zipCode,
-        };
+        }];
         axios.post(`${REACT_APP_SERVER_URL}/users/sale`, saleData)
             .then(response => {
                 const { token } = response.data;
@@ -121,7 +121,7 @@ class createSale extends Component {
                                     </p>
                                 </div>
                                 <div className="column right has-text-centered">
-                                    <h1 className="title is-4">Sign up today</h1>
+                                    <h1 className="title is-4">Create a Sale</h1>
                                     <p className="description">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit
                                     </p>
