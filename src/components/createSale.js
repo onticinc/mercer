@@ -72,7 +72,7 @@ class createSale extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        const saleData = [{
+        const saleData = {
             saleName: this.state.saleName,
             location: this.state.location,
             saleImage: this.state.saleImage,
@@ -81,7 +81,7 @@ class createSale extends Component {
             date: this.state.date,
             saleTags: this.state.saleTags,
             zipCode: this.state.zipCode,
-        }];
+        };
         axios.post(`${REACT_APP_SERVER_URL}/users/sale`, saleData)
             .then(response => {
                 const { token } = response.data;
