@@ -15,12 +15,13 @@ import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
+import createSale from './components/createSale';
 
-const PrivateRoute = ({ component: Component, ...rest}) => {
+const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem('jwtToken');
   // console.log('===> Hitting a Private Route');
   return <Route {...rest} render={(props) => {
-    return token ? <Component {...rest} {...props} /> : <Redirect to="/login"/>
+    return token ? <Component {...rest} {...props} /> : <Redirect to="/login" />
   }} />
 }
 
@@ -51,10 +52,10 @@ function App() {
 
   const handleLogout = () => {
     if (localStorage.getItem('jwtToken')) {
-        // remove token for localStorage
-        localStorage.removeItem('jwtToken');
-        setCurrentUser(null);
-        setIsAuthenticated(false);
+      // remove token for localStorage
+      localStorage.removeItem('jwtToken');
+      setCurrentUser(null);
+      setIsAuthenticated(false);
     }
   }
 
@@ -64,13 +65,14 @@ function App() {
       <div className="container mt-5">
         <Switch>
           <Route path='/signup' component={Signup} />
-          <Route 
+          <Route
             path="/login"
-            render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>}
+            render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser} />}
           />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
+          <PrivateRoute path="/sale" component={createSale} user={currentUser} handleLogout={handleLogout} />
         </Switch>
       </div>
       <Footer />
