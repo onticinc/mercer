@@ -59,6 +59,7 @@ class createItem extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         const itemData = {
+            saleNumber: this.state.saleNumber,
             itemName: this.state.itemName,
             price: this.state.price,
             itemDescription: this.state.itemDescription,
