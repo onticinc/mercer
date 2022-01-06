@@ -54,17 +54,14 @@ class createSale extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        const saleData = {
-            saleName: this.state.saleName,
-            location: this.state.location,
-            saleImage: this.state.saleImage,
-            saleDescription: this.state.saleDescription,
-            time: this.state.time,
-            date: this.state.date,
-            saleTags: this.state.saleTags,
-            zipCode: this.state.zipCode,
+        const itemData = {
+            itemName: this.state.itemName,
+            price: this.state.price,
+            itemDescription: this.state.itemDescription,
+            itemTags: this.state.itemTags,
+            itemImage: this.state.itemImage,
         };
-        axios.post(`${REACT_APP_SERVER_URL}/users/sale`, saleData)
+        axios.post(`${REACT_APP_SERVER_URL}/users/item`, itemData)
             .then(response => {
                 const { token } = response.data;
                 // save token to localStorage
