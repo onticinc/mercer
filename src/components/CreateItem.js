@@ -152,6 +152,20 @@ class createItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
+                                                    placeholder="Tag(s)"
+                                                    name="itemTags"
+                                                    value={this.state.itemTags}
+                                                    onChange={this.handleItemTags.bind(this)}
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div className="field">
+                                            <div className="control">
+                                                <input
+                                                    className="input is-medium"
+                                                    type="text"
                                                     placeholder="Item Image"
                                                     name="itemImage"
                                                     value={this.state.itemImage}
