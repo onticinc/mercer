@@ -82,3 +82,7 @@ input:focus {
   color: var(--textLight);
   margin-right: 1rem;
 }
+
+#column {
+  margin-top: -125px;
+}

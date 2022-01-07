@@ -89,24 +89,25 @@ class Signup extends Component {
     return (
       <>
         <section className="container">
-          <div className="columns is-multiline">
+          <div className="columns is-multiline" id="column">
             <div className="column is-8 is-offset-2 register">
               <div className="columns">
                 <div className="column left">
-                  <h1 className="title is-1">Super Cool Website</h1>
+                  <h1 className="title is-1">Mercers</h1>
                   <h2 className="subtitle colored is-4">
-                    Lorem ipsum dolor sit amet.
+                    Become a Vendor Today!
                   </h2>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Corporis ex deleniti aliquam tempora libero excepturi vero
-                    soluta odio optio sed.
+                    Mercers provides a platform for all Vendors who seek to advertise
+                    their yard sales to a global audience. All are wlecome to trade and prosper!
                   </p>
+                  <br /><br />
+                  <img src="https://i.imgur.com/gi4BvGD.png" />
                 </div>
                 <div className="column right has-text-centered">
                   <h1 className="title is-4">Sign up today</h1>
                   <p className="description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit
+                    Please fill out all forms correctly.
                   </p>
                   <form onSubmit={this.handleSubmit.bind(this)}>
                     <div className="field">
@@ -207,12 +208,12 @@ class Signup extends Component {
                       </div>
                     </div>
 
-                    <button type="submit" className="button is-block is-primary is-fullwidth is-medium">
+                    <button type="submit" className="button is-block is-success is-fullwidth is-medium">
                       Submit
                     </button>
                     <br />
                     <small>
-                      <em>Lorem ipsum dolor sit amet consectetur.</em>
+                      <em>Do not sell anything illegal under U.S. law</em>
                     </small>
                   </form>
                 </div>
@@ -255,6 +256,7 @@ class Signup extends Component {
               </nav>
             </div>
           </div>
+          <br />
         </section>
       </>
     );
