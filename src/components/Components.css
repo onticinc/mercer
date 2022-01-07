@@ -178,3 +178,15 @@ hr {
   margin-right: -0.75rem;
   margin-top: 1.25rem;
 }
+
+.button {
+  margin: auto;
+  width: 49.2%;
+  height: 450px;
+  display: inline;
+  font-size: 40px;
+}
+
+#button2 {
+  margin-left: 10px;
+}
