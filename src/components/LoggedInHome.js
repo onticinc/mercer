@@ -1,24 +1,15 @@
 import React from 'react';
 import './Components.css'
 
-const Welcome = () => {
+const LoggedInHome = () => {
     return (
         <div>
             <section className="hero is-medium">
                     <div className="hero-body has-text-centered">
 
-                        <h1 className="title is-2">Welcome to Mercer, Please Create an account.</h1>
+                        <h1 className="title is-2">Logged in homepage.</h1>
 
-                        <div id="hero-input-group" className="field has-addons has-addons-centered">
-                            <div className="control">
-                                <input className="input is-medium" type="text" placeholder="What are you looking for today?" />
-                            </div>
-                            <div className="control">
-                                <a className="button is-medium is-primary">
-                                    <i className="fal fa-search"></i>
-                                </a>
-                            </div>
-                        </div>
+
                     </div>
                 </section>
 
@@ -27,7 +18,7 @@ const Welcome = () => {
                         <div className="level">
                             <div className="level-left">
                                 <div className="level-item">
-                                    <h2 className="subtitle">Featured Mercer Sellers</h2>
+                                    <h2 className="subtitle">Logged </h2>
                                 </div>
                             </div>
                             <div className="level-right">
@@ -114,4 +105,4 @@ const Welcome = () => {
     )
 }
 
-export default Welcome;
+export default LoggedInHome;

@@ -1,3 +1,6 @@
+//components
+import Item from './Item'
+
 import "./Signup.css";
 import React, { Component } from "react";
 import axios from "axios";
@@ -6,12 +9,13 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
 
+
+
 class createItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: "",
-            sale: [],
+            data: [],
             redirect: false,
         };
     }
@@ -19,6 +23,12 @@ class createItem extends Component {
     handleName(e) {
         this.setState({
             userName: e.target.value,
+        });
+    }
+
+    handleSaleNumber(e) {
+        this.setState({
+            saleNumber: e.target.value,
         });
     }
 
@@ -85,16 +95,46 @@ class createItem extends Component {
             });
     };
 
+// Testing Dropdown
+    componentDidMount() {
+        axios.get(`${REACT_APP_SERVER_URL}/users/sale`,
+            {
+                header: { 'Access-Control-Allow-Origin': '*' }
+            })
+            .then((response) => {
+                console.log(response.data);
+                this.setState({
+                    data: response.data //===> Where API data is actually stored
+                })
+            })
+            .catch((error) => {
+                console.log('ERROR', error)
+            })
+    }
+
+    displaySales() {
+        const displaySale = this.state.data.map((sales, index) => {
+            console.log(sales.response)
+            return (
+                <Item key={index} />
+            );
+        });
+
+        return displaySale;
+    }
+
     render() {
         if (this.state.redirect) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)
 
         return (
             <>
+            
                 <section className="container">
                     <div className="columns is-multiline">
                         <div className="column is-8 is-offset-2 register">
                             <div className="columns">
                                 <div className="column left">
+                                <h1 className="title is-1">{this.displaySales()}</h1>
                                     <h1 className="title is-1">Super Cool Website</h1>
                                     <h2 className="subtitle colored is-4">
                                         Lorem ipsum dolor sit amet.
@@ -111,6 +151,27 @@ class createItem extends Component {
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit
                                     </p>
                                     <form onSubmit={this.handleSubmit.bind(this)}>
+                                        <div className="field">
+                                            <div className="control">
+
+                                                <select className="is-medium" name="cars" id="cars">
+                                                    <option value="1">Sale Number 1</option>
+                                                    <option value="2">Sale Number 2</option>
+                                                    <option value="3">Sale Number 3</option>
+                                                    <option value="4">Sale Number 4</option>
+                                                </select>
+                                                <input
+                                                    className="input is-medium"
+                                                    type="text"
+                                                    placeholder="Sale Number"
+                                                    name="saleNumber"
+                                                    value={this.state.saleNumber}
+                                                    onChange={this.handleSaleNumber.bind(this)}
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+
                                         <div className="field">
                                             <div className="control">
                                                 <input

@@ -17,6 +17,8 @@ import Profile from './components/Profile';
 import Welcome from './components/Welcome';
 import createSale from './components/CreateSale';
 import createItem from './components/CreateItem';
+import LoggedInHome from './components/LoggedInHome';
+
 
 
 
@@ -27,7 +29,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     return token ? <Component {...rest} {...props} /> : <Redirect to="/login" />
   }} />
 }
-
+// expansion opperator
+// Spread Opperator
 
 function App() {
   // Set state values
@@ -67,16 +70,17 @@ function App() {
       <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
       <div className="container mt-5">
         <Switch>
+          <Route exact path="/" component={Welcome} />
           <Route path='/signup' component={Signup} />
           <Route
             path="/login"
             render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser} />}
           />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
-          <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
           <PrivateRoute path="/sale" component={createSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/item" component={createItem} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/loggedinhome" component={LoggedInHome} user={currentUser} handleLogout={handleLogout} />
         </Switch>
       </div>
       <Footer />

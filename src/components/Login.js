@@ -52,7 +52,7 @@ class Login extends Component {
   };
 
   render() {
-    if (this.props.user) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)
+    if (this.props.user) return <Redirect to="/loggedinhome" />; // You can have them redirected to profile (your choice)
 
     return (
       <>
