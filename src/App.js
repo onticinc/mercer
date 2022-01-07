@@ -19,6 +19,7 @@ import createSale from './components/CreateSale';
 import createItem from './components/CreateItem';
 
 
+
 const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem('jwtToken');
   // console.log('===> Hitting a Private Route');

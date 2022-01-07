@@ -51,10 +51,16 @@ class createItem extends Component {
             itemImage: e.target.value,
         });
     }
+    handleSaleName(e) {
+        this.setState({
+            saleName: e.target.value,
+        });
+    }
 
     handleSubmit = (e) => {
         e.preventDefault();
         const itemData = {
+            saleName: this.state.saleName,
             itemName: this.state.itemName,
             price: this.state.price,
             itemDescription: this.state.itemDescription,
@@ -105,6 +111,20 @@ class createItem extends Component {
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit
                                     </p>
                                     <form onSubmit={this.handleSubmit.bind(this)}>
+                                        <div className="field">
+                                            <div className="control">
+                                                <input
+                                                    className="input is-medium"
+                                                    type="text"
+                                                    placeholder="Sale Name"
+                                                    name="saleName"
+                                                    value={this.state.saleName}
+                                                    onChange={this.handleSaleName.bind(this)}
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+
                                         <div className="field">
                                             <div className="control">
                                                 <input
