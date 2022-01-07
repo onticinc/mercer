@@ -23,6 +23,7 @@ import ViewSingleItem from './components/ItemPage';
 
 
 
+
 const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem('jwtToken');
   // console.log('===> Hitting a Private Route');

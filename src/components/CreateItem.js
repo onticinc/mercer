@@ -1,3 +1,6 @@
+//components
+import Item from './Item'
+
 import "./Signup.css";
 import React, { Component } from "react";
 import axios from "axios";
@@ -5,6 +8,8 @@ import { Redirect } from "react-router-dom";
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
+
+
 
 class createItem extends Component {
     constructor(props) {
@@ -56,11 +61,16 @@ class createItem extends Component {
             itemImage: e.target.value,
         });
     }
+    handleSaleName(e) {
+        this.setState({
+            saleName: e.target.value,
+        });
+    }
 
     handleSubmit = (e) => {
         e.preventDefault();
         const itemData = {
-            saleNumber: this.state.saleNumber,
+            saleName: this.state.saleName,
             itemName: this.state.itemName,
             price: this.state.price,
             itemDescription: this.state.itemDescription,
@@ -102,27 +112,29 @@ class createItem extends Component {
             })
     }
 
-    // displaySalesDropdown() {
-    //     const display = this.state.data.map((a, idx) => {
-    //         console.log(object)
-    //         return (
-                
-    //         );
-    //     });
+    displaySales() {
+        const displaySale = this.state.data.map((sales, index) => {
+            console.log(sales.response)
+            return (
+                <Item key={index} />
+            );
+        });
 
-    //     return display;
-    // }
+        return displaySale;
+    }
 
     render() {
         if (this.state.redirect) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)
 
         return (
             <>
+            
                 <section className="container">
                     <div className="columns is-multiline">
                         <div className="column is-8 is-offset-2 register">
                             <div className="columns">
                                 <div className="column left">
+                                <h1 className="title is-1">{this.displaySales()}</h1>
                                     <h1 className="title is-1">Super Cool Website</h1>
                                     <h2 className="subtitle colored is-4">
                                         Lorem ipsum dolor sit amet.
@@ -155,6 +167,20 @@ class createItem extends Component {
                                                     name="saleNumber"
                                                     value={this.state.saleNumber}
                                                     onChange={this.handleSaleNumber.bind(this)}
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div className="field">
+                                            <div className="control">
+                                                <input
+                                                    className="input is-medium"
+                                                    type="text"
+                                                    placeholder="Sale Name"
+                                                    name="saleName"
+                                                    value={this.state.saleName}
+                                                    onChange={this.handleSaleName.bind(this)}
                                                     required
                                                 />
                                             </div>

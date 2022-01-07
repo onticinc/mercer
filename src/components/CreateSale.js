@@ -1,3 +1,7 @@
+//components
+import Sale from "./Sale";
+
+
 import "./Signup.css";
 import React, { Component } from "react";
 import axios from "axios";
@@ -12,6 +16,7 @@ class createSale extends Component {
         this.state = {
             userName: "",
             sale: [],
+            data:[],
             redirect: false,
         };
     }
@@ -100,6 +105,40 @@ class createSale extends Component {
             });
     };
 
+    componentDidMount() {
+        console.log(localStorage) //Shows local token in console
+        let token = localStorage.getItem('jwtToken')  //grabs token 
+        setAuthToken(token); //function to auth saved token (seprate JS file)
+        axios.get(`${REACT_APP_SERVER_URL}/users/sale`,
+            {
+                header: { 'Access-Control-Allow-Origin': '*' }
+            })
+            .then((response) => {
+                console.log(response.data.user);
+                console.log(this.state.data);
+               let emptyData = this.state.data 
+                let saleData = response.data.user 
+                emptyData.push(saleData);
+                console.log('AFTER PUSH', emptyData);
+            })
+            .catch((error) => {
+                console.log('ERROR', error)
+            })
+    }
+
+    displaySales() {
+         const displaySale = console.log('TESTING DISPLAY', this.state.data)
+        // const displaySale = this.state.data.map((sales, index) => {
+        //     console.log(sales.response)
+        //     return (
+        //         <Sale key={index} />
+        //     );
+        // });
+
+        return displaySale;
+    }
+
+
     render() {
         if (this.state.redirect) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)
 
@@ -110,6 +149,7 @@ class createSale extends Component {
                         <div className="column is-8 is-offset-2 register">
                             <div className="columns">
                                 <div className="column left">
+                                <h1 className="title is-1">{this.displaySales()}</h1>
                                     <h1 className="title is-1">Super Cool Website</h1>
                                     <h2 className="subtitle colored is-4">
                                         Lorem ipsum dolor sit amet.
