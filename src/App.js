@@ -18,6 +18,8 @@ import Welcome from './components/Welcome';
 import createSale from './components/CreateSale';
 import createItem from './components/CreateItem';
 import LoggedInHome from './components/LoggedInHome';
+import ViewSale from './components/SalePage';
+import ViewSingleItem from './components/ItemPage';
 
 
 
@@ -76,6 +78,8 @@ function App() {
             render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser} />}
           />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/viewsale" component={ViewSale} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/viewitem" component={ViewSingleItem} user={currentUser} handleLogout={handleLogout} />
           <Route path="/about" component={About} />
           <PrivateRoute path="/sale" component={createSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/item" component={createItem} user={currentUser} handleLogout={handleLogout} />
