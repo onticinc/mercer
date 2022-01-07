@@ -83,7 +83,7 @@ function App() {
           <Route path="/about" component={About} />
           <PrivateRoute path="/sale" component={createSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/item" component={createItem} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/loggedinhome" component={LoggedInHome} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/loggedInHome" component={LoggedInHome} user={currentUser} handleLogout={handleLogout} />
         </Switch>
       </div>
       <Footer />
