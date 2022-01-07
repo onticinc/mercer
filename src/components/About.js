@@ -9,7 +9,8 @@ const About = () => {
                     <div className="container has-text-centered">
                         <p className="title" id="title">About Us</p>
                         <p id="subtitle">Mercers is a center for all yard sale enthusiasts,
-                            a place for vendors to advertise their sales and show off their wares. </p>
+                            a place for vendors to advertise their sales and show off their wares.
+                            We welcome all to join our marketplace of all merchandise. </p>
                     </div>
                 </div>
             </section>
@@ -25,7 +26,7 @@ const About = () => {
                             <div className="card-image">
                                 <figure className="image is-4by3">
                                     <img
-                                        src=""
+                                        src="https://i.imgur.com/hynSC4T.jpeg"
                                         alt="Placeholder image"
                                     />
                                 </figure>
@@ -34,7 +35,7 @@ const About = () => {
                                 <div className="content">
                                     <h4>Create your own Sale</h4>
                                     <p>
-                                        Become a Vendor, create a Sale to sell your Wares
+                                        Become a Vendor, create a Sale to sell your Wares and Trinkets
                                     </p>
                                 </div>
                             </div>
@@ -45,7 +46,7 @@ const About = () => {
                             <div className="card-image">
                                 <figure className="image is-4by3">
                                     <img
-                                        src=""
+                                        src="https://i.imgur.com/EXYTxtA.jpeg"
                                         alt="Placeholder image"
                                     />
                                 </figure>
@@ -65,7 +66,7 @@ const About = () => {
                             <div className="card-image">
                                 <figure className="image is-4by3">
                                     <img
-                                        src=""
+                                        src="https://i.imgur.com/40qLwOp.png"
                                         alt="Placeholder image"
                                     />
                                 </figure>
