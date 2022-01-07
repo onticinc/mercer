@@ -10,6 +10,7 @@ class createItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            data: [],
             redirect: false,
         };
     }
@@ -84,6 +85,34 @@ class createItem extends Component {
             });
     };
 
+// Testing Dropdown
+    componentDidMount() {
+        axios.get(`${REACT_APP_SERVER_URL}/users/sale`,
+            {
+                header: { 'Access-Control-Allow-Origin': '*' }
+            })
+            .then((response) => {
+                console.log(response.data);
+                this.setState({
+                    data: response.data //===> Where API data is actually stored
+                })
+            })
+            .catch((error) => {
+                console.log('ERROR', error)
+            })
+    }
+
+    // displaySalesDropdown() {
+    //     const display = this.state.data.map((a, idx) => {
+    //         console.log(object)
+    //         return (
+                
+    //         );
+    //     });
+
+    //     return display;
+    // }
+
     render() {
         if (this.state.redirect) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)
 
@@ -112,6 +141,13 @@ class createItem extends Component {
                                     <form onSubmit={this.handleSubmit.bind(this)}>
                                         <div className="field">
                                             <div className="control">
+
+                                                <select className="is-medium" name="cars" id="cars">
+                                                    <option value="1">Sale Number 1</option>
+                                                    <option value="2">Sale Number 2</option>
+                                                    <option value="3">Sale Number 3</option>
+                                                    <option value="4">Sale Number 4</option>
+                                                </select>
                                                 <input
                                                     className="input is-medium"
                                                     type="text"

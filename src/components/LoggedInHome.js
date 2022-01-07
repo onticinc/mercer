@@ -1,7 +1,7 @@
 import React from 'react';
 import './Components.css'
 
-const Welcome = () => {
+const LoggedInHome = () => {
     return (
         <div>
             <section className="hero is-medium">
@@ -114,4 +114,4 @@ const Welcome = () => {
     )
 }
 
-export default Welcome;
+export default LoggedInHome;
