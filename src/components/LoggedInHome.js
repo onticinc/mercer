@@ -17,7 +17,6 @@ const LoggedInHome = () => {
                                 <h2 className="subtitle">Items you can find in Mercers:</h2>
                             </div>
                         </div>
-
                     </div>
                     <div className="columns">
                         <div className="column is-3">
