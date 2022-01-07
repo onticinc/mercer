@@ -7,18 +7,9 @@ const LoggedInHome = () => {
             <section className="hero is-medium">
                     <div className="hero-body has-text-centered">
 
-                        <h1 className="title is-2">Thousands of hidden gems, all in one place.</h1>
+                        <h1 className="title is-2">Logged in homepage.</h1>
 
-                        <div id="hero-input-group" className="field has-addons has-addons-centered">
-                            <div className="control">
-                                <input className="input is-medium" type="text" placeholder="What are you looking for today?" />
-                            </div>
-                            <div className="control">
-                                <a className="button is-medium is-primary">
-                                    <i className="fal fa-search"></i>
-                                </a>
-                            </div>
-                        </div>
+
                     </div>
                 </section>
 
@@ -27,7 +18,7 @@ const LoggedInHome = () => {
                         <div className="level">
                             <div className="level-left">
                                 <div className="level-item">
-                                    <h2 className="subtitle">Featured Mercer Sellers</h2>
+                                    <h2 className="subtitle">Logged </h2>
                                 </div>
                             </div>
                             <div className="level-right">

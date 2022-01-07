@@ -7,7 +7,7 @@ const Welcome = () => {
             <section className="hero is-medium">
                     <div className="hero-body has-text-centered">
 
-                        <h1 className="title is-2">Thousands of hidden gems, all in one place.</h1>
+                        <h1 className="title is-2">Welcome to Mercer, Please Create an account.</h1>
 
                         <div id="hero-input-group" className="field has-addons has-addons-centered">
                             <div className="control">

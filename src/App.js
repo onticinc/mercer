@@ -18,7 +18,7 @@ import Welcome from './components/Welcome';
 import createSale from './components/CreateSale';
 import createItem from './components/CreateItem';
 import LoggedInHome from './components/LoggedInHome';
-import NavbarLoggedIn from './components/NavebarLoggedIn';
+
 
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -78,9 +78,7 @@ function App() {
           <Route path="/about" component={About} />
           <PrivateRoute path="/sale" component={createSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/item" component={createItem} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/loggedinhome" component={createItem} user={currentUser} handleLogout={handleLogout} />
-          <Route path="/NavbarLoggedIn" component={createItem} user={currentUser} handleLogout={handleLogout} />
-        
+          <PrivateRoute path="/loggedinhome" component={LoggedInHome} user={currentUser} handleLogout={handleLogout} />
         </Switch>
       </div>
       <Footer />
