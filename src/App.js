@@ -28,7 +28,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     return token ? <Component {...rest} {...props} /> : <Redirect to="/login" />
   }} />
 }
-
+// expansion opperator
+// Spread Opperator
 
 function App() {
   // Set state values
