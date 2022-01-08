@@ -28,6 +28,7 @@ import ViewSales from './components/sale/ViewSales';
 
 import CreateItem from './components/item/CreateItem';
 import ItemCard from './components/item/ItemCard';
+import ViewItems from './components/item/ViewItems';
 
 
 
@@ -92,6 +93,7 @@ function App() {
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
     
           <PrivateRoute path="/viewitem" component={ItemCard} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/viewitems" component={ViewItems} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/item" component={CreateItem} user={currentUser} handleLogout={handleLogout} />
           
           <PrivateRoute path="/editsale" component={EditSale} user={currentUser} handleLogout={handleLogout} />
