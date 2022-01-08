@@ -16,7 +16,7 @@ class ViewSingleItem extends Component {
                             <div className="card large">
                                 <div className="card-image">
                                     <figure className="image is-16by9">
-                                        <img src="https://bulma.io/images/placeholders/16x16.png" alt="itemPage"/>
+                                        <img src="https://bulma.io/images/placeholders/16x16.png" alt="itemPage" />
                                     </figure>
                                 </div>
                                 <div className="card-content">
