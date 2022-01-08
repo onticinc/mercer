@@ -29,26 +29,26 @@ class Login extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault(); // at the beginning of a submit function
-    const userData = { 
-      email: this.state.email, 
+    const userData = {
+      email: this.state.email,
       password: this.state.password
     };
     axios.post(`${REACT_APP_SERVER_URL}/users/login`, userData)
-        .then(response => {
-            const { token } = response.data;
-            // save token to localStorage
-            localStorage.setItem('jwtToken', token);
-            // set token to headers
-            setAuthToken(token);
-            // decode token to get the user data
-            const decoded = jwt_decode(token);
-            // set the current user
-            this.props.nowCurrentUser(decoded); // funnction passed down as props.
-        })
-        .catch(error => {
-            console.log('===> Error on login', error);
-            alert('Either email or password is incorrect. Please try again');
-        });
+      .then(response => {
+        const { token } = response.data;
+        // save token to localStorage
+        localStorage.setItem('jwtToken', token);
+        // set token to headers
+        setAuthToken(token);
+        // decode token to get the user data
+        const decoded = jwt_decode(token);
+        // set the current user
+        this.props.nowCurrentUser(decoded); // funnction passed down as props.
+      })
+      .catch(error => {
+        console.log('===> Error on login', error);
+        alert('Either email or password is incorrect. Please try again');
+      });
   };
 
   render() {
@@ -56,10 +56,12 @@ class Login extends Component {
 
     return (
       <>
-        <section id="login" className="hero is-fullheight">
-          <div className="hero-body has-text-centered">
-            <div className="login">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvZc2OTcmowp6dUbR_mwc_HPU5spYnvIwFSKyNdb1H1WrJUpEWJlDu-4q9rvgy7IrMfCc&usqp=CAU" width="325px" alt="logo"/>
+        <div className="container has-text-centered">
+          <div className="column is-4 is-offset-4">
+            <div className="box">
+              <figure className="avatar">
+                <img src="https://i.imgur.com/gi4BvGD.png" style={{ width: '150px', height: '150px' }} alt="Logo" />
+              </figure>
               <form onSubmit={this.handleSubmit.bind(this)}>
                 <div className="field">
                   <div className="control">
@@ -95,22 +97,25 @@ class Login extends Component {
                   Login
                 </button>
               </form>
-              <br />
-              <nav className="level">
-                <div className="level-item has-text-centered">
-                  <div>
-                    <a href="#">Forgot Password?</a>
+              <p>
+                <div className="container">
+                  <div className="row">
+                    <hr className="login-hr" />
+                    <a href="../register">Sign Up</a>
+                  </div>
+                  <div className="row">
+                    <a href="../">Forgot Password</a>
+                  </div>
+
+                  <div className="row">
+                    <a href="../">Need Help?</a>
                   </div>
                 </div>
-                <div className="level-item has-text-centered">
-                  <div>
-                    <a href="/signup">Create an Account</a>
-                  </div>
-                </div>
-              </nav>
+              </p>
             </div>
+
           </div>
-        </section>
+        </div>
       </>
     );
   }
