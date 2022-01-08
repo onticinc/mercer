@@ -7,7 +7,7 @@ const Navbar = (props) => {
             <div className="container">
                 <Link className="navbar-brand" to="/">
                     {props.isAuth
-                        ? <NavLink className="nav-link" exact to="/loggedInHome">
+                        ? <NavLink className="nav-link" exact to="/home">
                             <img src="https://i.imgur.com/gi4BvGD.png"
                                 width="75"
                                 height="75" />
@@ -26,7 +26,7 @@ const Navbar = (props) => {
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
                             {props.isAuth
-                                ? <NavLink className="nav-link" exact to="/loggedInHome">Home</NavLink>
+                                ? <NavLink className="nav-link" exact to="/home">Home</NavLink>
                                 : <NavLink className="nav-link" exact to="/">Home</NavLink>
                             }
                         </li>

@@ -182,8 +182,20 @@ hr {
   margin-top: 1.25rem;
 }
 
+.m-l-15 {
+  margin-left: 15px;
+}
+
+.m-r-15 {
+  margin-right: 15px;
+}
+
 .m-t-15 {
   margin-top: 15px;
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
 }
 
 .m-b-30 {
@@ -197,9 +209,6 @@ hr {
   display: flex;
   align-items: center;
 }
-
-
-
 
 .field:not(:last-child) {
   margin-bottom: 1rem;
@@ -315,7 +324,7 @@ input:focus {
   box-shadow: none;
 }
 .box {
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 .avatar {
   margin-top: -70px;
