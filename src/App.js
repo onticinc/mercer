@@ -23,9 +23,12 @@ import CreateSale from './components/sale/CreateSale';
 import SaleCard from './components/sale/SaleCard';
 import EditSale from './components/sale/EditSale';
 import ViewSale from './components/sale/ViewSale';
+import ViewSales from './components/sale/ViewSales';
+
 
 import CreateItem from './components/item/CreateItem';
 import ItemCard from './components/item/ItemCard';
+
 
 
 
@@ -93,6 +96,7 @@ function App() {
           
           <PrivateRoute path="/editsale" component={EditSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewsale" component={ViewSale} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/viewsales" component={ViewSales} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/newsale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
         </Switch>
       </div>
