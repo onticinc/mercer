@@ -25,8 +25,8 @@ const Profile = (props) => {
                   <img src="https://djontic.com/wp-content/uploads/2022/01/profile_pic.jpg" style={{ width: '150px', height: '150px' }} alt="Mercer Logo" />
                 </figure>
                 <form>
-                  <div class="content">
-                    <table class="table-profile">
+                  <div className="content">
+                    <table className="table-profile">
                       <tr>
                         <td>Name: {userName}</td>
                       </tr>
