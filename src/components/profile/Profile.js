@@ -50,7 +50,7 @@ const Profile = (props) => {
                       </tr>
                     </table>
                   </div>
-                  <button id="Edit Profile" className="button is-block is-fullwidth is-primary is-medium is-rounded">Edit Profile<i className="fa fa-sign-in" aria-hidden="true"></i></button>
+                  <button id="Edit Profile" className="button is-block is-fullwidth is-primary is-medium">Edit Profile<i className="fa fa-sign-in" aria-hidden="true"></i></button>
                 </form>
               </div>
             </div>

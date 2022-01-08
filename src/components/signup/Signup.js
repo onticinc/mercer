@@ -1,4 +1,4 @@
-import "./Signup.css";
+import '../Components.css';
 import React, { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
@@ -114,7 +114,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-                          type="text"
+                          
                           placeholder="Name"
                           name="name"
                           value={this.state.name}
@@ -128,7 +128,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-                          type="profilePic"
+                          
                           placeholder="Profile Picture URL"
                           name="profilePic"
                           value={this.state.profilePic}
@@ -142,7 +142,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-                          type="email"
+                          
                           placeholder="Email"
                           name="email"
                           value={this.state.email}
@@ -156,7 +156,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-                          type="address"
+                          
                           placeholder="Address"
                           name="address"
                           value={this.state.address}
@@ -184,7 +184,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-                          type="password"
+                          
                           placeholder="Password"
                           name="password"
                           value={this.state.password}
@@ -198,7 +198,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-                          type="password"
+                          
                           placeholder="Confirm Password"
                           name="confirmPassword"
                           value={this.state.confirmPassword}
@@ -208,7 +208,7 @@ class Signup extends Component {
                       </div>
                     </div>
 
-                    <button type="submit" className="button is-block is-success is-fullwidth is-medium">
+                    <button type="submit" className="button is-block is-fullwidth is-primary is-medium">
                       Submit
                     </button>
                     <br />
