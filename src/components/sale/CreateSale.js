@@ -1,21 +1,20 @@
 //components
-import Item from './Item'
-
-import "./Signup.css";
+import Sale from "../sale/Sale";
+import "../Components.css";
 import React, { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import jwt_decode from 'jwt-decode';
-import setAuthToken from '../utils/setAuthToken';
+import setAuthToken from '../../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
 
-
-
-class createItem extends Component {
+class createSale extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [],
+            userName: "",
+            sale: [],
+            data:[],
             redirect: false,
         };
     }
@@ -26,58 +25,67 @@ class createItem extends Component {
         });
     }
 
-    handleSaleNumber(e) {
-        this.setState({
-            saleNumber: e.target.value,
-        });
-    }
-
-    handleItemName(e) {
-        this.setState({
-            itemName: e.target.value,
-        });
-    }
-
-    handlePrice(e) {
-        this.setState({
-            price: e.target.value,
-        });
-    }
-
-    handleItemDescription(e) {
-        this.setState({
-            itemDescription: e.target.value,
-        });
-    }
-
-    handleItemTags(e) {
-        this.setState({
-            itemTags: e.target.value,
-        });
-    }
-
-    handleItemImage(e) {
-        this.setState({
-            itemImage: e.target.value,
-        });
-    }
     handleSaleName(e) {
         this.setState({
             saleName: e.target.value,
         });
     }
 
+    handleLocation(e) {
+        this.setState({
+            location: e.target.value,
+        });
+    }
+
+    handleSaleImage(e) {
+        this.setState({
+            saleImage: e.target.value,
+        });
+    }
+
+    handleSaleDescription(e) {
+        this.setState({
+            saleDescription: e.target.value,
+        });
+    }
+
+    handleTime(e) {
+        this.setState({
+            time: e.target.value,
+        });
+    }
+
+    handleDate(e) {
+        this.setState({
+            date: e.target.value,
+        });
+    }
+
+    handleSaleTags(e) {
+        this.setState({
+            saleTags: e.target.value,
+        });
+    }
+
+    handleZipCode(e) {
+        this.setState({
+            zipCode: e.target.value,
+        });
+    }
+
     handleSubmit = (e) => {
         e.preventDefault();
-        const itemData = {
+        const saleData = {
             saleName: this.state.saleName,
-            itemName: this.state.itemName,
-            price: this.state.price,
-            itemDescription: this.state.itemDescription,
-            itemTags: this.state.itemTags,
-            itemImage: this.state.itemImage,
+            location: this.state.location,
+            saleImage: this.state.saleImage,
+            saleDescription: this.state.saleDescription,
+            time: this.state.time,
+            date: this.state.date,
+            saleTags: this.state.saleTags,
+            zipCode: this.state.zipCode,
         };
-        axios.post(`${REACT_APP_SERVER_URL}/users/item`, itemData)
+        axios.post(`${REACT_APP_SERVER_URL}/users/sale`, saleData)
             .then(response => {
                 const { token } = response.data;
                 // save token to localStorage
@@ -95,17 +103,21 @@ class createItem extends Component {
             });
     };
 
-// Testing Dropdown
     componentDidMount() {
+        console.log(localStorage) //Shows local token in console
+        let token = localStorage.getItem('jwtToken')  //grabs token 
+        setAuthToken(token); //function to auth saved token (seprate JS file)
         axios.get(`${REACT_APP_SERVER_URL}/users/sale`,
             {
                 header: { 'Access-Control-Allow-Origin': '*' }
             })
             .then((response) => {
-                console.log(response.data);
-                this.setState({
-                    data: response.data //===> Where API data is actually stored
-                })
+                console.log(response.data.user);
+                console.log(this.state.data);
+               let emptyData = this.state.data 
+                let saleData = response.data.user 
+                emptyData.push(saleData);
+                console.log('AFTER PUSH', emptyData);
             })
             .catch((error) => {
                 console.log('ERROR', error)
@@ -113,22 +125,23 @@ class createItem extends Component {
     }
 
     displaySales() {
-        const displaySale = this.state.data.map((sales, index) => {
-            console.log(sales.response)
-            return (
-                <Item key={index} />
-            );
-        });
+         const displaySale = console.log('TESTING DISPLAY', this.state.data)
+        // const displaySale = this.state.data.map((sales, index) => {
+        //     console.log(sales.response)
+        //     return (
+        //         <Sale key={index} />
+        //     );
+        // });
 
         return displaySale;
     }
+
 
     render() {
         if (this.state.redirect) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)
 
         return (
             <>
-            
                 <section className="container">
                     <div className="columns is-multiline">
                         <div className="column is-8 is-offset-2 register">
@@ -146,32 +159,11 @@ class createItem extends Component {
                                     </p>
                                 </div>
                                 <div className="column right has-text-centered">
-                                    <h1 className="title is-4">Create an Item</h1>
+                                    <h1 className="title is-4">Create a Sale</h1>
                                     <p className="description">
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit
                                     </p>
                                     <form onSubmit={this.handleSubmit.bind(this)}>
-                                        <div className="field">
-                                            <div className="control">
-
-                                                <select className="is-medium" name="cars" id="cars">
-                                                    <option value="1">Sale Number 1</option>
-                                                    <option value="2">Sale Number 2</option>
-                                                    <option value="3">Sale Number 3</option>
-                                                    <option value="4">Sale Number 4</option>
-                                                </select>
-                                                <input
-                                                    className="input is-medium"
-                                                    type="text"
-                                                    placeholder="Sale Number"
-                                                    name="saleNumber"
-                                                    value={this.state.saleNumber}
-                                                    onChange={this.handleSaleNumber.bind(this)}
-                                                    required
-                                                />
-                                            </div>
-                                        </div>
-
                                         <div className="field">
                                             <div className="control">
                                                 <input
@@ -191,10 +183,10 @@ class createItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Item Name"
-                                                    name="itemName"
-                                                    value={this.state.itemName}
-                                                    onChange={this.handleItemName.bind(this)}
+                                                    placeholder="Location"
+                                                    name="location"
+                                                    value={this.state.location}
+                                                    onChange={this.handleLocation.bind(this)}
                                                     required
                                                 />
                                             </div>
@@ -205,10 +197,10 @@ class createItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Price"
-                                                    name="price"
-                                                    value={this.state.price}
-                                                    onChange={this.handlePrice.bind(this)}
+                                                    placeholder="Picture URL"
+                                                    name="image"
+                                                    value={this.state.saleImage}
+                                                    onChange={this.handleSaleImage.bind(this)}
                                                     required
                                                 />
                                             </div>
@@ -219,10 +211,38 @@ class createItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Item Description"
+                                                    placeholder="Description"
                                                     name="description"
-                                                    value={this.state.itemDescription}
-                                                    onChange={this.handleItemDescription.bind(this)}
+                                                    value={this.state.saleDescription}
+                                                    onChange={this.handleSaleDescription.bind(this)}
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div className="field">
+                                            <div className="control">
+                                                <input
+                                                    className="input is-medium"
+                                                    type="text"
+                                                    placeholder="Time"
+                                                    name="time"
+                                                    value={this.state.time}
+                                                    onChange={this.handleTime.bind(this)}
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div className="field">
+                                            <div className="control">
+                                                <input
+                                                    className="input is-medium"
+                                                    type="text"
+                                                    placeholder="Date"
+                                                    name="date"
+                                                    value={this.state.date}
+                                                    onChange={this.handleDate.bind(this)}
                                                     required
                                                 />
                                             </div>
@@ -234,9 +254,9 @@ class createItem extends Component {
                                                     className="input is-medium"
                                                     type="text"
                                                     placeholder="Tag(s)"
-                                                    name="itemTags"
-                                                    value={this.state.itemTags}
-                                                    onChange={this.handleItemTags.bind(this)}
+                                                    name="saleTags"
+                                                    value={this.state.saleTags}
+                                                    onChange={this.handleSaleTags.bind(this)}
                                                     required
                                                 />
                                             </div>
@@ -247,10 +267,10 @@ class createItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Item Image"
-                                                    name="itemImage"
-                                                    value={this.state.itemImage}
-                                                    onChange={this.handleItemImage.bind(this)}
+                                                    placeholder="Zip Code"
+                                                    name="zipCode"
+                                                    value={this.state.zipCode}
+                                                    onChange={this.handleZipCode.bind(this)}
                                                     required
                                                 />
                                             </div>
@@ -310,4 +330,4 @@ class createItem extends Component {
     }
 }
 
-export default createItem;
+export default createSale;

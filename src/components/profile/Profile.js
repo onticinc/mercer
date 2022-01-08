@@ -1,7 +1,7 @@
-import './Profile.css';
+import '../Components.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ViewSale from './SalePage';
+import ViewSale from '../sale/SalePage';
 
 const Profile = (props) => {
   const { handleLogout, user } = props;

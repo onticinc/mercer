@@ -8,18 +8,18 @@ import setAuthToken from './utils/setAuthToken';
 import './App.css';
 
 // Components
-import Signup from './components/Signup';
-import About from './components/About';
-import Footer from './components/Footer';
-import Login from './components/Login';
-import Navbar from './components/Navbar';
-import Profile from './components/Profile';
-import Welcome from './components/Welcome';
-import createSale from './components/CreateSale';
-import createItem from './components/CreateItem';
-import LoggedInHome from './components/LoggedInHome';
-import ViewSale from './components/SalePage';
-import ViewSingleItem from './components/ItemPage';
+import Signup from './components/signup/Signup';
+import About from './components/about/About';
+import Footer from './components/footer/Footer';
+import Login from './components/login/Login';
+import Navbar from './components/navbar/Navbar';
+import Profile from './components/profile/Profile';
+import Welcome from './components/home/Welcome';
+import createSale from './components/sale/CreateSale';
+import createItem from './components/item/CreateItem';
+import LoggedInHome from './components/home/LoggedInHome';
+import ViewSale from './components/sale/SalePage';
+import ViewSingleItem from './components/item/ItemPage';
 
 
 
