@@ -93,21 +93,19 @@ class Signup extends Component {
             <div className="column is-8 is-offset-2 register">
               <div className="columns">
                 <div className="column left">
-                  <h1 className="title is-1">Mercers</h1>
+                  <h1 className="title is-1">Mercer</h1>
                   <h2 className="subtitle colored is-4">
                     Become a Vendor Today!
                   </h2>
                   <p>
-                    Mercers provides a platform for all Vendors who seek to advertise
-                    their yard sales to a global audience. All are wlecome to trade and prosper!
+                    Mercer provides a platform for Vendors to advertise their sales to a global audience.
                   </p>
-                  <br /><br />
                   <img src="https://i.imgur.com/gi4BvGD.png" />
                 </div>
                 <div className="column right has-text-centered">
-                  <h1 className="title is-4">Sign up today</h1>
+                  <h1 className="title is-4">Create Your Account</h1>
                   <p className="description">
-                    Please fill out all forms correctly.
+                    Please fill out everything below. 
                   </p>
                   <form onSubmit={this.handleSubmit.bind(this)}>
                     <div className="field">
@@ -219,44 +217,7 @@ class Signup extends Component {
                 </div>
               </div>
             </div>
-            <div className="column is-8 is-offset-2">
-              <br />
-              <nav className="level">
-                <div className="level-left">
-                  <div className="level-item">
-                    <span className="icon">
-                      <i className="fab fa-twitter"></i>
-                    </span>{" "}
-                    &emsp;
-                    <span className="icon">
-                      <i className="fab fa-facebook"></i>
-                    </span>{" "}
-                    &emsp;
-                    <span className="icon">
-                      <i className="fab fa-instagram"></i>
-                    </span>{" "}
-                    &emsp;
-                    <span className="icon">
-                      <i className="fab fa-github"></i>
-                    </span>{" "}
-                    &emsp;
-                    <span className="icon">
-                      <i className="fas fa-envelope"></i>
-                    </span>
-                  </div>
-                </div>
-                <div className="level-right">
-                  <small
-                    className="level-item"
-                    style={{ color: "var(--textLight)" }}
-                  >
-                    &copy; Super Cool Website. 2022 All Rights Reserved.
-                  </small>
-                </div>
-              </nav>
-            </div>
           </div>
-          <br />
         </section>
       </>
     );

@@ -8,17 +8,22 @@ import setAuthToken from './utils/setAuthToken';
 import './App.css';
 
 // Components
-import Signup from './components/signup/Signup';
 import About from './components/about/About';
 import Footer from './components/footer/Footer';
-import Login from './components/login/Login';
 import Navbar from './components/navbar/Navbar';
 import Profile from './components/profile/Profile';
+
+import Signup from './components/signup/Signup';
+import Login from './components/login/Login';
 import Welcome from './components/home/Welcome';
-import CreateSale from './components/sale/CreateSale';
-import CreateItem from './components/item/CreateItem';
 import LoggedInHome from './components/home/LoggedInHome';
+
+
+import CreateSale from './components/sale/CreateSale';
 import SaleCard from './components/sale/SaleCard';
+import EditSale from './components/sale/EditSale';
+
+import CreateItem from './components/item/CreateItem';
 import ItemCard from './components/item/ItemCard';
 
 
@@ -85,7 +90,7 @@ function App() {
           <PrivateRoute path="/viewitem" component={ItemCard} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/item" component={CreateItem} user={currentUser} handleLogout={handleLogout} />
           
-          
+          <PrivateRoute path="/editsale" component={EditSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewsale" component={SaleCard} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/newsale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
         </Switch>

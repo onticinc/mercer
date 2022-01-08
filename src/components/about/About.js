@@ -31,7 +31,7 @@ const About = () => {
                                 <div className="content">
                                     <h4>Create your own Sale</h4>
                                     <p>
-                                        Become a Vendor, create a Sale to sell your items.
+                                        Let people know about your sale. 
                                     </p>
                                 </div>
                             </div>

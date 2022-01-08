@@ -1,6 +1,7 @@
-//components
-import ViewSale from "./ViewSale";
 import "../Components.css";
+
+
+//components
 import React, { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
@@ -148,21 +149,11 @@ class CreateSale extends Component {
                             <div className="columns">
                                 <div className="column left">
                                     <h1 className="title is-1">{this.displaySales()}</h1>
-                                    <h1 className="title is-1">Super Cool Website</h1>
-                                    <h2 className="subtitle colored is-4">
-                                        Lorem ipsum dolor sit amet.
-                                    </h2>
-                                    <p>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                        Corporis ex deleniti aliquam tempora libero excepturi vero
-                                        soluta odio optio sed.
-                                    </p>
+                                    <img src="https://i.imgur.com/gi4BvGD.png" />
                                 </div>
                                 <div className="column right has-text-centered">
-                                    <h1 className="title is-4">Create a Sale</h1>
-                                    <p className="description">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit
-                                    </p>
+                                    <h1 className="title is-4">Create a new sale.</h1>
+                    
                                     <form onSubmit={this.handleSubmit.bind(this)}>
                                         <div className="field">
                                             <div className="control">
@@ -286,42 +277,6 @@ class CreateSale extends Component {
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                        <div className="column is-8 is-offset-2">
-                            <br />
-                            <nav className="level">
-                                <div className="level-left">
-                                    <div className="level-item">
-                                        <span className="icon">
-                                            <i className="fab fa-twitter"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fab fa-facebook"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fab fa-instagram"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fab fa-github"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fas fa-envelope"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="level-right">
-                                    <small
-                                        className="level-item"
-                                        style={{ color: "var(--textLight)" }}
-                                    >
-                                        &copy; Super Cool Website. 2022 All Rights Reserved.
-                                    </small>
-                                </div>
-                            </nav>
                         </div>
                     </div>
                 </section>

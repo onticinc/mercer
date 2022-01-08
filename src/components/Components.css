@@ -66,6 +66,7 @@ hr {
   min-height: 5rem;
 }
 
+
 .button.is-primary {
   background: var(--primary);
 }
@@ -78,7 +79,7 @@ hr {
 
 .icon-padding-left {
   margin-left: 0.5rem;
-  color: #212121;
+  color: var(--textLight);
 }
 
 .icon-padding-right {
@@ -179,7 +180,7 @@ hr {
 .columns {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
-  margin-top: 1.25rem;
+  margin-top: .25rem;
 }
 
 .m-l-15 {
@@ -215,7 +216,7 @@ hr {
 }
 
 .register {
-  margin-top: 10rem;
+  margin-top: 1rem;
   background: white;
   border-radius: 10px;
 }
@@ -254,7 +255,7 @@ hr {
 .right .description {
   margin-top: 1rem;
   margin-bottom: 1rem !important;
-  color: var(--textLight);
+  color: var(--textDark);
   font-size: 1.15rem;
 }
 
