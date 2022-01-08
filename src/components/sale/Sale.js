@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 class Sale extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
-    render () {
+    render() {
         return (
             <div >
                 <h1>TESTING</h1>
