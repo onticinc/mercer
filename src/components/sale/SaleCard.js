@@ -22,11 +22,14 @@ class SaleCard extends Component {
                                                 </figure>
                                             </div>
                                             <div className="media-content">
-                                                <p className="title is-4 no-padding">Title</p>
+                                                <p className="title is-4 no-padding">Item Name Here</p>
                                                 <p>
                                                     <span className="title is-6">
-                                                        <a> @userName </a> </span> </p>
-                                                <p className="subtitle is-6">@Location</p>
+                                                        <a> @userName </a>
+                                                        <a> Sale Name </a>
+                                                    </span>
+                                                </p>
+                                                <p className="subtitle is-6">Price Here</p>
                                             </div>
                                         </div>
                                         <div className="content">

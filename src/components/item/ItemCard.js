@@ -6,17 +6,12 @@ class ItemCard extends Component {
         return (
             <div className="container">
                 <div className="section">
-                    <div className="columns">
-                        <div className="column has-text-centered">
-                            <h1 className="title">Item View</h1><br />
-                        </div>
-                    </div>
                     <div className="row columns is-multiline">
-                        <div v-for="card in cardData" key="card.id" className="column">
+                        <div v-for="card in cardData" key="card.id" className="column is-4">
                             <div className="card large">
                                 <div className="card-image">
                                     <figure className="image is-16by9">
-                                        <img src="https://bulma.io/images/placeholders/16x16.png" alt="itemPage" />
+                                        <img src="https://bulma.io/images/placeholders/16x16.png" />
                                     </figure>
                                 </div>
                                 <div className="card-content">
@@ -27,16 +22,18 @@ class ItemCard extends Component {
                                             </figure>
                                         </div>
                                         <div className="media-content">
-                                            <p className="title is-4 no-padding">Item Name</p>
+                                            <p className="title is-4 no-padding">Item Name Here</p>
                                             <p>
                                                 <span className="title is-6">
-                                                    <a> Item Price </a> </span> </p>
-
-                                            <p className="subtitle is-6">Item Tag</p>
+                                                    <a> @userName </a>
+                                                    <a> Sale Name </a>
+                                                </span>
+                                            </p>
+                                            <p className="subtitle is-6">Price Here</p>
                                         </div>
                                     </div>
                                     <div className="content">
-                                        Item Description
+                                        Description
                                         <div className="background-icon"><span className="icon-twitter"></span></div>
                                     </div>
                                 </div>
