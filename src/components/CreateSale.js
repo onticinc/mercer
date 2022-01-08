@@ -16,7 +16,7 @@ class createSale extends Component {
         this.state = {
             userName: "",
             sale: [],
-            data:[],
+            data: [],
             redirect: false,
         };
     }
@@ -116,8 +116,8 @@ class createSale extends Component {
             .then((response) => {
                 console.log(response.data.user);
                 console.log(this.state.data);
-               let emptyData = this.state.data 
-                let saleData = response.data.user 
+                let emptyData = this.state.data
+                let saleData = response.data.user
                 emptyData.push(saleData);
                 console.log('AFTER PUSH', emptyData);
             })
@@ -127,7 +127,7 @@ class createSale extends Component {
     }
 
     displaySales() {
-         const displaySale = console.log('TESTING DISPLAY', this.state.data)
+        const displaySale = console.log('TESTING DISPLAY', this.state.data)
         // const displaySale = this.state.data.map((sales, index) => {
         //     console.log(sales.response)
         //     return (
@@ -149,7 +149,7 @@ class createSale extends Component {
                         <div className="column is-8 is-offset-2 register">
                             <div className="columns">
                                 <div className="column left">
-                                <h1 className="title is-1">{this.displaySales()}</h1>
+                                    <h1 className="title is-1">{this.displaySales()}</h1>
                                     <h1 className="title is-1">Super Cool Website</h1>
                                     <h2 className="subtitle colored is-4">
                                         Lorem ipsum dolor sit amet.
