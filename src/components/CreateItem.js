@@ -95,7 +95,7 @@ class createItem extends Component {
             });
     };
 
-// Testing Dropdown
+    // Testing Dropdown
     componentDidMount() {
         axios.get(`${REACT_APP_SERVER_URL}/users/sale`,
             {
@@ -128,13 +128,13 @@ class createItem extends Component {
 
         return (
             <>
-            
+
                 <section className="container">
                     <div className="columns is-multiline">
                         <div className="column is-8 is-offset-2 register">
                             <div className="columns">
                                 <div className="column left">
-                                <h1 className="title is-1">{this.displaySales()}</h1>
+                                    <h1 className="title is-1">{this.displaySales()}</h1>
                                     <h1 className="title is-1">Super Cool Website</h1>
                                     <h2 className="subtitle colored is-4">
                                         Lorem ipsum dolor sit amet.
