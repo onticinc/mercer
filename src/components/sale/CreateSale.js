@@ -1,5 +1,5 @@
 //components
-import Sale from "../sale/Sale";
+import ViewSale from "./ViewSale";
 import "../Components.css";
 import React, { Component } from "react";
 import axios from "axios";

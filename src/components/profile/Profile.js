@@ -1,7 +1,7 @@
 import '../Components.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ViewSale from '../sale/SalePage';
+import SaleCard from '../sale/SaleCard';
 
 const Profile = (props) => {
   const { handleLogout, user } = props;
@@ -58,7 +58,7 @@ const Profile = (props) => {
         </div>
       </section>
       <section>
-        <ViewSale />
+        <SaleCard />
       </section>
 
     </div>) : <h2>Loading...</h2>

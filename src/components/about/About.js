@@ -35,7 +35,7 @@ const About = () => {
                                 <div className="content">
                                     <h4>Create your own Sale</h4>
                                     <p>
-                                        Become a Vendor, create a Sale to sell your Wares and Trinkets
+                                        Become a Vendor, create a Sale to sell your items.
                                     </p>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@ const About = () => {
                                 <div className="content">
                                     <h4>Find other Sales</h4>
                                     <p>
-                                        See the sales from other Vendors, see what they have to sell
+                                        Find sales from other Vendors and see what they are selling.
                                     </p>
                                 </div>
                             </div>
@@ -73,9 +73,9 @@ const About = () => {
                             </div>
                             <div className="card-content">
                                 <div className="content">
-                                    <h4>Buy any Item you want</h4>
+                                    <h4>Buy, Sell, and Trade Items.</h4>
                                     <p>
-                                        Many variable items are available from our many Vendors
+                                        Thousands of items are availabe in your location. 
                                     </p>
                                 </div>
                             </div>

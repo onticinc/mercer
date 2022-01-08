@@ -5,7 +5,7 @@ const LoggedInHome = () => {
     return (
         <div>
             <section className="buttonSection">
-                <button className="button is-success" id="button1" type="button">Find Sales</button>
+                <button className="button is-primary" id="button1" type="button">Find Sales</button>
                 <button className="button is-info" id="button2" type="button">Create a Sale</button>
             </section>
 
