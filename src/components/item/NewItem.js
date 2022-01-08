@@ -1,5 +1,4 @@
 //components
-
 import "../Components.css";
 import React, { Component } from "react";
 import axios from "axios";
@@ -8,7 +7,7 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from '../../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
 
-class CreateItem extends Component {
+class NewItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -93,21 +92,21 @@ class CreateItem extends Component {
     };
 
     // Testing Dropdown
-    componentDidMount() {
-        axios.get(`${REACT_APP_SERVER_URL}/users/sale`,
-            {
-                header: { 'Access-Control-Allow-Origin': '*' }
-            })
-            .then((response) => {
-                console.log(response.data);
-                this.setState({
-                    data: response.data //===> Where API data is actually stored
-                })
-            })
-            .catch((error) => {
-                console.log('ERROR', error)
-            })
-    }
+    // componentDidMount() {
+    //     axios.get(`${REACT_APP_SERVER_URL}/users/sale`,
+    //         {
+    //             header: { 'Access-Control-Allow-Origin': '*' }
+    //         })
+    //         .then((response) => {
+    //             console.log(response.data);
+    //             this.setState({
+    //                 data: response.data //===> Where API data is actually stored
+    //             })
+    //         })
+    //         .catch((error) => {
+    //             console.log('ERROR', error)
+    //         })
+    // }
 
     // displaySales() {
     //     const displaySale = this.state.data.map((sales, index) => {
@@ -125,7 +124,6 @@ class CreateItem extends Component {
 
         return (
             <>
-
                 <section className="container">
                     <div className="columns is-multiline">
                         <div className="column is-8 is-offset-2 register">
@@ -307,4 +305,4 @@ class CreateItem extends Component {
     }
 }
 
-export default CreateItem;
+export default NewItem;

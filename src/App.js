@@ -20,7 +20,7 @@ import CreateSale from './components/sale/CreateSale';
 import EditSale from './components/sale/EditSale';
 import ViewSale from './components/sale/ViewSale';
 import ViewSales from './components/sale/ViewSales';
-import CreateItem from './components/item/CreateItem';
+import NewItem from './components/item/NewItem';
 import ItemCard from './components/item/ItemCard';
 import ViewItems from './components/item/ViewItems';
 import EditItem from './components/item/EditItem';
@@ -87,12 +87,10 @@ function App() {
           <Route path="/about" component={About} />
           <PrivateRoute path="/home" component={LoggedInHome} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
-    
           <PrivateRoute path="/viewitem" component={ItemCard} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewitems" component={ViewItems} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/newitem" component={CreateItem} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/newitem" component={NewItem} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/edititem" component={EditItem} user={currentUser} handleLogout={handleLogout} />
-          
           <PrivateRoute path="/editsale" component={EditSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewsale" component={ViewSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewsales" component={ViewSales} user={currentUser} handleLogout={handleLogout} />
