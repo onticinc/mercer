@@ -6,8 +6,7 @@ const Welcome = () => {
         <div>
             <section className="hero2 is-medium">
                 <div className="hero-body has-text-centered">
-                    <h1 className="title is-2">Welcome to Mercer</h1>
-                    <h2 className="title is-2">Please Signup or Login</h2>
+                    <h1 className="title is-2">Welcome, Please Signup or Login </h1>
                 </div>
             </section>
 
@@ -16,7 +15,7 @@ const Welcome = () => {
                     <div className="level">
                         <div className="level-left">
                             <div className="level-item">
-                                <h2 className="subtitle">Items you can find in Mercers:</h2>
+                                <h2 className="subtitle">Items you can find:</h2>
                             </div>
                         </div>
                     </div>

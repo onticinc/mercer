@@ -1,5 +1,5 @@
 //components
-import Item from './Item'
+
 
 import "../Components.css";
 import React, { Component } from "react";
@@ -11,7 +11,7 @@ const { REACT_APP_SERVER_URL } = process.env;
 
 
 
-class createItem extends Component {
+class CreateItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -310,4 +310,4 @@ class createItem extends Component {
     }
 }
 
-export default createItem;
+export default CreateItem;

@@ -8,7 +8,7 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from '../../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
 
-class createSale extends Component {
+class CreateSale extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -330,4 +330,4 @@ class createSale extends Component {
     }
 }
 
-export default createSale;
+export default CreateSale;

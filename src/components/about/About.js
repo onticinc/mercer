@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css'
+import '../Components.css'
 
 const About = () => {
     return (
@@ -8,17 +8,13 @@ const About = () => {
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <p className="title" id="title">About Us</p>
-                        <p id="subtitle">Mercers is a center for all yard sale enthusiasts,
+                        <p id="subtitle">Mercer is a App for all yard sale enthusiasts,
                             a place for vendors to advertise their sales and show off their wares.
                             We welcome all to join our marketplace of all merchandise. </p>
                     </div>
                 </div>
             </section>
-            <div className="box cta">
-                <p className="has-text-centered">
-                    <span className="tag is-primary">New</span> Yard Sales from new Vendors, everyday
-                </p>
-            </div>
+            
             <section className="container">
                 <div className="columns features">
                     <div className="column is-4">
@@ -53,9 +49,9 @@ const About = () => {
                             </div>
                             <div className="card-content">
                                 <div className="content">
-                                    <h4>Find other Sales</h4>
+                                    <h4>Find Sales</h4>
                                     <p>
-                                        Find sales from other Vendors and see what they are selling.
+                                        Find sales from Vendors nationwide.
                                     </p>
                                 </div>
                             </div>
@@ -75,7 +71,7 @@ const About = () => {
                                 <div className="content">
                                     <h4>Buy, Sell, and Trade Items.</h4>
                                     <p>
-                                        Thousands of items are availabe in your location. 
+                                        Thousands of items are availabe near you. 
                                     </p>
                                 </div>
                             </div>

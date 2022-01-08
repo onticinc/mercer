@@ -15,11 +15,11 @@ import Login from './components/login/Login';
 import Navbar from './components/navbar/Navbar';
 import Profile from './components/profile/Profile';
 import Welcome from './components/home/Welcome';
-import createSale from './components/sale/CreateSale';
-import createItem from './components/item/CreateItem';
+import CreateSale from './components/sale/CreateSale';
+import CreateItem from './components/item/CreateItem';
 import LoggedInHome from './components/home/LoggedInHome';
 import SaleCard from './components/sale/SaleCard';
-import ViewSingleItem from './components/item/ItemPage';
+import ItemCard from './components/item/ItemCard';
 
 
 
@@ -82,12 +82,12 @@ function App() {
           <PrivateRoute path="/loggedinhome" component={LoggedInHome} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
     
-          <PrivateRoute path="/viewitem" component={ViewSingleItem} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/item" component={createItem} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/viewitem" component={ItemCard} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/item" component={CreateItem} user={currentUser} handleLogout={handleLogout} />
           
           
           <PrivateRoute path="/viewsale" component={SaleCard} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/sale" component={createSale} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/sale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
         </Switch>
       </div>
       <Footer />
