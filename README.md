@@ -38,16 +38,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <!-- <a href="https://github.com/onticinc/mercer">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
+  <a href="https://github.com/onticinc/mercer">
+    <img src="https://i.imgur.com/gi4BvGD.png" alt="Logo" width="80" height="80">
+  </a>
 
 <h1 align="center">Mercer Internet Marketplace</h1>
 
   <p align="center">
     A unique online resale platform intended to empower sellers.
     <br />
-    <a href="https://github.com/onticinc/mercer"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/onticinc/mercer/tree/main/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/RolandYambao/mercers-api">View Backend</a>
@@ -91,7 +91,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
 
 Here is a brief introduction & synopsis to the Mercer project.
 
@@ -103,6 +103,7 @@ Here is a brief introduction & synopsis to the Mercer project.
 
 
 * [React.js](https://reactjs.org/)
+* [MongoDB](https://www.mongodb.com)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -112,16 +113,7 @@ Here is a brief introduction & synopsis to the Mercer project.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+To get a local copy up and running follow these simple steps.
 
 ### Installation
 
@@ -152,15 +144,52 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- SCREENSHOT OF THE SITE -->
 
+## Appearance
 
-<!-- ROADMAP -->
-## Roadmap
+(INSERT SCREENSHOTS OF THE SITE)
 
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- TECHNOLOGIES USED -->
+
+## Technologies Used
+
+Explanation of the technologies used
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- GENERAL APPROACH -->
+
+## General Approach
+
+A couple paragraphs about the general approach you took
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- LINK TO USER STORIES -->
+
+## User Stories
+
+(INSERT LINK TO USER STORIES)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- WIREFRAMES -->
+
+## Project Wireframes
+
+(INSERT LINK TO WIREFRAMES)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ROADBLOCKS -->
+
+## Roadblocks
+
+Descriptions of any unsolved problems or major hurdles your team had to overcome.
+
 
 See the [open issues](https://github.com/onticinc/mercer/issues) for a full list of proposed features (and known issues).
 
@@ -190,28 +219,6 @@ Don't forget to give the project a star! Thanks again!
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/onticinc/mercer](https://github.com/onticinc/mercer)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
