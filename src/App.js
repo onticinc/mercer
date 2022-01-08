@@ -79,7 +79,7 @@ function App() {
             render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser} />}
           />
           <Route path="/about" component={About} />
-          <PrivateRoute path="/loggedinhome" component={LoggedInHome} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/home" component={LoggedInHome} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
     
           <PrivateRoute path="/viewitem" component={ItemCard} user={currentUser} handleLogout={handleLogout} />
@@ -87,7 +87,7 @@ function App() {
           
           
           <PrivateRoute path="/viewsale" component={SaleCard} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/sale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/newsale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
         </Switch>
       </div>
       <Footer />

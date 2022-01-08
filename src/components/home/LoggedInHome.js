@@ -5,8 +5,8 @@ const LoggedInHome = () => {
     return (
         <div>
             <section className="buttonSection">
-                <button className="button is-primary" id="button1" type="button">Find Sales</button>
-                <button className="button is-info" id="button2" type="button">Create a Sale</button>
+                <a className="button is-primary" id="button1" type="button">Your Sales</a>
+                <a className="button is-info" id="button2" type="button" href="/newsale">Create New Sale</a>
             </section>
 
             <div className="container is-max-desktop">
@@ -14,7 +14,7 @@ const LoggedInHome = () => {
                     <div className="level">
                         <div className="level-left">
                             <div className="level-item">
-                                <h2 className="subtitle">Items you can find in Mercers:</h2>
+                                <h2 className="subtitle">Items availabe on Mercer:</h2>
                             </div>
                         </div>
                     </div>
