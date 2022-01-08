@@ -1,4 +1,4 @@
-import './Profile.css';
+import '../Components.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 

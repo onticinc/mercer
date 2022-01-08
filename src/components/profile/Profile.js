@@ -17,18 +17,7 @@ const Profile = (props) => {
 
   const userData = user ?
     (<div>
-      <section className="topRow">
-        <div className="container">
-          <div className="row">
-            <figure className="avatar2">
-              <img src="https://i.imgur.com/gi4BvGD.png" style={{ width: '150px', height: '150px' }} alt="Mercer Logo" />
-              {/* <img src={profilePic} style={{ width: '150px', height: '150px' }} alt="Mercer Logo" /> */}
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section className="hero is-success is-fullheight">
+      <section className="hero  is-fullheight">
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="column is-4 is-offset-4">
@@ -61,7 +50,7 @@ const Profile = (props) => {
                       </tr>
                     </table>
                   </div>
-                  <button id="Edit Profile" className="button is-block is-info is-large is-fullwidth">Edit Profile<i className="fa fa-sign-in" aria-hidden="true"></i></button>
+                  <button id="Edit Profile" className="button is-block is-fullwidth is-primary is-medium is-rounded">Edit Profile<i className="fa fa-sign-in" aria-hidden="true"></i></button>
                 </form>
               </div>
             </div>

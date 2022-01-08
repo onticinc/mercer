@@ -1,8 +1,8 @@
 :root {
 
-  --bg: #5E6472;
-  --card-bg: #98c1d9;
-  --primary: #e0fbfc;
+  --bg: #3d5c4b;
+  --card-bg: #babdbe;
+  --primary: #5a866f;
 
 }
 
@@ -20,16 +20,16 @@ h1 {
 }
 
 input::placeholder {
-  color: antiquewhite;
+  color: white;
 }
 
 .navbar {
   background: var(--card-bg);
 }
 
-.navbar-item {
-  color: rgb(0, 0, 0);
-}
+/* .navbar-item {
+  color: rgb(255, 0, 0);
+} */
 
 /* Card start*/
 .card {
@@ -69,7 +69,7 @@ hr {
 }
 
 .button.is-primary:hover {
-  background: hsl(247, 84%, 63%);
+  background: #5a866f;
 }
 
 /* Helper styles */
@@ -177,4 +177,12 @@ hr {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
   margin-top: 1.25rem;
+}
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
 }
