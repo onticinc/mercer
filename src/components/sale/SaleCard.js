@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
 
-class ViewSale extends Component {
+class SaleCard extends Component {
     render() {
         return (
             <div>
                 <div className="container">
                     <div className="section">
-                        <div className="columns">
-                            <div className="column has-text-centered">
-                                <h1 className="title">View Sale: All Items</h1><br />
-                            </div>
-                        </div>
                         <div className="row columns is-multiline">
                             <div v-for="card in cardData" key="card.id" className="column is-4">
                                 <div className="card large">
@@ -49,4 +44,4 @@ class ViewSale extends Component {
     }
 }
 
-export default ViewSale;
+export default SaleCard;

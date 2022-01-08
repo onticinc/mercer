@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class ViewSingleItem extends Component {
+class ItemCard extends Component {
     render() {
         return (
             <div className="container">
@@ -49,4 +49,4 @@ class ViewSingleItem extends Component {
     }
 }
 
-export default ViewSingleItem;
+export default ItemCard;

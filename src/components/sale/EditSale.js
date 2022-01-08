@@ -1,16 +1,14 @@
+import "../Components.css";
+
 //components
-import Sale from "./Sale";
-
-
-import "./Signup.css";
 import React, { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import jwt_decode from 'jwt-decode';
-import setAuthToken from '../utils/setAuthToken';
+import setAuthToken from '../../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
 
-class createSale extends Component {
+class EditSale extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -150,28 +148,18 @@ class createSale extends Component {
                             <div className="columns">
                                 <div className="column left">
                                     <h1 className="title is-1">{this.displaySales()}</h1>
-                                    <h1 className="title is-1">Super Cool Website</h1>
-                                    <h2 className="subtitle colored is-4">
-                                        Lorem ipsum dolor sit amet.
-                                    </h2>
-                                    <p>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                        Corporis ex deleniti aliquam tempora libero excepturi vero
-                                        soluta odio optio sed.
-                                    </p>
+                                    <iframe width="300" height="248" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=300&amp;height=248&amp;hl=en&amp;q=151%20S%20Main%20Pocatello+(My%20Sale)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=828e8cd6faabae05b589f5b4a490c2c83b528345'></script>
                                 </div>
                                 <div className="column right has-text-centered">
-                                    <h1 className="title is-4">Create a Sale</h1>
-                                    <p className="description">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit
-                                    </p>
+                                    <h1 className="title is-4">Edit Sale</h1>
+                    
                                     <form onSubmit={this.handleSubmit.bind(this)}>
                                         <div className="field">
                                             <div className="control">
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Sale Name"
+                                                    placeholder="{saleName}"
                                                     name="saleName"
                                                     value={this.state.saleName}
                                                     onChange={this.handleSaleName.bind(this)}
@@ -185,7 +173,7 @@ class createSale extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Location"
+                                                    placeholder="{location}"
                                                     name="location"
                                                     value={this.state.location}
                                                     onChange={this.handleLocation.bind(this)}
@@ -199,7 +187,7 @@ class createSale extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Picture URL"
+                                                    placeholder="{saleImage}"
                                                     name="image"
                                                     value={this.state.saleImage}
                                                     onChange={this.handleSaleImage.bind(this)}
@@ -213,7 +201,7 @@ class createSale extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Description"
+                                                    placeholder="{saleDescription}"
                                                     name="description"
                                                     value={this.state.saleDescription}
                                                     onChange={this.handleSaleDescription.bind(this)}
@@ -227,7 +215,7 @@ class createSale extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Time"
+                                                    placeholder="{Time}"
                                                     name="time"
                                                     value={this.state.time}
                                                     onChange={this.handleTime.bind(this)}
@@ -241,7 +229,7 @@ class createSale extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Date"
+                                                    placeholder="{Date}"
                                                     name="date"
                                                     value={this.state.date}
                                                     onChange={this.handleDate.bind(this)}
@@ -255,7 +243,7 @@ class createSale extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Tag(s)"
+                                                    placeholder="{Tag(s)}"
                                                     name="saleTags"
                                                     value={this.state.saleTags}
                                                     onChange={this.handleSaleTags.bind(this)}
@@ -269,7 +257,7 @@ class createSale extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Zip Code"
+                                                    placeholder="{Zip Code}"
                                                     name="zipCode"
                                                     value={this.state.zipCode}
                                                     onChange={this.handleZipCode.bind(this)}
@@ -281,49 +269,10 @@ class createSale extends Component {
                                         <button type="submit" className="button is-block is-primary is-fullwidth is-medium">
                                             Submit
                                         </button>
-                                        <br />
-                                        <small>
-                                            <em>Lorem ipsum dolor sit amet consectetur.</em>
-                                        </small>
+        
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                        <div className="column is-8 is-offset-2">
-                            <br />
-                            <nav className="level">
-                                <div className="level-left">
-                                    <div className="level-item">
-                                        <span className="icon">
-                                            <i className="fab fa-twitter"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fab fa-facebook"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fab fa-instagram"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fab fa-github"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fas fa-envelope"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="level-right">
-                                    <small
-                                        className="level-item"
-                                        style={{ color: "var(--textLight)" }}
-                                    >
-                                        &copy; Super Cool Website. 2022 All Rights Reserved.
-                                    </small>
-                                </div>
-                            </nav>
                         </div>
                     </div>
                 </section>
@@ -332,4 +281,4 @@ class createSale extends Component {
     }
 }
 
-export default createSale;
+export default EditSale;

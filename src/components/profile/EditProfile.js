@@ -1,11 +1,10 @@
-import './Profile.css';
+import '../Components.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ViewSale from './SalePage';
 
 const Profile = (props) => {
   const { handleLogout, user } = props;
-  const { id, userName, email, profilePic, address, phone, password, exp } = user;
+  const { id, name, email, exp } = user;
   const expirationTime = new Date(exp * 1000);
   let currentTime = Date.now();
 
@@ -22,7 +21,6 @@ const Profile = (props) => {
           <div className="row">
             <figure className="avatar2">
               <img src="https://i.imgur.com/gi4BvGD.png" style={{ width: '150px', height: '150px' }} alt="Mercer Logo" />
-              {/* <img src={profilePic} style={{ width: '150px', height: '150px' }} alt="Mercer Logo" /> */}
             </figure>
           </div>
         </div>
@@ -45,16 +43,10 @@ const Profile = (props) => {
                         <th colspan="2"></th>
                       </tr>
                       <tr>
-                        <td>Name: {userName}</td>
+                        <td>Name: {name}</td>
                       </tr>
                       <tr>
                         <td>Email: {email}</td>
-                      </tr>
-                      <tr>
-                        <td>Phone Number: {phone}</td>
-                      </tr>
-                      <tr>
-                        <td>Address: {address}</td>
                       </tr>
                       <tr>
                         <td>Account ID: {id}</td>
@@ -63,13 +55,12 @@ const Profile = (props) => {
                   </div>
                   <button id="Edit Profile" className="button is-block is-info is-large is-fullwidth">Edit Profile<i className="fa fa-sign-in" aria-hidden="true"></i></button>
                 </form>
+
               </div>
+
             </div>
           </div>
         </div>
-      </section>
-      <section>
-        <ViewSale />
       </section>
 
     </div>) : <h2>Loading...</h2>

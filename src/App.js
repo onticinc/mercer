@@ -8,18 +8,24 @@ import setAuthToken from './utils/setAuthToken';
 import './App.css';
 
 // Components
-import Signup from './components/Signup';
-import About from './components/About';
-import Footer from './components/Footer';
-import Login from './components/Login';
-import Navbar from './components/Navbar';
-import Profile from './components/Profile';
-import Welcome from './components/Welcome';
-import createSale from './components/CreateSale';
-import createItem from './components/CreateItem';
-import LoggedInHome from './components/LoggedInHome';
-import ViewSale from './components/SalePage';
-import ViewSingleItem from './components/ItemPage';
+import About from './components/about/About';
+import Footer from './components/footer/Footer';
+import Navbar from './components/navbar/Navbar';
+import Profile from './components/profile/Profile';
+
+import Signup from './components/signup/Signup';
+import Login from './components/login/Login';
+import Welcome from './components/home/Welcome';
+import LoggedInHome from './components/home/LoggedInHome';
+
+
+import CreateSale from './components/sale/CreateSale';
+import SaleCard from './components/sale/SaleCard';
+import EditSale from './components/sale/EditSale';
+import ViewSale from './components/sale/ViewSale';
+
+import CreateItem from './components/item/CreateItem';
+import ItemCard from './components/item/ItemCard';
 
 
 
@@ -31,8 +37,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     return token ? <Component {...rest} {...props} /> : <Redirect to="/login" />
   }} />
 }
-// expansion opperator
-// Spread Opperator
+// Research Expansion opperators
+// Researcg Spread Opperator
 
 function App() {
   // Set state values
@@ -78,13 +84,16 @@ function App() {
             path="/login"
             render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser} />}
           />
-          <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/viewsale" component={ViewSale} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/viewitem" component={ViewSingleItem} user={currentUser} handleLogout={handleLogout} />
           <Route path="/about" component={About} />
-          <PrivateRoute path="/sale" component={createSale} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/item" component={createItem} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/loggedInHome" component={LoggedInHome} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/home" component={LoggedInHome} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
+    
+          <PrivateRoute path="/viewitem" component={ItemCard} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/item" component={CreateItem} user={currentUser} handleLogout={handleLogout} />
+          
+          <PrivateRoute path="/editsale" component={EditSale} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/viewsale" component={ViewSale} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/newsale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
         </Switch>
       </div>
       <Footer />

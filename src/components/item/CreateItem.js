@@ -1,17 +1,14 @@
 //components
-import Item from './Item'
 
-import "./Signup.css";
+import "../Components.css";
 import React, { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import jwt_decode from 'jwt-decode';
-import setAuthToken from '../utils/setAuthToken';
+import setAuthToken from '../../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
 
-
-
-class createItem extends Component {
+class CreateItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -112,16 +109,16 @@ class createItem extends Component {
             })
     }
 
-    displaySales() {
-        const displaySale = this.state.data.map((sales, index) => {
-            console.log(sales.response)
-            return (
-                <Item key={index} />
-            );
-        });
+    // displaySales() {
+    //     const displaySale = this.state.data.map((sales, index) => {
+    //         console.log(sales.response)
+    //         return (
+    //             <Item key={index} />
+    //         );
+    //     });
 
-        return displaySale;
-    }
+    //     return displaySale;
+    // }
 
     render() {
         if (this.state.redirect) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)
@@ -310,4 +307,4 @@ class createItem extends Component {
     }
 }
 
-export default createItem;
+export default CreateItem;

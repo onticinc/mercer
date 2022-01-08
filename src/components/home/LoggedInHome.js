@@ -1,14 +1,12 @@
 import React from 'react';
-import './Components.css'
+import '../Components.css'
 
-const Welcome = () => {
+const LoggedInHome = () => {
     return (
         <div>
-            <section className="hero is-medium">
-                <div className="hero-body has-text-centered">
-                    <h1 className="title is-2">Welcome to Mercers</h1>
-                    <h2 className="title is-2">Please Signup or Login</h2>
-                </div>
+            <section className="buttonSection">
+                <a className="button is-primary" id="button1" type="button">Your Sales</a>
+                <a className="button is-info" id="button2" type="button" href="/newsale">Create New Sale</a>
             </section>
 
             <div className="container is-max-desktop">
@@ -16,7 +14,7 @@ const Welcome = () => {
                     <div className="level">
                         <div className="level-left">
                             <div className="level-item">
-                                <h2 className="subtitle">Items you can find in Mercers:</h2>
+                                <h2 className="subtitle">Items availabe on Mercer:</h2>
                             </div>
                         </div>
                     </div>
@@ -61,4 +59,4 @@ const Welcome = () => {
     )
 }
 
-export default Welcome;
+export default LoggedInHome;

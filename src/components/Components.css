@@ -1,9 +1,11 @@
 :root {
 
-  --bg: #5E6472;
-  --card-bg: #98c1d9;
-  --primary: #e0fbfc;
-
+  --bg: #3d5c4b;
+  --card-bg: #babdbe;
+  --primary: #5a866f;
+  --textLight: white;
+  --textDark: black;
+  --brandColor: red;
 }
 
 body {
@@ -20,16 +22,16 @@ h1 {
 }
 
 input::placeholder {
-  color: antiquewhite;
+  color: white;
 }
 
 .navbar {
   background: var(--card-bg);
 }
 
-.navbar-item {
-  color: rgb(0, 0, 0);
-}
+/* .navbar-item {
+  color: rgb(255, 0, 0);
+} */
 
 /* Card start*/
 .card {
@@ -64,19 +66,20 @@ hr {
   min-height: 5rem;
 }
 
+
 .button.is-primary {
   background: var(--primary);
 }
 
 .button.is-primary:hover {
-  background: hsl(247, 84%, 63%);
+  background: #3eaa72;
 }
 
 /* Helper styles */
 
 .icon-padding-left {
   margin-left: 0.5rem;
-  color: #212121;
+  color: var(--textLight);
 }
 
 .icon-padding-right {
@@ -85,22 +88,23 @@ hr {
 
 /* Hero styles */
 
-.hero {
+.hero2 {
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.3)
     ),
-    url(https://i.imgur.com/0hrbgrz.jpeg);
+    url(https://i.imgur.com/0hrbgrz.jpeg); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.hero .title {
-  color: black;
-  background-color: lightblue;
-  margin-left: 30%;
-  margin-right: 30%;
+.hero2 .title {
+  color: var(--textDark);
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0);
 }
 
@@ -118,12 +122,12 @@ hr {
   border-bottom: 1px solid lightgrey;
 }
 .featured .level-item h2 {
-  color: var(--primary);
+  color: var(--textLight);
   font-weight: 600;
 }
 .featured article .subtitle {
   margin-top: 1rem;
-  color: #e0fbfc;
+  color: var(--textLight);
 }
 
 /* Categories styles */
@@ -176,17 +180,186 @@ hr {
 .columns {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
-  margin-top: 1.25rem;
+  margin-top: .25rem;
 }
 
-#button1, #button2{
+.m-l-15 {
+  margin-left: 15px;
+}
+
+.m-r-15 {
+  margin-right: 15px;
+}
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
+}
+
+
+/* Start Signup CSS */
+
+.va {
+  display: flex;
+  align-items: center;
+}
+
+.field:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.register {
+  margin-top: 1rem;
+  background: white;
+  border-radius: 10px;
+}
+
+.left,
+.right {
+  padding: 4.5rem;
+}
+
+.left {
+  border-right: 5px solid var(--background);
+}
+
+.left .title {
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.left .colored {
+  color: var(--brandColor);
+  font-weight: 500;
+  margin-top: 1rem !important;
+  letter-spacing: -1px;
+}
+
+.left p {
+  color: var(--textLight);
+  font-size: 1.15rem;
+}
+
+.right .title {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.right .description {
+  margin-top: 1rem;
+  margin-bottom: 1rem !important;
+  color: var(--textDark);
+  font-size: 1.15rem;
+}
+
+.right small {
+  color: var(--textLight);
+}
+
+input {
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: var(--brandColor) !important;
+  box-shadow: 0 0 0 1px var(--brandColor) !important;
+}
+
+.fab,
+.fas {
+  color: var(--textLight);
+  margin-right: 1rem;
+}
+
+#column {
+  margin-top: -125px;
+}
+
+
+
+/* Start About CSS */
+
+
+#title {
+  color: var(--textLight);
+  margin-top: -25px;
+}
+
+#subtitle {
+  margin-bottom: -70px;
+  color: var(--textLight);
+}
+
+.card {
+  margin-bottom: 50px;
+}
+
+/* Large Buttons on Logged in Home */
+
+#button1 {
   margin: auto;
-  width: 49.2%;
+  width: 49%;
   height: 450px;
-  display: inline;
-  font-size: 40px;
+  margin-right: 10px;
+}
+#button2 {
+  margin: auto;
+  width: 49%;
+  height: 450px;
 }
 
-#button2 {
-  margin-left: 10px;
+/* Login and Profile */
+
+.hero.is-success {
+  background: #F2F6FA;
+}
+.hero .nav, .hero.is-success .nav {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.box {
+  margin-top: 1rem;
+}
+.avatar {
+  margin-top: -70px;
+  padding-bottom: 20px;
+}
+.avatar img {
+  padding: 5px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+  box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+}
+input {
+  font-weight: 300;
+}
+p {
+  font-weight: 700;
+}
+p.subtitle {
+  padding-top: 1rem;
+}
+
+.login-hr{
+  border-bottom: 1px solid black;
+}
+
+.has-text-black{
+  color: black;
+}
+
+.field{
+  padding-bottom: 10px;
+}
+
+.fa{
+  margin-left: 5px; 
 }

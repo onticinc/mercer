@@ -1,10 +1,10 @@
-import './Profile.css';
+import '../Components.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Profile = (props) => {
   const { handleLogout, user } = props;
-  const { id, name, email, exp } = user;
+  const { id, userName, email, profilePic, address, phone, password, exp } = user;
   const expirationTime = new Date(exp * 1000);
   let currentTime = Date.now();
 
@@ -16,17 +16,7 @@ const Profile = (props) => {
 
   const userData = user ?
     (<div>
-      <section className="topRow">
-        <div className="container">
-          <div className="row">
-            <figure className="avatar2">
-              <img src="https://i.imgur.com/gi4BvGD.png" style={{ width: '150px', height: '150px' }} alt="Mercer Logo" />
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section className="hero is-success is-fullheight">
+      <section className="hero is-fullheight">
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="column is-4 is-offset-4">
@@ -35,29 +25,29 @@ const Profile = (props) => {
                   <img src="https://djontic.com/wp-content/uploads/2022/01/profile_pic.jpg" style={{ width: '150px', height: '150px' }} alt="Mercer Logo" />
                 </figure>
                 <form>
-                  <p className="subtitle has-text-black">Profile Page</p>
                   <div class="content">
                     <table class="table-profile">
                       <tr>
-                        <th colspan="1"></th>
-                        <th colspan="2"></th>
-                      </tr>
-                      <tr>
-                        <td>Name: {name}</td>
+                        <td>Name: {userName}</td>
                       </tr>
                       <tr>
                         <td>Email: {email}</td>
+                      </tr>
+                      <tr>
+                        <td>Phone Number: {phone}</td>
+                      </tr>
+                      <tr>
+                        <td>Address: {address}</td>
                       </tr>
                       <tr>
                         <td>Account ID: {id}</td>
                       </tr>
                     </table>
                   </div>
-                  <button id="Edit Profile" className="button is-block is-info is-large is-fullwidth">Edit Profile<i className="fa fa-sign-in" aria-hidden="true"></i></button>
+                  <a id="editProfile" className="button is-block is-fullwidth is-primary is-medium">Edit Profile<i className="fa fa-sign-in" aria-hidden="true"></i></a>
+                  <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15">View Your Sales<i className="fa fa-sign-in" aria-hidden="true"></i></a>
                 </form>
-
               </div>
-
             </div>
           </div>
         </div>

@@ -1,9 +1,9 @@
-import "./Login.css";
+import '../Components.css';
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import axios from "axios";
 import jwt_decode from 'jwt-decode';
-import setAuthToken from '../utils/setAuthToken';
+import setAuthToken from '../../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
 
 class Login extends Component {
@@ -52,7 +52,7 @@ class Login extends Component {
   };
 
   render() {
-    if (this.props.user) return <Redirect to="/loggedinhome" />; // You can have them redirected to profile (your choice)
+    if (this.props.user) return <Redirect to="/home" />; // You can have them redirected to profile (your choice)
 
     return (
       <>
@@ -66,10 +66,10 @@ class Login extends Component {
                 <div className="field">
                   <div className="control">
                     <input
-                      className="input is-medium is-rounded"
+                      className="input is-medium m-t-15"
                       type="email"
                       placeholder="hello@example.com"
-                      autocomplete="username"
+                      autocomplete="Email"
                       value={this.state.email}
                       onChange={this.handleEmail.bind(this)}
                       required
@@ -79,7 +79,7 @@ class Login extends Component {
                 <div className="field">
                   <div className="control">
                     <input
-                      className="input is-medium is-rounded"
+                      className="input is-medium"
                       type="password"
                       placeholder="**********"
                       autocomplete="current-password"
@@ -91,7 +91,7 @@ class Login extends Component {
                 </div>
                 <br />
                 <button
-                  className="button is-block is-fullwidth is-primary is-medium is-rounded"
+                  className="button is-block is-fullwidth is-primary is-medium"
                   type="submit"
                 >
                   Login

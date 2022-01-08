@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css'
+import '../Components.css'
 
 const About = () => {
     return (
@@ -8,17 +8,13 @@ const About = () => {
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <p className="title" id="title">About Us</p>
-                        <p id="subtitle">Mercers is a center for all yard sale enthusiasts,
+                        <p id="subtitle">Mercer is a App for all yard sale enthusiasts,
                             a place for vendors to advertise their sales and show off their wares.
                             We welcome all to join our marketplace of all merchandise. </p>
                     </div>
                 </div>
             </section>
-            <div className="box cta">
-                <p className="has-text-centered">
-                    <span className="tag is-primary">New</span> Yard Sales from new Vendors, everyday
-                </p>
-            </div>
+            
             <section className="container">
                 <div className="columns features">
                     <div className="column is-4">
@@ -35,7 +31,7 @@ const About = () => {
                                 <div className="content">
                                     <h4>Create your own Sale</h4>
                                     <p>
-                                        Become a Vendor, create a Sale to sell your Wares and Trinkets
+                                        Let people know about your sale. 
                                     </p>
                                 </div>
                             </div>
@@ -53,9 +49,9 @@ const About = () => {
                             </div>
                             <div className="card-content">
                                 <div className="content">
-                                    <h4>Find other Sales</h4>
+                                    <h4>Find Sales</h4>
                                     <p>
-                                        See the sales from other Vendors, see what they have to sell
+                                        Find sales from Vendors nationwide.
                                     </p>
                                 </div>
                             </div>
@@ -73,9 +69,9 @@ const About = () => {
                             </div>
                             <div className="card-content">
                                 <div className="content">
-                                    <h4>Buy any Item you want</h4>
+                                    <h4>Buy, Sell, and Trade Items.</h4>
                                     <p>
-                                        Many variable items are available from our many Vendors
+                                        Thousands of items are availabe near you. 
                                     </p>
                                 </div>
                             </div>
