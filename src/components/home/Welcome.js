@@ -4,9 +4,9 @@ import '../Components.css'
 const Welcome = () => {
     return (
         <div>
-            <section className="hero is-medium">
+            <section className="hero2 is-medium">
                 <div className="hero-body has-text-centered">
-                    <h1 className="title is-2">Welcome to Mercers</h1>
+                    <h1 className="title is-2">Welcome to Mercer</h1>
                     <h2 className="title is-2">Please Signup or Login</h2>
                 </div>
             </section>
