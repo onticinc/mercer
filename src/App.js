@@ -12,24 +12,19 @@ import About from './components/about/About';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import Profile from './components/profile/Profile';
-
 import Signup from './components/signup/Signup';
 import Login from './components/login/Login';
 import Welcome from './components/home/Welcome';
 import LoggedInHome from './components/home/LoggedInHome';
-
-
 import CreateSale from './components/sale/CreateSale';
-import SaleCard from './components/sale/SaleCard';
 import EditSale from './components/sale/EditSale';
 import ViewSale from './components/sale/ViewSale';
 import ViewSales from './components/sale/ViewSales';
-
-
 import CreateItem from './components/item/CreateItem';
 import ItemCard from './components/item/ItemCard';
 import ViewItems from './components/item/ViewItems';
 import EditItem from './components/item/EditItem';
+
 
 
 
@@ -94,9 +89,9 @@ function App() {
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
     
           <PrivateRoute path="/viewitem" component={ItemCard} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/edititem" component={EditItem} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewitems" component={ViewItems} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/item" component={CreateItem} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/newitem" component={CreateItem} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/edititem" component={EditItem} user={currentUser} handleLogout={handleLogout} />
           
           <PrivateRoute path="/editsale" component={EditSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewsale" component={ViewSale} user={currentUser} handleLogout={handleLogout} />

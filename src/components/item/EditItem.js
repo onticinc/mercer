@@ -151,7 +151,7 @@ class EditItem extends Component {
                                     <iframe width="300" height="248" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=300&amp;height=248&amp;hl=en&amp;q=151%20S%20Main%20Pocatello+(My%20Sale)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=828e8cd6faabae05b589f5b4a490c2c83b528345'></script>
                                 </div>
                                 <div className="column right has-text-centered">
-                                    <h1 className="title is-4">Edit Sale</h1>
+                                    <h1 className="title is-4">Edit Item</h1>
                     
                                     <form onSubmit={this.handleSubmit.bind(this)}>
                                         <div className="field">
