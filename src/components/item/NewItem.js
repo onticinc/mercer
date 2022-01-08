@@ -92,21 +92,21 @@ class NewItem extends Component {
     };
 
     // Testing Dropdown
-    // componentDidMount() {
-    //     axios.get(`${REACT_APP_SERVER_URL}/users/sale`,
-    //         {
-    //             header: { 'Access-Control-Allow-Origin': '*' }
-    //         })
-    //         .then((response) => {
-    //             console.log(response.data);
-    //             this.setState({
-    //                 data: response.data //===> Where API data is actually stored
-    //             })
-    //         })
-    //         .catch((error) => {
-    //             console.log('ERROR', error)
-    //         })
-    // }
+    componentDidMount() {
+        axios.get(`${REACT_APP_SERVER_URL}/users/sale`,
+            {
+                header: { 'Access-Control-Allow-Origin': '*' }
+            })
+            .then((response) => {
+                console.log(response.data);
+                this.setState({
+                    data: response.data //===> Where API data is actually stored
+                })
+            })
+            .catch((error) => {
+                console.log('ERROR', error)
+            })
+    }
 
     // displaySales() {
     //     const displaySale = this.state.data.map((sales, index) => {

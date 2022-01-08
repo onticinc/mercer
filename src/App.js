@@ -25,11 +25,6 @@ import ItemCard from './components/item/ItemCard';
 import ViewItems from './components/item/ViewItems';
 import EditItem from './components/item/EditItem';
 
-
-
-
-
-
 const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem('jwtToken');
   // console.log('===> Hitting a Private Route');
