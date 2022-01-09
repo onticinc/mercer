@@ -98,7 +98,7 @@ class Login extends Component {
                 </button>
               </form>
               <p>
-                <div className="container">
+                <div className="container isloginlink">
                   <div className="row">
                     <hr className="login-hr" />
                     <a href="../register">Sign Up</a>

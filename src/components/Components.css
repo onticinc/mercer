@@ -282,6 +282,15 @@ input:focus {
   margin-top: -125px;
 }
 
+.isloginlink {
+  padding: 5px;
+}
+
+.row {
+  justify-content: center;
+  margin-top: 15px;
+}
+
 
 
 /* Start About CSS */
