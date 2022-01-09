@@ -7,7 +7,7 @@ const About = () => {
             <section className="">
                 <div className="hero-body">
                     <div className="container has-text-centered">
-                        <p className="title" id="title">About Us</p>
+                        <p className="title" id="title">What is Mercer?</p>
                         <p id="subtitle">Mercer is a crowdsourced online marketplace powered by everyday entrepreneurs (like you!). 
                         From the latest and greatest in high-end electronics, to rare and unexpected collectibles and antiques, 
                         you’re only a few clicks away from discovering yet another amazing deal. Mercer was built for our vendors - 
