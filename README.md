@@ -73,7 +73,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -91,9 +90,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<br>
 
+Mercer is a crowdsourced online marketplace powered by everyday entrepreneurs (like you!). From the latest and greatest in high-end electronics, to rare and unexpected collectibles and antiques, you’re only a few clicks away from discovering yet another amazing deal. <br><br>
 
-Here is a brief introduction & synopsis to the Mercer project.
+Mercer was built for our vendors - making it fun, fast, and easy to quickly list and trade whatever they'd like, in bulk. We believe that as we continue to improve our vendor store management system, we’re providing an even more amazing customer experience as a result.
+Have a look around, and see for yourself!
+Est. 2022
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
