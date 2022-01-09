@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import ItemCard from "./ItemCard";
 
-
-
 const ViewItems = (props) => {
     const { handleLogout, user } = props;
     const { userName, item, profilePic, address, sale, phone, password, exp } = user;
