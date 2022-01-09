@@ -8,9 +8,14 @@ const About = () => {
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <p className="title" id="title">About Us</p>
-                        <p id="subtitle">Mercer is a App for all yard sale enthusiasts,
-                            a place for vendors to advertise their sales and show off their wares.
-                            We welcome all to join our marketplace of all merchandise. </p>
+                        <p id="subtitle">Mercer is a crowdsourced online marketplace powered by everyday entrepreneurs (like you!). 
+                        From the latest and greatest in high-end electronics, to rare and unexpected collectibles and antiques, 
+                        you’re only a few clicks away from discovering yet another amazing deal. Mercer was built for our vendors - 
+                        making it fun, fast, and easy to quickly list and trade whatever they'd like, in bulk. 
+                        We believe that as we continue to improve our vendor store management system, 
+                        we’re providing an even more amazing customer experience as a result. 
+                        <br></br>Have a look around, and see for yourself! <br></br>
+                        Est. 2022 </p>
                     </div>
                 </div>
             </section>

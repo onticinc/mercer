@@ -302,7 +302,7 @@ input:focus {
 }
 
 #subtitle {
-  margin-bottom: -70px;
+  margin-bottom: -30px;
   color: var(--textLight);
 }
 
