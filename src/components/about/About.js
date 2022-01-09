@@ -8,18 +8,18 @@ const About = () => {
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <p className="title" id="title">What is Mercer?</p>
-                        <p id="subtitle">Mercer is a crowdsourced online marketplace powered by everyday entrepreneurs (like you!). 
-                        From the latest and greatest in high-end electronics, to rare and unexpected collectibles and antiques, 
-                        you’re only a few clicks away from discovering yet another amazing deal. Mercer was built for our vendors - 
-                        making it fun, fast, and easy to quickly list and trade whatever they'd like, in bulk. 
-                        We believe that as we continue to improve our vendor store management system, 
-                        we’re providing an even more amazing customer experience as a result. 
-                        <br></br>Have a look around, and see for yourself! <br></br>
-                        Est. 2022 </p>
+                        <p id="subtitle">Mercer is a crowdsourced online marketplace powered by everyday entrepreneurs (like you!).
+                            From the latest and greatest in high-end electronics, to rare and unexpected collectibles and antiques,
+                            you’re only a few clicks away from discovering yet another amazing deal. Mercer was built for our vendors -
+                            making it fun, fast, and easy to quickly list and trade whatever they'd like, in bulk.
+                            We believe that as we continue to improve our vendor store management system,
+                            we’re providing an even more amazing customer experience as a result.
+                            <br></br>Have a look around, and see for yourself! <br></br>
+                            Est. 2022 </p>
                     </div>
                 </div>
             </section>
-            
+
             <section className="container">
                 <div className="columns features">
                     <div className="column is-4">
@@ -36,7 +36,7 @@ const About = () => {
                                 <div className="content">
                                     <h4>Create your own Sale</h4>
                                     <p>
-                                        Let people know about your sale. 
+                                        Let people know about your sale.
                                     </p>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ const About = () => {
                                 <div className="content">
                                     <h4>Buy, Sell, and Trade Items.</h4>
                                     <p>
-                                        Thousands of items are availabe near you. 
+                                        Thousands of items are availabe near you.
                                     </p>
                                 </div>
                             </div>
