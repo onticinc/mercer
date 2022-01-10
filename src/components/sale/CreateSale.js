@@ -124,9 +124,10 @@ class CreateSale extends Component {
 
     // displaySales() {
     //     const displaySale = this.state.data.sale.map((sale, index) => {
+    //         console.log(sale)
     //         return (
     //             <Sale key={index} />
-    //         )
+    //         );
     //     });
 
     //     return displaySale;
