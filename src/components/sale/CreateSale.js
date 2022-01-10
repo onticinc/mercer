@@ -1,6 +1,5 @@
 import "../Components.css";
 
-
 //components
 import React, { Component } from "react";
 import axios from "axios";
@@ -13,17 +12,8 @@ class CreateSale extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: "",
-            sale: [],
-            data: [],
             redirect: false,
         };
-    }
-
-    handleName(e) {
-        this.setState({
-            userName: e.target.value,
-        });
     }
 
     handleSaleName(e) {
@@ -122,20 +112,8 @@ class CreateSale extends Component {
             })
     }
 
-    // displaySales() {
-    //     const displaySale = this.state.data.sale.map((sale, index) => {
-    //         console.log(sale)
-    //         return (
-    //             <Sale key={index} />
-    //         );
-    //     });
-
-    //     return displaySale;
-    // }
-
-
     render() {
-        if (this.state.redirect) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)
+        if (this.state.redirect) return <Redirect to="/profile" />;
 
         return (
             <>
@@ -144,7 +122,6 @@ class CreateSale extends Component {
                         <div className="column is-8 is-offset-2 register">
                             <div className="columns">
                                 <div className="column left">
-                                    {/* <h1 className="title is-1">{this.displaySales()}</h1> */}
                                     <img src="https://i.imgur.com/gi4BvGD.png" />
                                 </div>
                                 <div className="column right has-text-centered">

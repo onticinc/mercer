@@ -67,6 +67,9 @@ class Signup extends Component {
         userName: this.state.userName,
         email: this.state.email,
         password: this.state.password,
+        profilePic: this.state.profilePic,
+        address: this.state.address,
+        phone: this.state.phone,
       };
       axios
         .post(`${REACT_APP_SERVER_URL}/users/signup`, newUser)
@@ -105,14 +108,14 @@ class Signup extends Component {
                 <div className="column right has-text-centered">
                   <h1 className="title is-4">Create Your Account</h1>
                   <p className="description">
-                    Please fill out everything below. 
+                    Please fill out everything below.
                   </p>
                   <form onSubmit={this.handleSubmit.bind(this)}>
                     <div className="field">
                       <div className="control">
                         <input
                           className="input is-medium"
-                          
+
                           placeholder="Name"
                           name="name"
                           value={this.state.name}
@@ -126,7 +129,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-                          
+
                           placeholder="Profile Picture URL"
                           name="profilePic"
                           value={this.state.profilePic}
@@ -140,7 +143,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-                          
+
                           placeholder="Email"
                           name="email"
                           value={this.state.email}
@@ -154,7 +157,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-                          
+
                           placeholder="Address"
                           name="address"
                           value={this.state.address}
@@ -182,7 +185,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-                          
+                          type="password"
                           placeholder="Password"
                           name="password"
                           value={this.state.password}
@@ -196,7 +199,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-                          
+                          type="password"
                           placeholder="Confirm Password"
                           name="confirmPassword"
                           value={this.state.confirmPassword}

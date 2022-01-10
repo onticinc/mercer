@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import SaleCard from "./SaleCard";
-import ViewSale from "./ViewSale";
+import ViewSale from "./ViewYourSales";
 // import SaleCard from "./SaleCard";
 
-const ViewSales = (props) => {
+const ViewOtherSale = (props) => {
     const { handleLogout, user } = props;
     const { userName, item, profilePic, address, sale, phone, password, exp } = user;
     const expirationTime = new Date(exp * 1000);
@@ -41,4 +41,4 @@ const ViewSales = (props) => {
 
 
 
-export default ViewSales;
+export default ViewOtherSale;
