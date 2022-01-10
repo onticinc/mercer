@@ -69,7 +69,7 @@ class EditItem extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        const saleData = {
+        const itemData = {
             itemName: this.state.itemName,
             price: this.state.price,
             itemDescription: this.state.itemDescription,
