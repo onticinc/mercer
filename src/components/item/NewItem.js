@@ -129,7 +129,7 @@ class NewItem extends Component {
                         <div className="column is-8 is-offset-2 register">
                             <div className="columns">
                                 <div className="column left">
-                                    <h1 className="title is-1">{this.displaySales()}</h1>
+                                    <h1 className="title is-1">Testing</h1>
                                     <h1 className="title is-1">Super Cool Website</h1>
                                     <h2 className="subtitle colored is-4">
                                         Lorem ipsum dolor sit amet.

@@ -22,7 +22,7 @@ const Profile = (props) => {
             <div className="column is-4 is-offset-4">
               <div className="box">
                 <figure className="avatar">
-                  <img src="https://djontic.com/wp-content/uploads/2022/01/profile_pic.jpg" style={{ width: '150px', height: '150px' }} alt="Mercer Logo" />
+                  <img src={profilePic} style={{ width: '150px', height: '150px' }} alt="Mercer Logo" />
                 </figure>
                 <form>
                   <div className="content">
