@@ -7,6 +7,7 @@ const Profile = (props) => {
   const { id, userName, email, profilePic, address, phone, password, exp } = user;
   const expirationTime = new Date(exp * 1000);
   let currentTime = Date.now();
+  console.log(user.profilePic, "This is new");
 
   // make a condition that compares exp and current time
   if (currentTime >= expirationTime) {
