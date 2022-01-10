@@ -67,6 +67,10 @@ class Signup extends Component {
         userName: this.state.userName,
         email: this.state.email,
         password: this.state.password,
+        profilePic: this.state.profilePic,
+        address: this.state.address,
+        phone: this.state.phone,
+        // ADD extra profile info here
       };
       axios
         .post(`${REACT_APP_SERVER_URL}/users/signup`, newUser)
