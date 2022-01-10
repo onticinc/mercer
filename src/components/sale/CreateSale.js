@@ -113,29 +113,24 @@ class CreateSale extends Component {
                 header: { 'Access-Control-Allow-Origin': '*' }
             })
             .then((response) => {
-                console.log(response.data.user);
-                console.log(this.state.data);
-                let emptyData = this.state.data
-                let saleData = response.data.user
-                emptyData.push(saleData);
-                console.log('AFTER PUSH', emptyData);
+                this.setState({
+                    data: response.data.user
+                })
             })
             .catch((error) => {
                 console.log('ERROR', error)
             })
     }
 
-    displaySales() {
-        const displaySale = console.log('TESTING DISPLAY', this.state.data)
-        // const displaySale = this.state.data.map((sales, index) => {
-        //     console.log(sales.response)
-        //     return (
-        //         <Sale key={index} />
-        //     );
-        // });
+    // displaySales() {
+    //     const displaySale = this.state.data.sale.map((sale, index) => {
+    //         return (
+    //             <Sale key={index} />
+    //         )
+    //     });
 
-        return displaySale;
-    }
+    //     return displaySale;
+    // }
 
 
     render() {
@@ -148,12 +143,12 @@ class CreateSale extends Component {
                         <div className="column is-8 is-offset-2 register">
                             <div className="columns">
                                 <div className="column left">
-                                    <h1 className="title is-1">{this.displaySales()}</h1>
+                                    {/* <h1 className="title is-1">{this.displaySales()}</h1> */}
                                     <img src="https://i.imgur.com/gi4BvGD.png" />
                                 </div>
                                 <div className="column right has-text-centered">
                                     <h1 className="title is-4">Create a new sale.</h1>
-                    
+
                                     <form onSubmit={this.handleSubmit.bind(this)}>
                                         <div className="field">
                                             <div className="control">
