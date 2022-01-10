@@ -24,6 +24,7 @@ import NewItem from './components/item/NewItem';
 import ItemCard from './components/item/ItemCard';
 import ViewItems from './components/item/ViewItems';
 import EditItem from './components/item/EditItem';
+import ViewUsers from './components/profile/ViewUsers';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem('jwtToken');
@@ -90,6 +91,7 @@ function App() {
           <PrivateRoute path="/viewsale" component={ViewSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewsales" component={ViewSales} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/newsale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/viewusers" component={ViewUsers} user={currentUser} handleLogout={handleLogout} />
         </Switch>
       </div>
       <Footer />
