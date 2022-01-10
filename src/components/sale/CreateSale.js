@@ -113,12 +113,9 @@ class CreateSale extends Component {
                 header: { 'Access-Control-Allow-Origin': '*' }
             })
             .then((response) => {
-                console.log(response.data.user);
-                console.log(this.state.data);
-                let emptyData = this.state.data
-                let saleData = response.data.user
-                emptyData.push(saleData);
-                console.log('AFTER PUSH', emptyData);
+                this.setState({
+                    data: response.data.user
+                })
             })
             .catch((error) => {
                 console.log('ERROR', error)
@@ -126,13 +123,12 @@ class CreateSale extends Component {
     }
 
     displaySales() {
-        const displaySale = console.log('TESTING DISPLAY', this.state.data)
-        // const displaySale = this.state.data.map((sales, index) => {
-        //     console.log(sales.response)
-        //     return (
-        //         <Sale key={index} />
-        //     );
-        // });
+        const displaySale = this.state.data.sale.map((sale, index) => {
+            console.log(sale)
+            return (
+                <Sale key={index} />
+            );
+        });
 
         return displaySale;
     }
