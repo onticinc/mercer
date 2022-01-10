@@ -76,16 +76,13 @@ class EditItem extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         const saleData = {
-            saleName: this.state.saleName,
-            location: this.state.location,
-            saleImage: this.state.saleImage,
-            saleDescription: this.state.saleDescription,
-            time: this.state.time,
-            date: this.state.date,
-            saleTags: this.state.saleTags,
-            zipCode: this.state.zipCode,
+            itemName: this.state.itemName,
+            price: this.state.price,
+            itemDescription: this.state.itemDescription,
+            itemTags: this.state.itemTags,
+            itemImage: this.state.itemImage,
         };
-        axios.post(`${REACT_APP_SERVER_URL}/users/sale`, saleData)
+        axios.post(`${REACT_APP_SERVER_URL}/users/item`, itemData)
             .then(response => {
                 const { token } = response.data;
                 // save token to localStorage
@@ -136,7 +133,6 @@ class EditItem extends Component {
         return displaySale;
     }
 
-
     render() {
         if (this.state.redirect) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)
 
@@ -159,10 +155,10 @@ class EditItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="{saleName}"
-                                                    name="saleName"
-                                                    value={this.state.saleName}
-                                                    onChange={this.handleSaleName.bind(this)}
+                                                    placeholder="{itemName}"
+                                                    name="itemName"
+                                                    value={this.state.itemName}
+                                                    onChange={this.handleItemName.bind(this)}
                                                     required
                                                 />
                                             </div>
@@ -173,10 +169,10 @@ class EditItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="{location}"
+                                                    placeholder="{price}"
                                                     name="location"
-                                                    value={this.state.location}
-                                                    onChange={this.handleLocation.bind(this)}
+                                                    value={this.state.price}
+                                                    onChange={this.handlePrice.bind(this)}
                                                     required
                                                 />
                                             </div>
@@ -189,8 +185,8 @@ class EditItem extends Component {
                                                     type="text"
                                                     placeholder="{saleImage}"
                                                     name="image"
-                                                    value={this.state.saleImage}
-                                                    onChange={this.handleSaleImage.bind(this)}
+                                                    value={this.state.itemDescription}
+                                                    onChange={this.handleitemDescription.bind(this)}
                                                     required
                                                 />
                                             </div>
@@ -201,10 +197,10 @@ class EditItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="{saleDescription}"
+                                                    placeholder="{itemTags}"
                                                     name="description"
-                                                    value={this.state.saleDescription}
-                                                    onChange={this.handleSaleDescription.bind(this)}
+                                                    value={this.state.itemTags}
+                                                    onChange={this.handleItemTags.bind(this)}
                                                     required
                                                 />
                                             </div>
@@ -215,57 +211,14 @@ class EditItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="{Time}"
+                                                    placeholder="{itemImage}"
                                                     name="time"
-                                                    value={this.state.time}
-                                                    onChange={this.handleTime.bind(this)}
+                                                    value={this.state.itemImage}
+                                                    onChange={this.handleItemImage.bind(this)}
                                                     required
                                                 />
                                             </div>
                                         </div>
-
-                                        <div className="field">
-                                            <div className="control">
-                                                <input
-                                                    className="input is-medium"
-                                                    type="text"
-                                                    placeholder="{Date}"
-                                                    name="date"
-                                                    value={this.state.date}
-                                                    onChange={this.handleDate.bind(this)}
-                                                    required
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="field">
-                                            <div className="control">
-                                                <input
-                                                    className="input is-medium"
-                                                    type="text"
-                                                    placeholder="{Tag(s)}"
-                                                    name="saleTags"
-                                                    value={this.state.saleTags}
-                                                    onChange={this.handleSaleTags.bind(this)}
-                                                    required
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="field">
-                                            <div className="control">
-                                                <input
-                                                    className="input is-medium"
-                                                    type="text"
-                                                    placeholder="{Zip Code}"
-                                                    name="zipCode"
-                                                    value={this.state.zipCode}
-                                                    onChange={this.handleZipCode.bind(this)}
-                                                    required
-                                                />
-                                            </div>
-                                        </div>
-
                                         <button type="submit" className="button is-block is-primary is-fullwidth is-medium">
                                             Submit
                                         </button>
