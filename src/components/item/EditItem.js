@@ -13,7 +13,7 @@ class EditItem extends Component {
         super(props);
         this.state = {
             userName: "",
-            sale: [],
+            item: [],
             data: [],
             redirect: false,
         };
@@ -25,21 +25,21 @@ class EditItem extends Component {
         });
     }
 
-    handleSaleName(e) {
+    handleItemName(e) {
         this.setState({
-            saleName: e.target.value,
+            itemName: e.target.value,
         });
     }
 
-    handleLocation(e) {
+    handlePrice(e) {
         this.setState({
-            location: e.target.value,
+            price: e.target.value,
         });
     }
 
-    handleSaleImage(e) {
+    handleitemDescription(e) {
         this.setState({
-            saleImage: e.target.value,
+            itemDescription: e.target.value,
         });
     }
 
@@ -49,9 +49,9 @@ class EditItem extends Component {
         });
     }
 
-    handleTime(e) {
+    handleItemTags(e) {
         this.setState({
-            time: e.target.value,
+            itemTags: e.target.value,
         });
     }
 
@@ -61,15 +61,9 @@ class EditItem extends Component {
         });
     }
 
-    handleSaleTags(e) {
+    handleItemImages(e) {
         this.setState({
-            saleTags: e.target.value,
-        });
-    }
-
-    handleZipCode(e) {
-        this.setState({
-            zipCode: e.target.value,
+            itemTags: e.target.value,
         });
     }
 
@@ -112,8 +106,8 @@ class EditItem extends Component {
                 console.log(response.data.user);
                 console.log(this.state.data);
                 let emptyData = this.state.data
-                let saleData = response.data.user
-                emptyData.push(saleData);
+                let itemData = response.data.user
+                emptyData.push(itemData);
                 console.log('AFTER PUSH', emptyData);
             })
             .catch((error) => {
@@ -122,7 +116,7 @@ class EditItem extends Component {
     }
 
     displaySales() {
-        const displaySale = console.log('TESTING DISPLAY', this.state.data)
+        const displayItem = console.log('TESTING DISPLAY', this.state.data)
         // const displaySale = this.state.data.map((sales, index) => {
         //     console.log(sales.response)
         //     return (
@@ -130,11 +124,11 @@ class EditItem extends Component {
         //     );
         // });
 
-        return displaySale;
+        return displayItem;
     }
 
     render() {
-        if (this.state.redirect) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)
+        if (this.state.redirect) return <Redirect to="/item" />; // You can have them redirected to profile (your choice)
 
         return (
             <>
