@@ -15,19 +15,6 @@ class NewItem extends Component {
             redirect: false,
         };
     }
-
-    handleName(e) {
-        this.setState({
-            userName: e.target.value,
-        });
-    }
-
-    handleSaleNumber(e) {
-        this.setState({
-            saleNumber: e.target.value,
-        });
-    }
-
     handleItemName(e) {
         this.setState({
             itemName: e.target.value,
@@ -57,16 +44,10 @@ class NewItem extends Component {
             itemImage: e.target.value,
         });
     }
-    handleSaleName(e) {
-        this.setState({
-            saleName: e.target.value,
-        });
-    }
 
     handleSubmit = (e) => {
         e.preventDefault();
         const itemData = {
-            saleName: this.state.saleName,
             itemName: this.state.itemName,
             price: this.state.price,
             itemDescription: this.state.itemDescription,
@@ -129,27 +110,20 @@ class NewItem extends Component {
                         <div className="column is-8 is-offset-2 register">
                             <div className="columns">
                                 <div className="column left">
-                                    <h1 className="title is-1">Testing</h1>
-                                    <h1 className="title is-1">Super Cool Website</h1>
+                                    <h1 className="title is-1">Mercer</h1>
+                                    
                                     <h2 className="subtitle colored is-4">
-                                        Lorem ipsum dolor sit amet.
+                                        Add New Item
                                     </h2>
-                                    <p>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                        Corporis ex deleniti aliquam tempora libero excepturi vero
-                                        soluta odio optio sed.
-                                    </p>
+                                
                                 </div>
                                 <div className="column right has-text-centered">
                                     <h1 className="title is-4">Create an Item</h1>
-                                    <p className="description">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit
-                                    </p>
                                     <form onSubmit={this.handleSubmit.bind(this)}>
                                         <div className="field">
                                             <div className="control">
 
-                                                <select className="is-medium" name="cars" id="cars">
+                                                <select className="is-medium" name="selectSale" id="saleDropdown">
                                                     <option value="1">Sale Number 1</option>
                                                     <option value="2">Sale Number 2</option>
                                                     <option value="3">Sale Number 3</option>
@@ -158,36 +132,8 @@ class NewItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Sale Number"
-                                                    name="saleNumber"
-                                                    value={this.state.saleNumber}
-                                                    onChange={this.handleSaleNumber.bind(this)}
-                                                    required
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="field">
-                                            <div className="control">
-                                                <input
-                                                    className="input is-medium"
-                                                    type="text"
-                                                    placeholder="Sale Name"
-                                                    name="saleName"
-                                                    value={this.state.saleName}
-                                                    onChange={this.handleSaleName.bind(this)}
-                                                    required
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="field">
-                                            <div className="control">
-                                                <input
-                                                    className="input is-medium"
-                                                    type="text"
                                                     placeholder="Item Name"
-                                                    name="itemName"
+                                                    name="saleNumber"
                                                     value={this.state.itemName}
                                                     onChange={this.handleItemName.bind(this)}
                                                     required
@@ -200,7 +146,7 @@ class NewItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Price"
+                                                    placeholder="Item Price"
                                                     name="price"
                                                     value={this.state.price}
                                                     onChange={this.handlePrice.bind(this)}
@@ -215,7 +161,7 @@ class NewItem extends Component {
                                                     className="input is-medium"
                                                     type="text"
                                                     placeholder="Item Description"
-                                                    name="description"
+                                                    name="itemDescription"
                                                     value={this.state.itemDescription}
                                                     onChange={this.handleItemDescription.bind(this)}
                                                     required
@@ -228,11 +174,11 @@ class NewItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Tag(s)"
-                                                    name="itemTags"
+                                                    placeholder="Item Tags"
+                                                    name="Tags"
                                                     value={this.state.itemTags}
                                                     onChange={this.handleItemTags.bind(this)}
-                                                    required
+                                                    
                                                 />
                                             </div>
                                         </div>
@@ -242,7 +188,7 @@ class NewItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Item Image"
+                                                    placeholder="Image Link"
                                                     name="itemImage"
                                                     value={this.state.itemImage}
                                                     onChange={this.handleItemImage.bind(this)}
@@ -254,50 +200,11 @@ class NewItem extends Component {
                                         <button type="submit" className="button is-block is-primary is-fullwidth is-medium">
                                             Submit
                                         </button>
-                                        <br />
-                                        <small>
-                                            <em>Lorem ipsum dolor sit amet consectetur.</em>
-                                        </small>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                        <div className="column is-8 is-offset-2">
-                            <br />
-                            <nav className="level">
-                                <div className="level-left">
-                                    <div className="level-item">
-                                        <span className="icon">
-                                            <i className="fab fa-twitter"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fab fa-facebook"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fab fa-instagram"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fab fa-github"></i>
-                                        </span>{" "}
-                                        &emsp;
-                                        <span className="icon">
-                                            <i className="fas fa-envelope"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="level-right">
-                                    <small
-                                        className="level-item"
-                                        style={{ color: "var(--textLight)" }}
-                                    >
-                                        &copy; Super Cool Website. 2022 All Rights Reserved.
-                                    </small>
-                                </div>
-                            </nav>
-                        </div>
+                       
                     </div>
                 </section>
             </>
