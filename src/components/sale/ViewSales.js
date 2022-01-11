@@ -4,7 +4,7 @@ import SaleCard from "./SaleCard";
 const { REACT_APP_SERVER_URL } = process.env;
 
 
-class ViewOtherSales extends Component {
+class ViewSales extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,7 +33,7 @@ class ViewOtherSales extends Component {
     }
 
     displaySales() {
-        const display = !this.state.users[this.state.userIndex] ? <h1>Loading</h1> : this.state.users[this.state.userIndex].sale.map((a, idx) => {
+        const display = !this.state.users[this.state.userIndex] ? <h1>There is no User of this Index</h1> : this.state.users[this.state.userIndex].sale.map((a, idx) => {
             return (
                 <SaleCard
                     key={idx}
@@ -61,7 +61,7 @@ class ViewOtherSales extends Component {
     }
 }
 
-export default ViewOtherSales;
+export default ViewSales;
 
 /********************************************************/
 // const ViewOtherSales = (props) => {
