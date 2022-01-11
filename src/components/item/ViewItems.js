@@ -1,52 +1,81 @@
-import "../Components.css";
-
-import React, { Component } from "react";
 import axios from "axios";
-import setAuthToken from '../../utils/setAuthToken';
+import React, { Component } from "react";
 import ItemCard from "./ItemCard";
 const { REACT_APP_SERVER_URL } = process.env;
+
 
 class ViewItems extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: []
+            userIndex: 0,
+            saleIndex: 0,
+            users: [],
         };
     }
 
+    handleUserNumber(e) {
+        this.setState({
+            userIndex: e.target.value,
+        });
+    }
+
+    handleSaleNumber(e) {
+        this.setState({
+            saleIndex: e.target.value,
+        });
+    }
+
     componentDidMount() {
-        console.log(localStorage) //Shows local token in console
-        let token = localStorage.getItem('jwtToken')  //grabs token 
-        setAuthToken(token); //function to auth saved token (seprate JS file)
-        axios.get(`${REACT_APP_SERVER_URL}/users/other-stuff`,
-            {
-                header: { 'Access-Control-Allow-Origin': '*' }
-            })
+        axios.get(`${REACT_APP_SERVER_URL}/users/other-stuff`)
             .then((response) => {
+                let users = response.data.user;
+                let sales = response.data.user.sale;
                 this.setState({
-                    data: response.data
-                })
-                console.log(response.data.user);
-                console.log(this.state.data);
-                // let emptyData = this.state.data
-                // let userData = response.data.user
-                // emptyData.push(saleData);
-                // console.log('AFTER PUSH', emptyData);
+                    users: users,
+                    sales: sales,
+                });
+                console.log("LOOK AT THIS", this.state.users[0].sale.length);
             })
             .catch((error) => {
                 console.log('ERROR', error)
             })
     }
 
+    displayItems() {
+        if (!this.state.users[this.state.userIndex]) {
+            return <h1>There are no Users this Index</h1>
+        } else {
+            if (!this.state.users[this.state.userIndex].sale[this.state.saleIndex]) {
+                return <h1>There are no Sales of this Index</h1>
+            } else {
+                return this.state.users[this.state.userIndex].sale[this.state.saleIndex].item.map((a, idx) => {
+                    return (
+                        <ItemCard
+                            key={idx}
+                            itemName={a.itemName}
+                            price={a.price}
+                            itemDescription={a.itemDescription}
+                            itemTags={a.itemTags}
+                            itemImage={a.itemImage}
+                        />
+                    )
+                });
+            }
+        }
+    }
+
     render() {
         return (
             <div>
-                <h1>This is the View Items Page</h1>
-                <ItemCard />
-            </div>
+                <h1>Users</h1>
+                <input type="number" min="0" value={this.state.userIndex} onChange={this.handleUserNumber.bind(this)} />
+                <h1>Sales</h1>
+                <input type="number" min="0" value={this.state.saleIndex} onChange={this.handleSaleNumber.bind(this)} />
+                {this.displayItems()}
+            </div >
         )
     }
-
 }
 
 export default ViewItems;
