@@ -66,6 +66,7 @@ class CreateSale extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+
         const saleData = {
             saleName: this.state.saleName,
             location: this.state.location,
@@ -74,8 +75,10 @@ class CreateSale extends Component {
             time: this.state.time,
             date: this.state.date,
             saleTags: this.state.saleTags,
-            zipCode: this.state.zipCode,
-        };
+            zipCode: this.state.zipCode,   
+        }
+       
+
         axios.post(`${REACT_APP_SERVER_URL}/users/sale`, saleData)
             .then(response => {
                 const { token } = response.data;
@@ -88,10 +91,14 @@ class CreateSale extends Component {
                 // set the current user
                 this.props.nowCurrentUser(decoded); // funnction passed down as props.
             })
+            
             .catch(error => {
                 console.log('===> Error on login', error);
                 alert('Either email or password is incorrect. Please try again');
             });
+
+        this.state.redirect = true;    
+            
     };
 
     componentDidMount() {
@@ -113,7 +120,7 @@ class CreateSale extends Component {
     }
 
     render() {
-        if (this.state.redirect) return <Redirect to="/profile" />;
+        if (this.state.redirect === true) return <Redirect to="/newitem" />;
 
         return (
             <>
@@ -239,14 +246,12 @@ class CreateSale extends Component {
                                                 />
                                             </div>
                                         </div>
-
+                                        
                                         <button type="submit" className="button is-block is-primary is-fullwidth is-medium">
-                                            Submit
+                                      Submit
                                         </button>
                                         <br />
-                                        <small>
-                                            <em>Lorem ipsum dolor sit amet consectetur.</em>
-                                        </small>
+                                        <a href="/newitem" className="button is primary is-fullwidth is-medium">Add Items After Sale</a>
                                     </form>
                                 </div>
                             </div>

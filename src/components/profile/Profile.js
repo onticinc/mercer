@@ -59,8 +59,8 @@ class displayProfile extends Component {
                         </tr>
                       </table>
                     </div>
-                    <a id="editProfile" className="button is-block is-fullwidth is-primary is-medium">Edit Profile<i className="fa fa-sign-in" aria-hidden="true"></i></a>
-                    <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15">View Your Sales<i className="fa fa-sign-in" aria-hidden="true"></i></a>
+                    {/* <a id="editProfile" className="button is-block is-fullwidth is-primary is-medium">Edit Profile<i className="fa fa-sign-in" aria-hidden="true"></i></a> */}
+                    {/* <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15">View Your Sales<i className="fa fa-sign-in" aria-hidden="true"></i></a> */}
                   </form>
                 </div>
               </div>

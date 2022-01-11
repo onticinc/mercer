@@ -206,6 +206,7 @@ class NewItem extends Component {
                                         <button type="submit" className="button is-block is-primary is-fullwidth is-medium">
                                             Submit
                                         </button>
+                                        <a href="/home" className="button is primary is-fullwidth is-medium">Add Items After Sale</a>
                                     </form>
                                 </div>
                             </div>
