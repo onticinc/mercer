@@ -118,7 +118,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-
+                          type="text"
                           placeholder="Name"
                           name="name"
                           value={this.state.name}
@@ -132,7 +132,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-
+                          type="text"
                           placeholder="Profile Picture URL"
                           name="profilePic"
                           value={this.state.profilePic}
@@ -146,7 +146,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-
+                          type="email"
                           placeholder="Email"
                           name="email"
                           value={this.state.email}
@@ -160,7 +160,7 @@ class Signup extends Component {
                       <div className="control">
                         <input
                           className="input is-medium"
-
+                          type="text"
                           placeholder="Address"
                           name="address"
                           value={this.state.address}

@@ -61,7 +61,7 @@ class EditItem extends Component {
         });
     }
 
-    handleItemImages(e) {
+    handleItemImage(e) {
         this.setState({
             itemTags: e.target.value,
         });
@@ -86,7 +86,7 @@ class EditItem extends Component {
                 // decode token to get the user data
                 const decoded = jwt_decode(token);
                 // set the current user
-                this.props.nowCurrentUser(decoded); // funnction passed down as props.
+                this.props.nowCurrentUser(decoded); // function passed down as props.
             })
             .catch(error => {
                 console.log('===> Error on login', error);
@@ -98,7 +98,7 @@ class EditItem extends Component {
         console.log(localStorage) //Shows local token in console
         let token = localStorage.getItem('jwtToken')  //grabs token 
         setAuthToken(token); //function to auth saved token (seprate JS file)
-        axios.get(`${REACT_APP_SERVER_URL}/users/sale`,
+        axios.get(`${REACT_APP_SERVER_URL}/users/item`,
             {
                 header: { 'Access-Control-Allow-Origin': '*' }
             })
