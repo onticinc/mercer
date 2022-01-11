@@ -43,7 +43,7 @@ class UserCard extends Component {
                                             <div className="background-icon"><span className="icon-twitter"></span></div>
                                         </div>
                                         <div>
-                                            <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15">View Sales<i className="fa fa-sign-in" aria-hidden="true"></i></a>
+                                            <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15" href="/viewothersales">View Sales<i className="fa fa-sign-in" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
                                 </div>

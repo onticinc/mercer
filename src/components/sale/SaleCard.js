@@ -46,6 +46,9 @@ class SaleCard extends Component {
                                             {this.props.item}
                                             <div className="background-icon"><span className="icon-twitter"></span></div>
                                         </div>
+                                        <div>
+                                        <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15" href="/viewitems">Browse This Sale<i className="fa fa-sign-in" aria-hidden="true"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
