@@ -1,42 +1,52 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import "../Components.css";
+
+import React, { Component } from "react";
+import axios from "axios";
+import setAuthToken from '../../utils/setAuthToken';
 import ItemCard from "./ItemCard";
+const { REACT_APP_SERVER_URL } = process.env;
 
-const ViewItems = (props) => {
-    const { handleLogout, user } = props;
-    const { userName, item, profilePic, address, sale, phone, password, exp } = user;
-    const expirationTime = new Date(exp * 1000);
-    let currentTime = Date.now();
-
-    // make a condition that compares exp and current time
-    if (currentTime >= expirationTime) {
-        handleLogout();
-        alert('Session has ended. Please login to continue.');
+class ViewItems extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: []
+        };
     }
 
-    const salesData = user ?
-        (
+    componentDidMount() {
+        console.log(localStorage) //Shows local token in console
+        let token = localStorage.getItem('jwtToken')  //grabs token 
+        setAuthToken(token); //function to auth saved token (seprate JS file)
+        axios.get(`${REACT_APP_SERVER_URL}/users/other-stuff`,
+            {
+                header: { 'Access-Control-Allow-Origin': '*' }
+            })
+            .then((response) => {
+                this.setState({
+                    data: response.data
+                })
+                console.log(response.data.user);
+                console.log(this.state.data);
+                // let emptyData = this.state.data
+                // let userData = response.data.user
+                // emptyData.push(saleData);
+                // console.log('AFTER PUSH', emptyData);
+            })
+            .catch((error) => {
+                console.log('ERROR', error)
+            })
+    }
+
+    render() {
+        return (
             <div>
+                <h1>This is the View Items Page</h1>
                 <ItemCard />
             </div>
-        ) : <h2>Loading...</h2>
-
-    const errorDiv = () => {
-        return (
-            <div className="text-center pt-4">
-                <h3>Please <Link to="/login">login</Link> to view this page</h3>
-            </div>
-        );
-    };
-
-    return (
-        <div className="text-center pt-4">
-            {user ? salesData : errorDiv()}
-        </div>
-    );
+        )
+    }
 
 }
-
-
 
 export default ViewItems;
