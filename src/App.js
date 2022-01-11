@@ -28,6 +28,8 @@ import ViewItems from './components/item/ViewItems';
 import EditItem from './components/item/EditItem';
 import ViewUsers from './components/profile/ViewUsers';
 
+import DisplayPurchasePage from './components/utilities/PurchasePage';
+
 const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem('jwtToken');
   // console.log('===> Hitting a Private Route');
@@ -96,6 +98,9 @@ function App() {
 
           <PrivateRoute path="/newsale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewusers" component={ViewUsers} user={currentUser} handleLogout={handleLogout} />
+
+          <PrivateRoute path="/purchasepage" component={DisplayPurchasePage} user={currentUser} handleLogout={handleLogout} />
+
         </Switch>
       </div>
       <Footer />
