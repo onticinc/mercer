@@ -1,33 +1,33 @@
 import React from 'react';
 import '../Components.css'
-const { REACT_APP_SERVER_URL } = process.env;
+// const { REACT_APP_SERVER_URL } = process.env;
 
-class displayProfile extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        data: []
-      };
-    }
+class DisplayPurchasePage extends Component {
+    // constructor(props) {
+    //   super(props);
+    //   this.state = {
+    //     data: []
+    //   };
+    // }
   
-    componentDidMount() {
-      console.log(localStorage) //Shows local token in console
-      let token = localStorage.getItem('jwtToken')  //grabs token 
-      setAuthToken(token); //function to auth saved token (seprate JS file)
-      axios.get(`${REACT_APP_SERVER_URL}/users/your-stuff`,
-        {
-          header: { 'Access-Control-Allow-Origin': '*' }
-        })
-        .then((response) => {
-          console.log(response);
-          this.setState({
-            data: response.data.user
-          })
-        })
-        .catch((error) => {
-          console.log('ERROR', error)
-        })
-    }
+    // componentDidMount() {
+    //   console.log(localStorage) //Shows local token in console
+    //   let token = localStorage.getItem('jwtToken')  //grabs token 
+    //   setAuthToken(token); //function to auth saved token (seprate JS file)
+    //   axios.get(`${REACT_APP_SERVER_URL}/users/your-stuff`,
+    //     {
+    //       header: { 'Access-Control-Allow-Origin': '*' }
+    //     })
+    //     .then((response) => {
+    //       console.log(response);
+    //       this.setState({
+    //         data: response.data.user
+    //       })
+    //     })
+    //     .catch((error) => {
+    //       console.log('ERROR', error)
+    //     })
+    // }
   
     render() {
       return (
@@ -71,4 +71,4 @@ class displayProfile extends Component {
   
   }
   
-  export default displayProfile;
+  export default DisplayPurchasePage;
