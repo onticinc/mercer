@@ -11,10 +11,18 @@ class NewItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            saleNumber: 0,
             data: [],
             redirect: false,
         };
     }
+
+    handleSaleNumber(e) {
+        this.setState({
+            saleNumber: e.target.value,
+        });
+    }
+
     handleItemName(e) {
         this.setState({
             itemName: e.target.value,
@@ -48,6 +56,7 @@ class NewItem extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         const itemData = {
+            saleNumber: this.state.saleNumber,
             itemName: this.state.itemName,
             price: this.state.price,
             itemDescription: this.state.itemDescription,
@@ -114,29 +123,23 @@ class NewItem extends Component {
                             <div className="columns">
                                 <div className="column left">
                                     <h1 className="title is-1">Mercer</h1>
-                                    
+
                                     <h2 className="subtitle colored is-4">
                                         Add New Item
                                     </h2>
-                                
+
                                 </div>
                                 <div className="column right has-text-centered">
                                     <h1 className="title is-4">Create an Item</h1>
                                     <form onSubmit={this.handleSubmit.bind(this)}>
                                         <div className="field">
                                             <div className="control">
-
-                                                <select className="is-medium" name="selectSale" id="saleDropdown">
-                                                    <option value="1">Sale Number 1</option>
-                                                    <option value="2">Sale Number 2</option>
-                                                    <option value="3">Sale Number 3</option>
-                                                    <option value="4">Sale Number 4</option>
-                                                </select>
+                                                <input type="number" min="0" value={this.state.saleNumber} onChange={this.handleSaleNumber.bind(this)} />
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
                                                     placeholder="Item Name"
-                                                    name="saleNumber"
+                                                    name="itemName"
                                                     value={this.state.itemName}
                                                     onChange={this.handleItemName.bind(this)}
                                                     required
@@ -181,7 +184,7 @@ class NewItem extends Component {
                                                     name="Tags"
                                                     value={this.state.itemTags}
                                                     onChange={this.handleItemTags.bind(this)}
-                                                    
+
                                                 />
                                             </div>
                                         </div>
@@ -207,7 +210,7 @@ class NewItem extends Component {
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
                 </section>
             </>
