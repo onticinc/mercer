@@ -134,6 +134,7 @@ class NewItem extends Component {
                                     <form onSubmit={this.handleSubmit.bind(this)}>
                                         <div className="field">
                                             <div className="control">
+                                                <p>Select Sale Index - Minimum: 0</p>
                                                 <input type="number" min="0" value={this.state.saleNumber} onChange={this.handleSaleNumber.bind(this)} />
                                                 <input
                                                     className="input is-medium"
@@ -206,7 +207,7 @@ class NewItem extends Component {
                                         <button type="submit" className="button is-block is-primary is-fullwidth is-medium">
                                             Submit
                                         </button>
-                                        <a href="/home" className="button is primary is-fullwidth is-medium">Add Items After Sale</a>
+                                        <a href="/home" className="button is primary is-fullwidth is-medium">Click Here to Return Home</a>
                                     </form>
                                 </div>
                             </div>

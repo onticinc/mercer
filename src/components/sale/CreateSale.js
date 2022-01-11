@@ -75,9 +75,9 @@ class CreateSale extends Component {
             time: this.state.time,
             date: this.state.date,
             saleTags: this.state.saleTags,
-            zipCode: this.state.zipCode,   
+            zipCode: this.state.zipCode,
         }
-       
+
 
         axios.post(`${REACT_APP_SERVER_URL}/users/sale`, saleData)
             .then(response => {
@@ -91,14 +91,14 @@ class CreateSale extends Component {
                 // set the current user
                 this.props.nowCurrentUser(decoded); // funnction passed down as props.
             })
-            
+
             .catch(error => {
                 console.log('===> Error on login', error);
                 alert('Either email or password is incorrect. Please try again');
             });
 
-        this.state.redirect = true;    
-            
+        this.state.redirect = true;
+
     };
 
     componentDidMount() {
@@ -246,12 +246,12 @@ class CreateSale extends Component {
                                                 />
                                             </div>
                                         </div>
-                                        
+
                                         <button type="submit" className="button is-block is-primary is-fullwidth is-medium">
-                                      Submit
+                                            Submit
                                         </button>
                                         <br />
-                                        <a href="/newitem" className="button is primary is-fullwidth is-medium">Add Items After Sale</a>
+                                        <a href="/newitem" className="button is primary is-fullwidth is-medium">Click Here to Add Items</a>
                                     </form>
                                 </div>
                             </div>
