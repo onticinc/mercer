@@ -19,7 +19,7 @@ const DisplayPurchasePage = () => {
                             <h1>Congratulations!</h1>
                           </tr>
                           <tr>
-                            <td>You're item purchase was successful. We'll email you a receipt and confirmation number in the next few minutes.</td>
+                            <td>Your item purchase was successful. We'll email you a receipt and confirmation number in the next few minutes.</td>
                           </tr>
                           <tr>
                             <td>Thank you for shopping on Mercer</td>
