@@ -22,7 +22,7 @@ class ViewItem extends Component {
 
 
     componentDidMount() {
-        axios.get(`${REACT_APP_SERVER_URL}/users/item`,
+        axios.get(`${REACT_APP_SERVER_URL}/users/item`)
             .then((response) => {
                 console.log(response.data.user);
                 console.log(this.state.data);
@@ -40,8 +40,8 @@ class ViewItem extends Component {
         const display = this.state.data.map((i, index) => {
             console.log(item.response)
             return (
-                <ItemCard 
-                    key={index}  
+                <ItemCard
+                    key={index}
                     itemName={i.itemName}
                     price={i.price}
                     itemDescription={i.descrption}
@@ -60,9 +60,9 @@ class ViewItem extends Component {
 
         return (
             <>
-                
-            <ItemCard key={idx} itemName={itemName}/>
-                
+
+                <ItemCard key={idx} itemName={itemName} />
+
             </>
         );
     }
