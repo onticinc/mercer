@@ -19,9 +19,7 @@ import LoggedInHome from './components/home/LoggedInHome';
 import CreateSale from './components/sale/CreateSale';
 import EditSale from './components/sale/EditSale';
 
-import ViewOtherSale from './components/sale/ViewOtherSale';
 import ViewOtherSales from './components/sale/ViewOtherSales';
-import ViewYourSale from './components/sale/ViewYourSale';
 import ViewYourSales from './components/sale/ViewYourSales';
 
 import NewItem from './components/item/NewItem';
@@ -93,9 +91,7 @@ function App() {
           <PrivateRoute path="/edititem" component={EditItem} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/editsale" component={EditSale} user={currentUser} handleLogout={handleLogout} />
 
-          <PrivateRoute path="/viewothersale" component={ViewOtherSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewothersales" component={ViewOtherSales} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/viewyoursale" component={ViewYourSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewyoursales" component={ViewYourSales} user={currentUser} handleLogout={handleLogout} />
 
           <PrivateRoute path="/newsale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />

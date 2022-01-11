@@ -8,16 +8,23 @@ class ViewOtherSales extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [],
+            userIndex: 0,
+            users: [],
         };
+    }
+
+    handleUserNumber(e) {
+        this.setState({
+            userIndex: e.target.value,
+        });
     }
 
     componentDidMount() {
         axios.get(`${REACT_APP_SERVER_URL}/users/other-stuff`)
             .then((response) => {
-                console.log("SEE THIS", response.data.user);
+                let users = response.data.user;
                 this.setState({
-                    data: response.data.user,
+                    users: users,
                 });
             })
             .catch((error) => {
@@ -26,8 +33,7 @@ class ViewOtherSales extends Component {
     }
 
     displaySales() {
-        console.log("LOOK AT THIS !!!!!", this.state.data[0]);
-        const display = this.state.data.map((a, idx) => {
+        const display = !this.state.users[this.state.userIndex] ? <h1>Loading</h1> : this.state.users[this.state.userIndex].sale.map((a, idx) => {
             return (
                 <SaleCard
                     key={idx}
@@ -41,13 +47,14 @@ class ViewOtherSales extends Component {
                     zipCode={a.zipCode}
                 />
             )
-        });
+        })
         return display;
     }
 
     render() {
         return (
             <div>
+                <input type="number" min="0" value={this.state.userIndex} onChange={this.handleUserNumber.bind(this)} />
                 {this.displaySales()}
             </div>
         )
