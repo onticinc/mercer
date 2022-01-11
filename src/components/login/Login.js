@@ -56,7 +56,7 @@ class Login extends Component {
 
     return (
       <>
-        <div className="container has-text-centered">
+        <div className="container m-t-30 has-text-centered">
           <div className="column is-4 is-offset-4">
             <div className="box">
               <figure className="avatar">
@@ -101,14 +101,10 @@ class Login extends Component {
                 <div className="container isloginlink">
                   <div className="row">
                     <hr className="login-hr" />
-                    <a href="../register">Sign Up</a>
+                    <a href="/signup">Sign Up</a>
                   </div>
                   <div className="row">
                     <a href="../">Forgot Password</a>
-                  </div>
-
-                  <div className="row">
-                    <a href="../">Need Help?</a>
                   </div>
                 </div>
               </p>

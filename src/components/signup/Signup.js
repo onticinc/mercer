@@ -94,9 +94,9 @@ class Signup extends Component {
 
     return (
       <>
-        <section className="container">
-          <div className="columns is-multiline" id="column">
-            <div className="column is-8 is-offset-2 register">
+        <section className="container m-t-30">
+          <div className="columns is-multiline" id="column2">
+            <div className="column is-8 is-offset-2 register m-t-30">
               <div className="columns">
                 <div className="column left">
                   <h1 className="title is-1">Mercer</h1>
@@ -109,7 +109,7 @@ class Signup extends Component {
                   <img src="https://i.imgur.com/gi4BvGD.png" />
                 </div>
                 <div className="column right has-text-centered">
-                  <h1 className="title is-4">Create Your Account</h1>
+                  <h1 className="title is-4 m-t-15">Create Your Account</h1>
                   <p className="description">
                     Please fill out everything below.
                   </p>

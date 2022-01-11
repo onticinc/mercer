@@ -41,21 +41,25 @@ const LoggedInHome = () => {
                             </a>
                         </div>
                         <div className="column is-3">
-                            <article>
-                                <figure className="image is-5by3">
-                                    <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/best-items-to-sell-yard-garage-sales-kids-toys.jpg" />
-                                </figure>
-                                <h2 className="subtitle">Children's Toys</h2>
-                            </article>
+                            <a href="/viewitems">
+                                <article>
+                                    <figure className="image is-5by3">
+                                        <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/best-items-to-sell-yard-garage-sales-kids-toys.jpg" />
+                                    </figure>
+                                    <h2 className="subtitle">Children's Toys</h2>
+                                </article>
+                            </a>
                         </div>
                         <div className="column is-3">
-                            <article>
-                                <figure className="image is-5by3">
-                                    <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-costume-jewelry.jpg" />
-                                </figure>
-                                <h2 className="subtitle">Jewelry</h2>
-                                <br />
-                            </article>
+                            <a href="/viewitems">   
+                                <article>
+                                    <figure className="image is-5by3">
+                                        <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-costume-jewelry.jpg" />
+                                    </figure>
+                                    <h2 className="subtitle">Jewelry</h2>
+                                    <br />
+                                </article>
+                            </a>
                         </div>
                     </div>
                 </section>

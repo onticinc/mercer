@@ -207,6 +207,10 @@ hr {
   margin-bottom: 30px;
 }
 
+.m-t-30 {
+  margin-top: 30px;
+}
+
 
 /* Start Signup CSS */
 
@@ -282,9 +286,7 @@ input:focus {
   margin-right: 1rem;
 }
 
-#column {
-  margin-top: -125px;
-}
+
 
 .isloginlink {
   padding: 5px;
