@@ -40,6 +40,10 @@ input::placeholder {
   color: var(--bg);
 }
 
+/* .usercontainer {
+  display: flex;
+} */
+
 .card.large {
   border-radius: 5px;
 }

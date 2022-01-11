@@ -1,46 +1,61 @@
 import '../Components.css';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import axios from 'axios';
+import setAuthToken from '../../utils/setAuthToken';
+const { REACT_APP_SERVER_URL } = process.env;
 
-const Profile = (props) => {
-  const { handleLogout, user } = props;
-  const { id, userName, email, profilePic, address, phone, password, exp } = user;
-  const expirationTime = new Date(exp * 1000);
-  let currentTime = Date.now();
-
-  // make a condition that compares exp and current time
-  if (currentTime >= expirationTime) {
-    handleLogout();
-    alert('Session has ended. Please login to continue.');
+class displayProfile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
   }
 
-  const userData = user ?
-    (<div>
-      <section className="hero is-fullheight">
+  componentDidMount() {
+    console.log(localStorage) //Shows local token in console
+    let token = localStorage.getItem('jwtToken')  //grabs token 
+    setAuthToken(token); //function to auth saved token (seprate JS file)
+    axios.get(`${REACT_APP_SERVER_URL}/users/your-stuff`,
+      {
+        header: { 'Access-Control-Allow-Origin': '*' }
+      })
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          data: response.data.user
+        })
+      })
+      .catch((error) => {
+        console.log('ERROR', error)
+      })
+  }
+
+  render() {
+    return (
+      <div>
+        <section className="hero is-fullheight">
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="column is-4 is-offset-4">
               <div className="box">
                 <figure className="avatar">
-                  <img src={profilePic} style={{ width: '150px', height: '150px' }} alt="Mercer Logo" />
+                  <img src={this.state.data.profilePic} style={{ width: '150px', height: '150px' }} alt="Profile Pic" />
                 </figure>
                 <form>
                   <div className="content">
                     <table className="table-profile">
                       <tr>
-                        <td>Name: {userName}</td>
+                        <td>Name: {this.state.data.userName}</td>
                       </tr>
                       <tr>
-                        <td>Email: {email}</td>
+                        <td>Email: {this.state.data.email}</td>
                       </tr>
                       <tr>
-                        <td>Phone Number: {phone}</td>
+                        <td>Phone Number: {this.state.data.phone}</td>
                       </tr>
                       <tr>
-                        <td>Address: {address}</td>
-                      </tr>
-                      <tr>
-                        <td>Account ID: {id}</td>
+                        <td>Address: {this.state.data.address}</td>
                       </tr>
                     </table>
                   </div>
@@ -52,23 +67,10 @@ const Profile = (props) => {
           </div>
         </div>
       </section>
-
-    </div>) : <h2>Loading...</h2>
-
-  const errorDiv = () => {
-    return (
-      <div className="text-center pt-4">
-        <h3>Please <Link to="/login">login</Link> to view this page</h3>
       </div>
-    );
-  };
-
-  return (
-    <div className="text-center pt-4">
-      {user ? userData : errorDiv()}
-    </div>
-  );
+    )
+  }
 
 }
 
-export default Profile;
+export default displayProfile;
