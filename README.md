@@ -183,7 +183,15 @@ A couple paragraphs about the general approach you took
 
 ## Project Wireframes
 
-(INSERT LINK TO WIREFRAMES)
+![Alt text](https://i.imgur.com/elBrbgk.png "Optional title")
+
+![Alt text](https://i.imgur.com/ID426sI.png "Optional title")
+
+![Alt text](https://i.imgur.com/shUjrcg.png "Optional title")
+
+![Alt text](https://i.imgur.com/jKftZkX.png "Optional title")
+
+![Alt text](https://i.imgur.com/qGrHgpc.png "Optional title")
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -191,8 +199,15 @@ A couple paragraphs about the general approach you took
 
 ## Roadblocks
 
-Descriptions of any unsolved problems or major hurdles your team had to overcome.
+Frontend:
+- Placeholder
+- Placeholder
+- Placeholder
 
+Backend:
+- Placeholder
+- Placeholder
+- Placeholder
 
 See the [open issues](https://github.com/onticinc/mercer/issues) for a full list of proposed features (and known issues).
 
