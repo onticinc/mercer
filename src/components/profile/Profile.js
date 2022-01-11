@@ -1,12 +1,8 @@
 import '../Components.css';
-// import React from 'react';
 import React, { Component } from "react";
 import axios from 'axios';
 import setAuthToken from '../../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
-
-// import { Link } from 'react-router-dom';
-
 
 class displayProfile extends Component {
   constructor(props) {
@@ -29,8 +25,6 @@ class displayProfile extends Component {
         this.setState({
           data: response.data.user
         })
-        // console.log(this.setState);
-        console.log(this.state.data);
       })
       .catch((error) => {
         console.log('ERROR', error)
