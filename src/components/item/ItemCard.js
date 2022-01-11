@@ -40,6 +40,9 @@ class ItemCard extends Component {
                                         <div className="content">
                                             {this.props.itemTags}
                                         </div>
+                                        <div>
+                                        <a id="editProfile" className="button is-block is-fullwidth is-primary is-medium" href="/purchasepage">Purchase This Item<i className="fa fa-sign-in" aria-hidden="true"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
