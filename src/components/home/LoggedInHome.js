@@ -5,7 +5,7 @@ const LoggedInHome = () => {
     return (
         <div>
             <section className="buttonSection">
-                <a className="button is-primary" id="button1" type="button">Find Sales</a>
+                <a className="button is-primary" id="button1" type="button" href="/viewothersales">Find Sales</a>
                 <a className="button is-info" id="button2" type="button" href="/newsale">Create New Sale</a>
             </section>
 
@@ -20,20 +20,25 @@ const LoggedInHome = () => {
                     </div>
                     <div className="columns">
                         <div className="column is-3">
+                            <a href="/viewitems">
                             <article>
                                 <figure className="image is-5by3">
                                     <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-outdoor-furniture.jpg" />
                                 </figure>
                                 <h2 className="subtitle">Outdoor Furniture</h2>
                             </article>
+                            </a>
                         </div>
+                       
                         <div className="column is-3">
-                            <article>
-                                <figure className="image is-5by3">
-                                    <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-lawn-equipment.jpg" />
-                                </figure>
-                                <h2 className="subtitle">Lawn Equipment</h2>
-                            </article>
+                            <a href="/viewitems">
+                                <article>
+                                    <figure className="image is-5by3">
+                                        <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-lawn-equipment.jpg" />
+                                    </figure>
+                                    <h2 className="subtitle">Lawn Equipment</h2>
+                                </article>
+                            </a>
                         </div>
                         <div className="column is-3">
                             <article>
