@@ -216,7 +216,11 @@ Mercer is a fun and easy way to find great deals on awesome resale items, and it
 
 ## General Approach
 
-A couple paragraphs about the general approach you took
+Our frontend and backend teams collaboratively built the idea for Mercer. We wanted an online-store application where we could innovate on ideas we thought could interact well on a single platform.
+
+We began by creating our wireframe and laying out our user stories. With these as the foundation, our backend team built out the database tools necessary to provide functionality to the app. Our frontend began creating components and pages to address the requirements we had produced from our wireframes. 
+
+Over time, the backend was connected in these pages and components, and the basic functionality of the app emerged. From there, both teams worked to add the more complex (but awesome) features we’d set out to create. Up until the time of our deployment, we continued working to build out and improve our UI and UX. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
