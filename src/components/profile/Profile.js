@@ -38,7 +38,8 @@ class Profile extends Component {
           <div className="hero-body">
             <div className="container has-text-centered">
               <div className="column is-4 is-offset-4">
-                <div className="box">
+                <h1 id="profileTitle">Welcome to your Profile!</h1>
+                <div className="box" id="profileForm">
                   <figure className="avatar">
                     <img src={this.state.data.profilePic} style={{ width: '150px', height: '150px' }} alt="Profile Pic" />
                   </figure>
@@ -59,8 +60,6 @@ class Profile extends Component {
                         </tr>
                       </table>
                     </div>
-                    {/* <a id="editProfile" className="button is-block is-fullwidth is-primary is-medium">Edit Profile<i className="fa fa-sign-in" aria-hidden="true"></i></a> */}
-                    {/* <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15">View Your Sales<i className="fa fa-sign-in" aria-hidden="true"></i></a> */}
                   </form>
                 </div>
               </div>

@@ -81,7 +81,7 @@ class Login extends Component {
                     <input
                       className="input is-medium"
                       type="password"
-                      placeholder="Password"
+                      placeholder="**********"
                       autocomplete="current-password"
                       value={this.state.password}
                       onChange={this.handlePassword.bind(this)}
@@ -102,9 +102,6 @@ class Login extends Component {
                   <div className="row">
                     <hr className="login-hr" />
                     <a href="/signup">Sign Up</a>
-                  </div>
-                  <div className="row">
-                    <a href="../">Forgot Password</a>
                   </div>
                 </div>
               </p>

@@ -123,11 +123,9 @@ class NewItem extends Component {
                             <div className="columns">
                                 <div className="column left">
                                     <h1 className="title is-1">Mercer</h1>
-
                                     <h2 className="subtitle colored is-4">
-                                        Add New Item
+                                        Create a New Item!
                                     </h2>
-
                                     <p id="smallText">
                                         Mercer provides a platform for Vendors to advertise their sales to a global audience.
                                     </p>
@@ -135,7 +133,6 @@ class NewItem extends Component {
                                         src="https://i.imgur.com/gi4BvGD.png"
                                         alt="Mercer Logo"
                                     />
-
                                 </div>
                                 <div className="column right has-text-centered">
                                     <h1 className="title is-4">Create an Item</h1>
@@ -143,7 +140,7 @@ class NewItem extends Component {
                                         <div className="field">
                                             <div className="control">
                                                 <p>Select Sale Index - Minimum: 0</p>
-                                                <input type="number" min="0" value={this.state.saleNumber} onChange={this.handleSaleNumber.bind(this)} />
+                                                <input id="saleIndex" type="number" min="0" value={this.state.saleNumber} onChange={this.handleSaleNumber.bind(this)} />
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
@@ -155,7 +152,6 @@ class NewItem extends Component {
                                                 />
                                             </div>
                                         </div>
-
                                         <div className="field">
                                             <div className="control">
                                                 <input
@@ -169,7 +165,6 @@ class NewItem extends Component {
                                                 />
                                             </div>
                                         </div>
-
                                         <div className="field">
                                             <div className="control">
                                                 <input
@@ -183,7 +178,6 @@ class NewItem extends Component {
                                                 />
                                             </div>
                                         </div>
-
                                         <div className="field">
                                             <div className="control">
                                                 <input
@@ -197,7 +191,6 @@ class NewItem extends Component {
                                                 />
                                             </div>
                                         </div>
-
                                         <div className="field">
                                             <div className="control">
                                                 <input
@@ -211,16 +204,15 @@ class NewItem extends Component {
                                                 />
                                             </div>
                                         </div>
-
                                         <button type="submit" className="button is-block is-primary is-fullwidth is-medium">
                                             Submit
                                         </button>
+                                        <br />
                                         <a href="/home" className="button is primary is-fullwidth is-medium">Click Here to Return Home</a>
                                     </form>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </section>
             </>
