@@ -1,5 +1,6 @@
-//components
 import "../Components.css";
+// pull test
+//components
 import React, { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
@@ -7,19 +8,20 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from '../../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
 
-class NewItem extends Component {
+class EditItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            saleNumber: 0,
+            userName: "",
+            item: [],
             data: [],
             redirect: false,
         };
     }
 
-    handleSaleNumber(e) {
+    handleName(e) {
         this.setState({
-            saleNumber: e.target.value,
+            userName: e.target.value,
         });
     }
 
@@ -35,9 +37,15 @@ class NewItem extends Component {
         });
     }
 
-    handleItemDescription(e) {
+    handleitemDescription(e) {
         this.setState({
             itemDescription: e.target.value,
+        });
+    }
+
+    handleSaleDescription(e) {
+        this.setState({
+            saleDescription: e.target.value,
         });
     }
 
@@ -47,16 +55,21 @@ class NewItem extends Component {
         });
     }
 
+    handleDate(e) {
+        this.setState({
+            date: e.target.value,
+        });
+    }
+
     handleItemImage(e) {
         this.setState({
-            itemImage: e.target.value,
+            itemTags: e.target.value,
         });
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
         const itemData = {
-            saleNumber: this.state.saleNumber,
             itemName: this.state.itemName,
             price: this.state.price,
             itemDescription: this.state.itemDescription,
@@ -73,7 +86,7 @@ class NewItem extends Component {
                 // decode token to get the user data
                 const decoded = jwt_decode(token);
                 // set the current user
-                this.props.nowCurrentUser(decoded); // funnction passed down as props.
+                this.props.nowCurrentUser(decoded); // function passed down as props.
             })
             .catch(error => {
                 console.log('===> Error on login', error);
@@ -81,7 +94,6 @@ class NewItem extends Component {
             });
     };
 
-    // Testing Dropdown
     componentDidMount() {
         console.log(localStorage) //Shows local token in console
         let token = localStorage.getItem('jwtToken')  //grabs token 
@@ -91,29 +103,32 @@ class NewItem extends Component {
                 header: { 'Access-Control-Allow-Origin': '*' }
             })
             .then((response) => {
-                console.log(response.data);
-                this.setState({
-                    data: response.data //===> Where API data is actually stored
-                })
+                console.log(response.data.user);
+                console.log(this.state.data);
+                let emptyData = this.state.data
+                let itemData = response.data.user
+                emptyData.push(itemData);
+                console.log('AFTER PUSH', emptyData);
             })
             .catch((error) => {
                 console.log('ERROR', error)
             })
     }
 
-    // displaySales() {
-    //     const displaySale = this.state.data.map((sales, index) => {
-    //         console.log(sales.response)
-    //         return (
-    //             <Item key={index} />
-    //         );
-    //     });
+    displaySales() {
+        const displayItem = console.log('TESTING DISPLAY', this.state.data)
+        // const displaySale = this.state.data.map((sales, index) => {
+        //     console.log(sales.response)
+        //     return (
+        //         <Sale key={index} />
+        //     );
+        // });
 
-    //     return displaySale;
-    // }
+        return displayItem;
+    }
 
     render() {
-        if (this.state.redirect) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)
+        if (this.state.redirect) return <Redirect to="/item" />; // You can have them redirected to profile (your choice)
 
         return (
             <>
@@ -122,32 +137,19 @@ class NewItem extends Component {
                         <div className="column is-8 is-offset-2 register">
                             <div className="columns">
                                 <div className="column left">
-                                    <h1 className="title is-1">Mercer</h1>
-
-                                    <h2 className="subtitle colored is-4">
-                                        Add New Item
-                                    </h2>
-
-                                    <p id="smallText">
-                                        Mercer provides a platform for Vendors to advertise their sales to a global audience.
-                                    </p>
-                                    <img
-                                        src="https://i.imgur.com/gi4BvGD.png"
-                                        alt="Mercer Logo"
-                                    />
-
+                                    <h1 className="title is-1">{this.displaySales()}</h1>
+                                    <iframe width="300" height="248" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=300&amp;height=248&amp;hl=en&amp;q=151%20S%20Main%20Pocatello+(My%20Sale)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=828e8cd6faabae05b589f5b4a490c2c83b528345'></script>
                                 </div>
                                 <div className="column right has-text-centered">
-                                    <h1 className="title is-4">Create an Item</h1>
+                                    <h1 className="title is-4">Edit Item</h1>
+                    
                                     <form onSubmit={this.handleSubmit.bind(this)}>
                                         <div className="field">
                                             <div className="control">
-                                                <p>Select Sale Index - Minimum: 0</p>
-                                                <input type="number" min="0" value={this.state.saleNumber} onChange={this.handleSaleNumber.bind(this)} />
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Item Name"
+                                                    placeholder="{itemName}"
                                                     name="itemName"
                                                     value={this.state.itemName}
                                                     onChange={this.handleItemName.bind(this)}
@@ -161,8 +163,8 @@ class NewItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Item Price"
-                                                    name="price"
+                                                    placeholder="{price}"
+                                                    name="location"
                                                     value={this.state.price}
                                                     onChange={this.handlePrice.bind(this)}
                                                     required
@@ -175,10 +177,10 @@ class NewItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Item Description"
-                                                    name="itemDescription"
+                                                    placeholder="{saleImage}"
+                                                    name="image"
                                                     value={this.state.itemDescription}
-                                                    onChange={this.handleItemDescription.bind(this)}
+                                                    onChange={this.handleitemDescription.bind(this)}
                                                     required
                                                 />
                                             </div>
@@ -189,11 +191,11 @@ class NewItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Item Tags"
-                                                    name="Tags"
+                                                    placeholder="{itemTags}"
+                                                    name="description"
                                                     value={this.state.itemTags}
                                                     onChange={this.handleItemTags.bind(this)}
-
+                                                    required
                                                 />
                                             </div>
                                         </div>
@@ -203,24 +205,22 @@ class NewItem extends Component {
                                                 <input
                                                     className="input is-medium"
                                                     type="text"
-                                                    placeholder="Image Link"
-                                                    name="itemImage"
+                                                    placeholder="{itemImage}"
+                                                    name="time"
                                                     value={this.state.itemImage}
                                                     onChange={this.handleItemImage.bind(this)}
                                                     required
                                                 />
                                             </div>
                                         </div>
-
                                         <button type="submit" className="button is-block is-primary is-fullwidth is-medium">
                                             Submit
                                         </button>
-                                        <a href="/home" className="button is primary is-fullwidth is-medium">Click Here to Return Home</a>
+        
                                     </form>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </section>
             </>
@@ -228,4 +228,4 @@ class NewItem extends Component {
     }
 }
 
-export default NewItem;
+export default EditItem;

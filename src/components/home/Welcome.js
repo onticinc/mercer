@@ -6,12 +6,12 @@ const Welcome = () => {
         <div>
             <section className="hero2 is-medium">
                 <div className="hero-body has-text-centered">
-                    <h1 className="title is-2">Welcome to Mercer, Please Signup or Login </h1>
+                    <h1 className="title is-2">Welcome, Please Signup or Login </h1>
                 </div>
             </section>
 
             <div className="container is-max-desktop">
-                <section className="featured">
+            <section className="featured">
                     <div className="level">
                         <div className="level-left">
                             <div className="level-item">
@@ -22,15 +22,15 @@ const Welcome = () => {
                     <div className="columns">
                         <div className="column is-3">
                             <a href="/viewitems">
-                                <article>
-                                    <figure className="image is-5by3">
-                                        <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-outdoor-furniture.jpg" />
-                                    </figure>
-                                    <h2 className="subtitle">Outdoor Furniture</h2>
-                                </article>
+                            <article>
+                                <figure className="image is-5by3">
+                                    <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-outdoor-furniture.jpg" />
+                                </figure>
+                                <h2 className="subtitle">Outdoor Furniture</h2>
+                            </article>
                             </a>
                         </div>
-
+                       
                         <div className="column is-3">
                             <a href="/viewitems">
                                 <article>
@@ -52,7 +52,7 @@ const Welcome = () => {
                             </a>
                         </div>
                         <div className="column is-3">
-                            <a href="/viewitems">
+                            <a href="/viewitems">   
                                 <article>
                                     <figure className="image is-5by3">
                                         <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-costume-jewelry.jpg" />

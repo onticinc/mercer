@@ -68,12 +68,11 @@ class ViewItems extends Component {
     render() {
         return (
             <div>
-                <h1 id="topTitle">User Index - Minimum: 0</h1>
-                <input id="topInput" type="number" min="0" value={this.state.userIndex} onChange={this.handleUserNumber.bind(this)} />
-                <h1 id="topTitle">Sale Index - Minimum: 0</h1>
-                <input id="topInput" type="number" min="0" value={this.state.saleIndex} onChange={this.handleSaleNumber.bind(this)} />
+                <h1>Users</h1>
+                <input type="number" min="0" value={this.state.userIndex} onChange={this.handleUserNumber.bind(this)} />
+                <h1>Sales</h1>
+                <input type="number" min="0" value={this.state.saleIndex} onChange={this.handleSaleNumber.bind(this)} />
                 {this.displayItems()}
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div >
         )
     }
