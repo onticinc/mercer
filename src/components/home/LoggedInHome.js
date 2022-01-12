@@ -21,20 +21,23 @@ const LoggedInHome = () => {
                     <div className="columns">
                         <div className="column is-3">
                             <a href="/viewitems">
-                            <article>
-                                <figure className="image is-5by3">
-                                    <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-outdoor-furniture.jpg" />
-                                </figure>
-                                <h2 className="subtitle">Outdoor Furniture</h2>
-                            </article>
+                                <article>
+                                    <figure className="image is-5by3">
+                                        <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-outdoor-furniture.jpg" />
+                                    </figure>
+                                    <h2 className="subtitle">Outdoor Furniture</h2>
+                                </article>
                             </a>
                         </div>
-                       
+
                         <div className="column is-3">
                             <a href="/viewitems">
                                 <article>
                                     <figure className="image is-5by3">
-                                        <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-lawn-equipment.jpg" />
+                                        <img
+                                            src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-lawn-equipment.jpg"
+                                            alt="Yard Sale"
+                                        />
                                     </figure>
                                     <h2 className="subtitle">Lawn Equipment</h2>
                                 </article>
@@ -44,17 +47,23 @@ const LoggedInHome = () => {
                             <a href="/viewitems">
                                 <article>
                                     <figure className="image is-5by3">
-                                        <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/best-items-to-sell-yard-garage-sales-kids-toys.jpg" />
+                                        <img
+                                            src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/best-items-to-sell-yard-garage-sales-kids-toys.jpg"
+                                            alt="Garage Sale"
+                                        />
                                     </figure>
                                     <h2 className="subtitle">Children's Toys</h2>
                                 </article>
                             </a>
                         </div>
                         <div className="column is-3">
-                            <a href="/viewitems">   
+                            <a href="/viewitems">
                                 <article>
                                     <figure className="image is-5by3">
-                                        <img src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-costume-jewelry.jpg" />
+                                        <img
+                                            src="https://makinglemonadeblog.com/wp-content/uploads/2015/06/popular-yard-sale-garage-sale-costume-jewelry.jpg"
+                                            alt="Yard Sale Items"
+                                        />
                                     </figure>
                                     <h2 className="subtitle">Jewelry</h2>
                                     <br />

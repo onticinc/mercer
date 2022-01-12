@@ -60,7 +60,7 @@ class Login extends Component {
           <div className="column is-4 is-offset-4">
             <div className="box">
               <figure className="avatar">
-                <img src="https://i.imgur.com/gi4BvGD.png" style={{ width: '150px', height: '150px' }} alt="Logo" />
+                <img src="https://i.imgur.com/gi4BvGD.png" style={{ width: '150px', height: '150px' }} alt="Mercer Logo" />
               </figure>
               <form onSubmit={this.handleSubmit.bind(this)}>
                 <div className="field">

@@ -129,7 +129,16 @@ class CreateSale extends Component {
                         <div className="column is-8 is-offset-2 register">
                             <div className="columns">
                                 <div className="column left">
-                                    <img src="https://i.imgur.com/gi4BvGD.png" />
+
+                                    <h1 className="title is-1">Mercer</h1>
+                                    <h2 className="subtitle colored is-4">
+                                        Create a New Sale!
+                                    </h2>
+                                    <p id="smallText">
+                                        Mercer provides a platform for Vendors to advertise their sales to a global audience.
+                                    </p>
+                                    <img src="https://i.imgur.com/gi4BvGD.png" alt="Mercer Logo" />
+
                                 </div>
                                 <div className="column right has-text-centered">
                                     <h1 className="title is-4">Create a new sale.</h1>

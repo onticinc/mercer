@@ -9,11 +9,13 @@ const Navbar = (props) => {
                     {props.isAuth
                         ? <NavLink className="nav-link" exact to="/home">
                             <img src="https://i.imgur.com/gi4BvGD.png"
+                                alt="Mercer Logo"
                                 width="75"
                                 height="75" />
                         </NavLink>
                         : <NavLink className="nav-link" exact to="/">
                             <img src="https://i.imgur.com/gi4BvGD.png"
+                                alt="Mercer Logo"
                                 width="75"
                                 height="75" />
                         </NavLink>
