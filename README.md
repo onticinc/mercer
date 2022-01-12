@@ -259,10 +259,8 @@ Frontend:
 
 - Instant-listing. We wanted sellers to be able to take a big mass of things they want to sell (a ton of old equipment in the garage, for example), whip out their phone - and make dozens of listings quickly and easily. We did not have the time to address this functionality.
 
-Backend:
-- Placeholder
-- Placeholder
-- Placeholder
+- Wanted the items on the home page to populate with recent items postes... We ran out of time to be able to adress this issue.  
+
 
 See the [open issues](https://github.com/onticinc/mercer/issues) for a full list of proposed features (and known issues).
 
