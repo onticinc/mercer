@@ -33,7 +33,7 @@ class ItemCard extends Component {
                                             <p className="title is-4 no-padding">{this.props.itemName}</p>
                                             <p>
                                                 <span className="title is-6">
-                                                    <p> {this.props.price}</p>
+                                                    <p>${this.props.price}</p>
                                                 </span>
                                             </p>
                                             <p className="subtitle is-6">{this.props.itemTags}</p>
