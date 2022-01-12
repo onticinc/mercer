@@ -224,7 +224,7 @@ A couple paragraphs about the general approach you took
 
 ## User Stories
 
-(INSERT LINK TO USER STORIES)
+[View our user stories documentation here](INSERT LINK TO USER STORIES)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
