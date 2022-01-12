@@ -180,7 +180,15 @@ Mercer is a fun and easy way to find great deals on awesome resale items, and it
 
 ## Appearance
 
-(INSERT SCREENSHOTS OF THE SITE)
+![Alt text](https://i.imgur.com/AN7CehG.png)
+
+![Alt text](https://i.imgur.com/8WLMDBO.png)
+
+![Alt text](https://i.imgur.com/RIHWR92.png)
+
+![Alt text](https://i.imgur.com/MQasQ3v.png)
+
+![Alt text](https://i.imgur.com/uSVZVhr.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
