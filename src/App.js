@@ -20,6 +20,7 @@ import CreateSale from './components/sale/CreateSale';
 import EditSale from './components/sale/EditSale';
 
 import ViewSales from './components/sale/ViewSales';
+import ViewCatalog from './components/catalog/ViewCatalog';
 
 import NewItem from './components/item/NewItem';
 import ItemCard from './components/item/ItemCard';
@@ -93,6 +94,7 @@ function App() {
           <PrivateRoute path="/editsale" component={EditSale} user={currentUser} handleLogout={handleLogout} />
 
           <PrivateRoute path="/viewsales" component={ViewSales} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/viewcatalog" component={ViewCatalog} user={currentUser} handleLogout={handleLogout} />
 
           <PrivateRoute path="/newsale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewusers" component={ViewUsers} user={currentUser} handleLogout={handleLogout} />
