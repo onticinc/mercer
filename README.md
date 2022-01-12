@@ -46,6 +46,7 @@
 
   <p align="center">
     A unique online resale platform intended to empower sellers.
+    <br>
     <br />
     <a href="https://github.com/onticinc/mercer/tree/main/docs"><strong>Explore the docs »</strong></a>
     <br />
@@ -57,6 +58,8 @@
     <a href="https://github.com/onticinc/mercer/issues">Request Feature</a>
   </p>
 </div>
+
+<br>
 
 
 
@@ -77,15 +80,18 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#appearance">Appearance</a></li>
+    <li><a href="#technologies-used">Technologies Used</a></li>
+    <li><a href="#general-approach">General Approach</a></li>
+    <li><a href="#user-stories">User Stories</a></li>
+    <li><a href="#project-wireframes">Project Wireframes</a></li>
+    <li><a href="#roadblocks">Roadblocks</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
-
+<br>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
