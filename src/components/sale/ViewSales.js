@@ -54,13 +54,40 @@ class ViewSales extends Component {
     render() {
         return (
             <div>
-                <h1 id="topTitle">User Index - Minimum: 0</h1>
-                <input id="topInput" type="number" min="0" value={this.state.userIndex} onChange={this.handleUserNumber.bind(this)} />
+                <input type="number" min="0" value={this.state.userIndex} onChange={this.handleUserNumber.bind(this)} />
                 {this.displaySales()}
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
         )
     }
 }
 
 export default ViewSales;
+
+/********************************************************/
+// const ViewOtherSales = (props) => {
+//     const { handleLogout, user } = props;
+//     const { userName, item, profilePic, address, sale, phone, password, exp } = user;
+//     const expirationTime = new Date(exp * 1000);
+//     let currentTime = Date.now();
+
+//     // make a condition that compares exp and current time
+//     if (currentTime >= expirationTime) {
+//         handleLogout();
+//         alert('Session has ended. Please login to continue.');
+//     }
+
+//     const salesData = user ?
+//         (
+//             <div>
+//                 <SaleCard />
+//             </div>
+//         ) : <h2>Loading...</h2>
+
+//     return (
+//         <div className="text-center pt-4">
+//             {salesData}
+//         </div>
+//     );
+
+// }
+/********************************************************/

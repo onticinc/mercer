@@ -43,7 +43,7 @@ class Login extends Component {
         // decode token to get the user data
         const decoded = jwt_decode(token);
         // set the current user
-        this.props.nowCurrentUser(decoded); // function passed down as props.
+        this.props.nowCurrentUser(decoded); // funnction passed down as props.
       })
       .catch(error => {
         console.log('===> Error on login', error);
@@ -102,6 +102,9 @@ class Login extends Component {
                   <div className="row">
                     <hr className="login-hr" />
                     <a href="/signup">Sign Up</a>
+                  </div>
+                  <div className="row">
+                    <a href="../">Forgot Password</a>
                   </div>
                 </div>
               </p>

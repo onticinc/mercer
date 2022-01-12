@@ -103,7 +103,7 @@ class Signup extends Component {
                   <h2 className="subtitle colored is-4">
                     Become a Vendor Today!
                   </h2>
-                  <p id="smallText">
+                  <p>
                     Mercer provides a platform for Vendors to advertise their sales to a global audience.
                   </p>
                   <img src="https://i.imgur.com/gi4BvGD.png" />
@@ -216,7 +216,9 @@ class Signup extends Component {
                       Submit
                     </button>
                     <br />
-                    <p>Do not sell anything illegal under U.S. law</p>
+                    <small>
+                      <em>Do not sell anything illegal under U.S. law</em>
+                    </small>
                   </form>
                 </div>
               </div>
