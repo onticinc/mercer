@@ -27,12 +27,12 @@ class SaleCard extends Component {
                                                 </figure>
                                             </div>
                                             <div className="media-content">
-                                                <p className="title is-4 no-padding">Sale: {this.props.saleName}</p>
+                                                <p className="title is-4 no-padding">{this.props.saleName}</p>
                                                 <p>
                                                     <span className="title is-6">
-                                                        <p> Location: {this.props.location}</p>
-                                                        <p> Time: {this.props.time}</p>
-                                                        <p> Date: {this.props.date}</p>
+                                                        <p> {this.props.location}</p>
+                                                        <p> {this.props.time}</p>
+                                                        <p> {this.props.date}</p>
                                                     </span>
                                                 </p>
                                                 <p className="subtitle is-6">{this.props.saleTags}</p>
@@ -47,7 +47,7 @@ class SaleCard extends Component {
                                             <div className="background-icon"><span className="icon-twitter"></span></div>
                                         </div>
                                         <div>
-                                            <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15" href="/viewitems">Browse All Items<i className="fa fa-sign-in" aria-hidden="true"></i></a>
+                                        <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15" href="/viewitems">Browse This Sale<i className="fa fa-sign-in" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
                                 </div>
