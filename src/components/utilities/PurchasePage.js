@@ -29,7 +29,7 @@ const DisplayPurchasePage = () => {
                           </tr>
                         </table>
                       </div>
-                      <a id="editProfile" className="button is-block is-fullwidth is-primary is-medium" href="/viewsales">Browse Other Sales<i className="fa fa-sign-in" aria-hidden="true"></i></a>
+                      <a id="editProfile" className="button is-block is-fullwidth is-primary is-medium" href="/viewsales">Browse All Sales<i className="fa fa-sign-in" aria-hidden="true"></i></a>
                       <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15" href="/newsale">Create A New Sale<i className="fa fa-sign-in" aria-hidden="true"></i></a>
                     </form>
                   </div>
