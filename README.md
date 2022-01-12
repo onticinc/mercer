@@ -168,7 +168,11 @@ To get a local copy up and running follow these simple steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This site's usage
+A Mercer vendor is able to create a sale associated with a niche or theme. For example, a user-seller (vendor) wants to clear out their man-cave. On Mercer, they are able to promote and market their inventory for a particular category based on these themes or niche associations. 
+
+Our intention was to create an environment for buyers and sellers to connect on a local scale. We believe this relationship would lead to a better experience on both ends, and create a more efficient circulation of products in the after-market. 
+
+Mercer is a fun and easy way to find great deals on awesome resale items, and it also encourages users to recirculate items they might otherwise throw away.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -212,7 +216,11 @@ This site's usage
 
 ## General Approach
 
-A couple paragraphs about the general approach you took
+Our frontend and backend teams collaboratively built the idea for Mercer. We wanted an online-store application where we could innovate on ideas we thought could interact well on a single platform.
+
+We began by creating our wireframe and laying out our user stories. With these as the foundation, our backend team built out the database tools necessary to provide functionality to the app. Our frontend began creating components and pages to address the requirements we had produced from our wireframes. 
+
+Over time, the backend was connected in these pages and components, and the basic functionality of the app emerged. From there, both teams worked to add the more complex (but awesome) features we’d set out to create. Up until the time of our deployment, we continued working to build out and improve our UI and UX. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -220,7 +228,7 @@ A couple paragraphs about the general approach you took
 
 ## User Stories
 
-(INSERT LINK TO USER STORIES)
+[View our user stories documentation here](INSERT LINK TO USER STORIES)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -245,9 +253,11 @@ A couple paragraphs about the general approach you took
 ## Roadblocks
 
 Frontend:
-- Placeholder
-- Placeholder
-- Placeholder
+- Creating a functional map tool to allow users to view how near/far they are from the listings. We were able to produce the nonfunctional map element on the app, but making it functional in our timeframe was not tenable.
+
+- Bidding/Haggling/Reservation interaction. We wanted to allow potential buyers to post their best offer on an item, or make counteroffers, or pay extra to the seller to be able to reserve a product. We did not have enough time during the timeframe to attempt to implement these features.
+
+- Instant-listing. We wanted sellers to be able to take a big mass of things they want to sell (a ton of old equipment in the garage, for example), whip out their phone - and make dozens of listings quickly and easily. We did not have the time to address this functionality.
 
 Backend:
 - Placeholder
