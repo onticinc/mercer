@@ -120,19 +120,43 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone this repository
    ```sh
    git clone https://github.com/onticinc/mercer.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Fork the backend from [this repository](https://github.com/RolandYambao/mercers-api)
+
+4. Clone the repo
+   ```sh
+   git clone https://github.com/onticinc/mercer.git
    ```
+4. Install NPM packages
+   ```sh
+   npm install
+   ```
+5. Create a .env file in the front and backend. Set your  mongo SRV with 
+    ```
+    MONGO_URI
+    ```
+    example: 
+    ```
+    MONGO_URI = mongodb+srv:// ... (etc)
+    ```
+    then, similarly - add 
+    ```
+    JWT_SECRET= 
+    ```
+    to your .env files and assign it your own value.
+6. Now on both the front and backend, run:
+    ```
+    npm start
+    ```
+    You should now be able to view and interact with your local copy of the Mercers app!
+    
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -159,7 +183,27 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Technologies Used
 
-Explanation of the technologies used
+## Node.js
+- As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. In the following "hello world" example, many connections can be handled concurrently. Upon each connection, the callback is fired, but if there is no work to be done, Node.js will sleep.
+
+## React
+
+- React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications. However, React is only concerned with state management and rendering that state to the DOM, so creating React applications usually requires the use of additional libraries for routing, as well as certain client-side functionality.
+
+## Axios
+- Axios, which is a popular library is mainly used to send asynchronous HTTP requests to REST endpoints. This library is very useful to perform CRUD operations.
+- This popular library is used to communicate with the backend. Axios supports the Promise API, native to JS ES6.
+- Using Axios we make API requests in our application. Once the request is made we get the data in Return, and then we use this data in our project. 
+- This library is very popular among developers.
+
+## MongoDB
+- MongoDB is an open-source document-oriented database that is designed to store a large scale of data and also allows you to work with that data very efficiently.
+- MongoDB stores data in flexible, JSON-like documents, meaning fields can vary from document to document and data structure can be changed over time
+- The document model maps to the objects in your application code, making data easy to work with
+- Ad hoc queries, indexing, and real time aggregation provide powerful ways to access and analyze your data
+
+## bcrypt
+- bcrypt is a password-hashing function designed by Niels Provos and David Mazières, based on the Blowfish cipher and presented at USENIX in 1999. Besides incorporating a salt to protect against rainbow table attacks, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to brute-force search attacks even with increasing computation power.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
