@@ -136,7 +136,7 @@ class CreateSale extends Component {
                                     <p id="smallText">
                                         Mercer provides a platform for Vendors to advertise their sales to a global audience.
                                     </p>
-                                    <img src="https://i.imgur.com/gi4BvGD.png" />
+                                    <img src="https://i.imgur.com/gi4BvGD.png" alt="Mercer Logo" />
                                 </div>
                                 <div className="column right has-text-centered">
                                     <h1 className="title is-4">Create a New Sale</h1>

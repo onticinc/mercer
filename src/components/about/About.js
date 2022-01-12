@@ -28,7 +28,7 @@ const About = () => {
                                 <figure className="image is-4by3">
                                     <img
                                         src="https://i.imgur.com/hynSC4T.jpeg"
-                                        alt="Placeholder image"
+                                        alt="Yard Sale"
                                     />
                                 </figure>
                             </div>
@@ -48,7 +48,7 @@ const About = () => {
                                 <figure className="image is-4by3">
                                     <img
                                         src="https://i.imgur.com/EXYTxtA.jpeg"
-                                        alt="Placeholder image"
+                                        alt="Garage Sale"
                                     />
                                 </figure>
                             </div>
@@ -68,7 +68,7 @@ const About = () => {
                                 <figure className="image is-4by3">
                                     <img
                                         src="https://i.imgur.com/40qLwOp.png"
-                                        alt="Placeholder image"
+                                        alt="Yard Sale Items"
                                     />
                                 </figure>
                             </div>

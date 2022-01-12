@@ -4,7 +4,7 @@ import axios from 'axios';
 import setAuthToken from '../../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
 
-class displayProfile extends Component {
+class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -72,4 +72,4 @@ class displayProfile extends Component {
 
 }
 
-export default displayProfile;
+export default Profile;
