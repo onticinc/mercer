@@ -168,7 +168,11 @@ To get a local copy up and running follow these simple steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This site's usage
+A Mercer vendor is able to create a sale associated with a niche or theme. For example, a user-seller (vendor) wants to clear out their man-cave. On Mercer, they are able to promote and market their inventory for a particular category based on these themes or niche associations. 
+
+Our intention was to create an environment for buyers and sellers to connect on a local scale. We believe this relationship would lead to a better experience on both ends, and create a more efficient circulation of products in the after-market. 
+
+Mercer is a fun and easy way to find great deals on awesome resale items, but it encourages users to recirculate items they might otherwise throw away.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
