@@ -107,6 +107,9 @@ Est. 2022
 
 * [React.js](https://reactjs.org/)
 * [MongoDB](https://www.mongodb.com)
+* [Axios](https://axios-http.com)
+* [bcrypt](https://www.npmjs.com/package/bcrypt)
+* [Node.js](https://nodejs.org/en/)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
