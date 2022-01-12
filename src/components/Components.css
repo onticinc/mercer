@@ -123,6 +123,7 @@ hr {
 }
 .featured .level {
   padding-bottom: 1rem;
+  margin-top: 30px;
   border-bottom: 1px solid lightgrey;
 }
 .featured .level-item h2 {
@@ -287,6 +288,7 @@ input:focus {
 }
 
 
+
 .isloginlink {
   padding: 5px;
 }
@@ -339,7 +341,7 @@ input:focus {
   box-shadow: none;
 }
 .box {
-  margin-top: 1rem;
+  margin-top: 90px;
 }
 .avatar {
   margin-top: -70px;
@@ -376,4 +378,40 @@ p.subtitle {
 
 .fa{
   margin-left: 5px; 
+}
+
+#smallText {
+  color: black;
+  margin-bottom: 50px;;
+}
+
+#saleIndex {
+  margin-bottom: 10px;
+}
+
+#profileTitle {
+  margin-top: -250px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#userTitle {
+  padding-top: 25px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#topTitle {
+  padding-top: 25px;
+  font-size: 30px;
+  text-align: left;
+}
+
+#topInput {
+  font-size: 20px;
+  text-align: center;
+}
+
+#profileForm {
+  margin-bottom: -150px;
 }

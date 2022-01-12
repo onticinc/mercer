@@ -180,7 +180,15 @@ Mercer is a fun and easy way to find great deals on awesome resale items, and it
 
 ## Appearance
 
-(INSERT SCREENSHOTS OF THE SITE)
+![Alt text](https://i.imgur.com/AN7CehG.png)
+
+![Alt text](https://i.imgur.com/8WLMDBO.png)
+
+![Alt text](https://i.imgur.com/RIHWR92.png)
+
+![Alt text](https://i.imgur.com/MQasQ3v.png)
+
+![Alt text](https://i.imgur.com/uSVZVhr.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -228,7 +236,7 @@ Over time, the backend was connected in these pages and components, and the basi
 
 ## User Stories
 
-[View our user stories documentation here](INSERT LINK TO USER STORIES)
+View our user stories page by following [this link](https://github.com/onticinc/mercer/blob/main/USERSTORIES.md)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -236,15 +244,15 @@ Over time, the backend was connected in these pages and components, and the basi
 
 ## Project Wireframes
 
-![Alt text](https://i.imgur.com/elBrbgk.png "Optional title")
+![Alt text](https://i.imgur.com/elBrbgk.png)
 
-![Alt text](https://i.imgur.com/ID426sI.png "Optional title")
+![Alt text](https://i.imgur.com/ID426sI.png)
 
-![Alt text](https://i.imgur.com/shUjrcg.png "Optional title")
+![Alt text](https://i.imgur.com/shUjrcg.png)
 
-![Alt text](https://i.imgur.com/jKftZkX.png "Optional title")
+![Alt text](https://i.imgur.com/jKftZkX.png)
 
-![Alt text](https://i.imgur.com/qGrHgpc.png "Optional title")
+![Alt text](https://i.imgur.com/qGrHgpc.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
