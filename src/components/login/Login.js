@@ -69,7 +69,6 @@ class Login extends Component {
                       className="input is-medium m-t-15"
                       type="email"
                       placeholder="hello@example.com"
-                      autocomplete="Email"
                       value={this.state.email}
                       onChange={this.handleEmail.bind(this)}
                       required
@@ -81,8 +80,7 @@ class Login extends Component {
                     <input
                       className="input is-medium"
                       type="password"
-                      placeholder="**********"
-                      autocomplete="current-password"
+                      placeholder="Password"
                       value={this.state.password}
                       onChange={this.handlePassword.bind(this)}
                       required
@@ -100,7 +98,6 @@ class Login extends Component {
               <p>
                 <div className="container isloginlink">
                   <div className="row">
-                    <hr className="login-hr" />
                     <a href="/signup">Sign Up</a>
                   </div>
                 </div>

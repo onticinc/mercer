@@ -13,14 +13,8 @@ test('Check Password Input', () => {
     expect(password).toBeInTheDocument();
   });
 
-test('Check Submit Button', () => {
+test('Check For Submit Button', () => {
     render(<Login />);
     const loginButton = screen.getByText(/Login/i);
-    expect(loginButton).toBeInTheDocument();
-});
-
-test('Check Remember Me Checkbox', () => {
-    render(<Login />);
-    const loginButton = screen.getByText(/Remember Me:/i);
     expect(loginButton).toBeInTheDocument();
 });

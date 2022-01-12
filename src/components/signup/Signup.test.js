@@ -8,7 +8,7 @@ test('Check Name Input', () => {
     expect(email).toBeInTheDocument();
   });
 
-test('Check Profile Picture', () => {
+test('Check For Profile Picture', () => {
     render(<Signup />);
     const profilePic = screen.getByPlaceholderText(/Profile Picture URL/i);
     expect(profilePic).toBeInTheDocument();
@@ -32,14 +32,9 @@ test('Check Phone Number Input', () => {
     expect(phoneInput).toBeInTheDocument();
 });
 
-test('Check Password', () => {
+test('Check For Password Input', () => {
     render(<Signup />);
     const password = screen.getByPlaceholderText(/Password/i);
     expect(password).toBeInTheDocument();
 });
 
-test('Check Confirm Password', () => {
-    render(<Signup />);
-    const confirmPassword = screen.getByPlaceholderText(/Confirm Password/i);
-    expect(confirmPassword).toBeInTheDocument();
-});

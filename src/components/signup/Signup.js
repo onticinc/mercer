@@ -203,7 +203,7 @@ class Signup extends Component {
                         <input
                           className="input is-medium"
                           type="password"
-                          placeholder="Confirm Password"
+                          placeholder="Confirm PW"
                           name="confirmPassword"
                           value={this.state.confirmPassword}
                           onChange={this.handleConfirmPassword.bind(this)}
