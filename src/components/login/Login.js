@@ -43,7 +43,7 @@ class Login extends Component {
         // decode token to get the user data
         const decoded = jwt_decode(token);
         // set the current user
-        this.props.nowCurrentUser(decoded); // funnction passed down as props.
+        this.props.nowCurrentUser(decoded); // function passed down as props.
       })
       .catch(error => {
         console.log('===> Error on login', error);
