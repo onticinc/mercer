@@ -33,15 +33,14 @@ class ItemCard extends Component {
                                             <p className="title is-4 no-padding">{this.props.itemName}</p>
                                             <p>
                                                 <span className="title is-6">
-                                                    <p> {this.props.price}</p>
-                                                    <p> {this.props.itemDescription}</p>
+                                                    <p>${this.props.price}</p>
                                                 </span>
                                             </p>
                                             <p className="subtitle is-6">{this.props.itemTags}</p>
                                         </div>
                                     </div>
                                     <div className="content">
-                                        {this.props.itemTags}
+                                        {this.props.itemDescription}
                                     </div>
                                     <div>
                                         <a id="editProfile" className="button is-block is-fullwidth is-primary is-medium" href="/purchasepage">Purchase This Item<i className="fa fa-sign-in" aria-hidden="true"></i></a>
