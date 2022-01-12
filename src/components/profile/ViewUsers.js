@@ -50,7 +50,7 @@ class ViewUsers extends Component {
     render() {
         return (
             <div>
-                <h1 id="userTitle">This Page shows all Available Mercers</h1>
+                <h1>This is the View Users Page</h1>
                 <div className="usercontainer">
                     {!this.state.data.user ? <h1>Loading...</h1> : this.state.data.user.map((u, idx) => {
                         return (

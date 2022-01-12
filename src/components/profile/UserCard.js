@@ -25,15 +25,15 @@ class UserCard extends Component {
                                                 </figure>
                                             </div>
                                             <div className="media-content">
-                                                <p className="title is-4 no-padding">Name: {this.props.name}</p>
+                                                <p className="title is-4 no-padding">Mercer: {this.props.name}</p>
                                                 <br />
                                                 <p>
                                                     <span className="title is-6">
-                                                        <a> Address: {this.props.address} </a>
+                                                        <a> {this.props.address} </a>
                                                         <br />
-                                                        <a> Phone Number: {this.props.phone} </a>
+                                                        <a> {this.props.phone} </a>
                                                         <br />
-                                                        <a> Email: {this.props.email}</a>
+                                                        <a> {this.props.email}</a>
                                                     </span>
                                                 </p>
                                             </div>
@@ -43,7 +43,7 @@ class UserCard extends Component {
                                             <div className="background-icon"><span className="icon-twitter"></span></div>
                                         </div>
                                         <div>
-                                            <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15" href="/viewsales">View All Sales<i className="fa fa-sign-in" aria-hidden="true"></i></a>
+                                            <a id="viewSales" className="button is-block is-fullwidth is-info is-medium m-t-15" href="/viewsales">View Sales<i className="fa fa-sign-in" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
                                 </div>
