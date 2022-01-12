@@ -81,7 +81,7 @@ class Login extends Component {
                     <input
                       className="input is-medium"
                       type="password"
-                      placeholder="**********"
+                      placeholder="Password"
                       autocomplete="current-password"
                       value={this.state.password}
                       onChange={this.handlePassword.bind(this)}

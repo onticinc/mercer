@@ -89,14 +89,10 @@ function App() {
           <PrivateRoute path="/newitem" component={NewItem} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/edititem" component={EditItem} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/editsale" component={EditSale} user={currentUser} handleLogout={handleLogout} />
-
           <PrivateRoute path="/viewsales" component={ViewSales} user={currentUser} handleLogout={handleLogout} />
-
           <PrivateRoute path="/newsale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewusers" component={ViewUsers} user={currentUser} handleLogout={handleLogout} />
-
           <PrivateRoute path="/purchasepage" component={DisplayPurchasePage} user={currentUser} handleLogout={handleLogout} />
-
         </Switch>
       </div>
       <Footer />
