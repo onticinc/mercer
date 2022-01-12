@@ -25,7 +25,7 @@ import DisplayPurchasePage from './components/utilities/PurchasePage';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem('jwtToken');
-  // console.log('===> Hitting a Private Route');
+ 
   return <Route {...rest} render={(props) => {
     return token ? <Component {...rest} {...props} /> : <Redirect to="/login" />
   }} />
@@ -41,7 +41,7 @@ function App() {
 
     if (!localStorage.getItem('jwtToken')) {
       setIsAuthenticated(false);
-      // console.log('====> Authenticated is now FALSE');
+    
     } else {
       token = jwt_decode(localStorage.getItem('jwtToken'));
       setAuthToken(localStorage.getItem('jwtToken'));
@@ -50,7 +50,7 @@ function App() {
   }, []);
 
   const nowCurrentUser = (userData) => {
-    // console.log('===> nowCurrentUser is here.');
+    
     setCurrentUser(userData);
     setIsAuthenticated(true);
   }

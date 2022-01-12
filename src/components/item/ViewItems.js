@@ -35,10 +35,10 @@ class ViewItems extends Component {
                     users: users,
                     sales: sales,
                 });
-                console.log("LOOK AT THIS", this.state.users[0].sale.length);
+                
             })
             .catch((error) => {
-                console.log('ERROR', error)
+                
             })
     }
 

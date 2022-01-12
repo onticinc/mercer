@@ -76,14 +76,12 @@ class NewItem extends Component {
                 this.props.nowCurrentUser(decoded); // funnction passed down as props.
             })
             .catch(error => {
-                console.log('===> Error on login', error);
                 alert('Either email or password is incorrect. Please try again');
             });
     };
 
     // Testing Dropdown
     componentDidMount() {
-        console.log(localStorage) //Shows local token in console
         let token = localStorage.getItem('jwtToken')  //grabs token 
         setAuthToken(token); //function to auth saved token (seprate JS file)
         axios.get(`${REACT_APP_SERVER_URL}/users/item`,
@@ -91,19 +89,18 @@ class NewItem extends Component {
                 header: { 'Access-Control-Allow-Origin': '*' }
             })
             .then((response) => {
-                console.log(response.data);
                 this.setState({
                     data: response.data //===> Where API data is actually stored
                 })
             })
             .catch((error) => {
-                console.log('ERROR', error)
+            
             })
     }
 
     // displaySales() {
     //     const displaySale = this.state.data.map((sales, index) => {
-    //         console.log(sales.response)
+    //      
     //         return (
     //             <Item key={index} />
     //         );

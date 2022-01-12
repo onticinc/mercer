@@ -46,7 +46,6 @@ class Login extends Component {
         this.props.nowCurrentUser(decoded); // function passed down as props.
       })
       .catch(error => {
-        console.log('===> Error on login', error);
         alert('Either email or password is incorrect. Please try again');
       });
   };

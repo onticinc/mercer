@@ -93,7 +93,6 @@ class CreateSale extends Component {
             })
 
             .catch(error => {
-                console.log('===> Error on login', error);
                 alert('Either email or password is incorrect. Please try again');
             });
 
@@ -102,7 +101,6 @@ class CreateSale extends Component {
     };
 
     componentDidMount() {
-        console.log(localStorage) //Shows local token in console
         let token = localStorage.getItem('jwtToken')  //grabs token 
         setAuthToken(token); //function to auth saved token (seprate JS file)
         axios.get(`${REACT_APP_SERVER_URL}/users/sale`,
@@ -115,7 +113,7 @@ class CreateSale extends Component {
                 })
             })
             .catch((error) => {
-                console.log('ERROR', error)
+                
             })
     }
 
