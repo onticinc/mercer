@@ -172,7 +172,7 @@ A Mercer vendor is able to create a sale associated with a niche or theme. For e
 
 Our intention was to create an environment for buyers and sellers to connect on a local scale. We believe this relationship would lead to a better experience on both ends, and create a more efficient circulation of products in the after-market. 
 
-Mercer is a fun and easy way to find great deals on awesome resale items, but it encourages users to recirculate items they might otherwise throw away.
+Mercer is a fun and easy way to find great deals on awesome resale items, and it also encourages users to recirculate items they might otherwise throw away.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -249,9 +249,11 @@ A couple paragraphs about the general approach you took
 ## Roadblocks
 
 Frontend:
-- Placeholder
-- Placeholder
-- Placeholder
+- Creating a functional map tool to allow users to view how near/far they are from the listings. We were able to produce the nonfunctional map element on the app, but making it functional in our timeframe was not tenable.
+
+- Bidding/Haggling/Reservation interaction. We wanted to allow potential buyers to post their best offer on an item, or make counteroffers, or pay extra to the seller to be able to reserve a product. We did not have enough time during the timeframe to attempt to implement these features.
+
+- Instant-listing. We wanted sellers to be able to take a big mass of things they want to sell (a ton of old equipment in the garage, for example), whip out their phone - and make dozens of listings quickly and easily. We did not have the time to address this functionality.
 
 Backend:
 - Placeholder
