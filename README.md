@@ -228,7 +228,7 @@ Over time, the backend was connected in these pages and components, and the basi
 
 ## User Stories
 
-[View our user stories documentation here](INSERT LINK TO USER STORIES)
+View our user stories page by following [this link](https://github.com/onticinc/mercer/blob/main/USERSTORIES.md)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
