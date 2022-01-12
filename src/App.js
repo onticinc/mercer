@@ -16,17 +16,11 @@ import Signup from './components/signup/Signup';
 import Login from './components/login/Login';
 import Welcome from './components/home/Welcome';
 import LoggedInHome from './components/home/LoggedInHome';
-import CreateSale from './components/sale/CreateSale';
-import EditSale from './components/sale/EditSale';
-
-import ViewSales from './components/sale/ViewSales';
-
-import NewItem from './components/item/NewItem';
-import ItemCard from './components/item/ItemCard';
-import ViewItems from './components/item/ViewItems';
-import EditItem from './components/item/EditItem';
 import ViewUsers from './components/profile/ViewUsers';
-
+import CreateSale from './components/sale/CreateSale';
+import ViewSales from './components/sale/ViewSales';
+import NewItem from './components/item/NewItem';
+import ViewItems from './components/item/ViewItems';
 import DisplayPurchasePage from './components/utilities/PurchasePage';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -86,19 +80,12 @@ function App() {
           <Route path="/about" component={About} />
           <PrivateRoute path="/home" component={LoggedInHome} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/viewitem" component={ItemCard} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/viewitems" component={ViewItems} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/newitem" component={NewItem} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/edititem" component={EditItem} user={currentUser} handleLogout={handleLogout} />
-          <PrivateRoute path="/editsale" component={EditSale} user={currentUser} handleLogout={handleLogout} />
-
-          <PrivateRoute path="/viewsales" component={ViewSales} user={currentUser} handleLogout={handleLogout} />
-
-          <PrivateRoute path="/newsale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/viewusers" component={ViewUsers} user={currentUser} handleLogout={handleLogout} />
-
+          <PrivateRoute path="/viewsales" component={ViewSales} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/viewitems" component={ViewItems} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/newsale" component={CreateSale} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/newitem" component={NewItem} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/purchasepage" component={DisplayPurchasePage} user={currentUser} handleLogout={handleLogout} />
-
         </Switch>
       </div>
       <Footer />
