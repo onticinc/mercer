@@ -28,7 +28,7 @@ class ViewSales extends Component {
                 });
             })
             .catch((error) => {
-                
+
             })
     }
 
@@ -53,11 +53,15 @@ class ViewSales extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1 id="topTitle">User Index - Minimum: 0</h1>
                 <input id="topInput" type="number" min="0" value={this.state.userIndex} onChange={this.handleUserNumber.bind(this)} />
-                {this.displaySales()}
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div className="section">
+                    <div className="row columns is-multiline">
+                        {this.displaySales()}
+                    </div>
+                </div>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             </div>
         )
     }

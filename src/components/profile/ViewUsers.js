@@ -40,7 +40,7 @@ class ViewUsers extends Component {
     displayUsers() {
         const displayUsers = this.state.data.users.map((u, idx) => {
             return (
-                <UserCard key={idx} name={u.userName} photo={u.profilePic} address={u.address} phone={u.phone} />
+                <UserCard key={idx} name={u.userName} email={u.email} photo={u.profilePic} address={u.address} phone={u.phone} />
             )
         });
 
@@ -49,16 +49,22 @@ class ViewUsers extends Component {
 
     render() {
         return (
-            <div>
-                <h1 id="userTitle">This Page shows all Available Mercers</h1>
-                <div className="usercontainer">
-                    {!this.state.data.user ? <h1>Loading...</h1> : this.state.data.user.map((u, idx) => {
-                        return (
-                            <UserCard key={idx} name={u.userName} email={u.email} photo={u.profilePic} address={u.address} phone={u.phone} />
-
-                        )
-                    })
-                    }
+            <div className="container">
+                <section className="hero bg-dark is-small">
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            <h1 className="title" id="userTitle">This Page shows all Available Mercers</h1>
+                        </div>
+                    </div>
+                </section >
+                <div className="section">
+                    <div className="row columns is-multiline">
+                        {!this.state.data.user ? <h1>Loading...</h1> : this.state.data.user.map((u, idx) => {
+                            return (
+                                <UserCard key={idx} name={u.userName} email={u.email} photo={u.profilePic} address={u.address} phone={u.phone} />
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         );

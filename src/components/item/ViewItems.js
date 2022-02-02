@@ -35,10 +35,10 @@ class ViewItems extends Component {
                     users: users,
                     sales: sales,
                 });
-                
+
             })
             .catch((error) => {
-                
+
             })
     }
 
@@ -67,13 +67,15 @@ class ViewItems extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1 id="topTitle">User Index - Minimum: 0</h1>
                 <input id="topInput" type="number" min="0" value={this.state.userIndex} onChange={this.handleUserNumber.bind(this)} />
                 <h1 id="topTitle">Sale Index - Minimum: 0</h1>
                 <input id="topInput" type="number" min="0" value={this.state.saleIndex} onChange={this.handleSaleNumber.bind(this)} />
-                {this.displayItems()}
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div className="row columns is-multiline">
+                    {this.displayItems()}
+                </div>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             </div >
         )
     }
