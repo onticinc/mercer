@@ -94,20 +94,9 @@ class NewItem extends Component {
                 })
             })
             .catch((error) => {
-            
+
             })
     }
-
-    // displaySales() {
-    //     const displaySale = this.state.data.map((sales, index) => {
-    //      
-    //         return (
-    //             <Item key={index} />
-    //         );
-    //     });
-
-    //     return displaySale;
-    // }
 
     render() {
         if (this.state.redirect) return <Redirect to="/profile" />; // You can have them redirected to profile (your choice)

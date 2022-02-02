@@ -396,9 +396,9 @@ p.subtitle {
 }
 
 #userTitle {
-  padding-top: 25px;
   font-size: 30px;
   text-align: center;
+  color: white;
 }
 
 #topTitle {
@@ -414,4 +414,8 @@ p.subtitle {
 
 #profileForm {
   margin-bottom: -150px;
+}
+
+img {
+  object-fit: contain;
 }
